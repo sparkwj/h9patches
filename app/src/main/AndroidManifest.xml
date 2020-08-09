@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spark.h9patches"
+    android:sharedUserId="android.uid.system"
+    android:installLocation="internalOnly">
+
+    <uses-sdk android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.car.permission.CAR_VENDOR_EXTENSION" />
+    <uses-permission android:name="android.permission.SET_PROCESS_FOREGROUND" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="cn.nubia.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.bbk.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.bbk.launcher2.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.tencent.permission.VIRUS_SCAN" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
+    <uses-permission android:name="android.permission.DIAGNOSTIC" />
+    <uses-permission android:name="android.permission.ACCESS_MTK_MMHW" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+
+    <uses-feature android:name="android.hardware.wifi" />
+
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />
+    <uses-permission android:name="android.permission.READ_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+    <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.huawei.pushagent.permission.RICHMEDIA_PROVIDER" />
+    <uses-permission android:name="com.tencent.assistant.permission.YYB_EVENT_PERMISSION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.MANAGE_USERS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.location" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+    <uses-feature android:name="android.hardware.sensor.compass" />
+
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="com.tencent.android.qqdownloader.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+
+    <application
+        android:name=".H9PatchesApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/outline_settings_backup_restore_24"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/outline_settings_backup_restore_black_48"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".H9PatchesKeysService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <receiver
+            android:name=".BootBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:priority="1000">
+            <intent-filter>
+                <action android:name="action_get_and_install_plugin" />
+                <action android:name="ACTION_NOTIFY_MEM_CHANGE" />
+                <action android:name="action_v5_push_message" />
+                <action android:name="android.intent.action.ACTION_UNSOL_RESPONSE_OEM_HOOK_RAW" />
+                <action android:name="android.intent.action.ALARM_CHANGED" />
+                <action android:name="android.intent.action.BADGE_COUNT_UPDATE" />
+                <action android:name="android.intent.action.GTALK_CONNECTED" />
+                <action android:name="android.intent.action.GTALK_DISCONNECTED" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_STARTED" />
+                <action android:name="android.intent.action.PROVIDER_CHANGED" />
+                <action android:name="android.intent.action.RINGTONE_ADD" />
+                <action android:name="android.intent.action.ultimatesnapshot" />
+                <action android:name="android.net.sip.SIP_SERVICE_UP" />
+                <action android:name="applock_cloudcfg_changed_notification" />
+                <action android:name="broadcast_action_close_pop" />
+                <action android:name="broadcast_action_request_query" />
+                <action android:name="com.android.calendar.APPWIDGET_UPDATE" />
+                <action android:name="com.android.contacts.favorites.updated" />
+                <action android:name="com.android.huawei.DATASERVICE_SETTING_CHANGED" />
+                <action android:name="com.android.internal.telephony" />
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+                <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.ufosdk.getappkeysuccess_getnewhistoryflag" />
+                <action android:name="com.bytedance.frameworks.plugin.ACTION_REPORTER" />
+                <action android:name="com.cmcm.screensaver.screen_off" />
+                <action android:name="com.cmcm.screensaver.screen_on" />
+                <action android:name="com.google.android.checkin.CHECKIN_COMPLETE" />
+                <action android:name="com.google.android.talk.MCS_CONNECTION_SERVICE_STARTED" />
+                <action android:name="com.huawei.android.push.intent.REGISTER" />
+                <action android:name="com.huawei.android.push.intent.SOCKET_INFO" />
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+                <action android:name="com.huawei.mms.RINGER_MODE_CHANGED" />
+                <action android:name="com.kingroot.common.ACTION_NEW_APP_STARTED" />
+                <action android:name="com.kingroot.common.ACTION_NOTIFY_IN_SELF_APP_MAIN" />
+                <action android:name="com.kingroot.common.ACTION_NOTIFY_OUT_SELF_APP_BY_MAIN" />
+                <action android:name="com.kingroot.common.ACTION_SWITCH_IN_DESKTOP" />
+                <action android:name="com.kingroot.common.ACTION_SWITCH_OUT_DESKTOP" />
+                <action android:name="com.kingroot.common.ACTION_TOP_ACTIVITY_CHANGED" />
+                <action android:name="com.kingroot.common.ACTION_TOP_APP_CHANGED" />
+                <action android:name="com.kingroot.kinguser.gamebox.ACTION_GAME_ADDED" />
+                <action android:name="com.morgoo.doirplugin.PACKAGE_ADDED" />
+                <action android:name="com.qihoo.action.UPDATE_NOTIFY" />
+                <action android:name="com.qihoo.antivirus.sync.ActivityResultChange" />
+                <action android:name="com.qihoo.appstore.appwatcher.removeall" />
+                <action android:name="com.qihoo.appstore.appwatcher.reset" />
+                <action android:name="com.qihoo.root.rooting" />
+                <action android:name="com.qihoo.root.rootover" />
+                <action android:name="com.qihoo360.launcher.action.APP_ICON_NOTIFICATION_COUNT" />
+                <action android:name="com.sina.weibo.action.push.active.groupscheme" />
+                <action android:name="com.sina.weibo.action.push.active.record.complete" />
+                <action android:name="com.sina.weibo.guardunion.NEW_DATA" />
+                <action android:name="com.sina.weibo.photo.action.UPDATE_VIDEO_CONFIG" />
+                <action android:name="com.sina.weibo.video.debug.ACTION_PLAYER_LOG_SAVED" />
+                <action android:name="com.sina.weibo.video.debug.ACTION_PLAYER_LOG_START" />
+                <action android:name="com.taobao.bootimage.show.coldstart" />
+                <action android:name="com.taobao.bootimage.show.finish" />
+                <action android:name="com.taobao.event.HomePageLoadFinished" />
+                <action android:name="com.taobao.tao.messagkit.receive" />
+                <action android:name="com.taobao.taobao.action.BUNDLES_INSTALLED" />
+                <action android:name="com.taobao.taobao.intent.action.INIT" />
+                <action android:name="com.tencent.android.qqdownloader.action.CAN_UPDATE_APP_SUM_CHANGED" />
+                <action android:name="com.tencent.assistant.ipc.firststart.action" />
+                <action android:name="com.tencent.intent.QZONE_PRE_DOWNLOAD_CANCEL" />
+                <action android:name="com.tencent.mm.Intent.ACTION_CLICK_FLOW_REPORT" />
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_REGISTER" />
+                <action android:name="com.tencent.mm.ui.ACTION_ACTIVE" />
+                <action android:name="com.tencent.mm.ui.ACTION_DEACTIVE" />
+                <action android:name="com.tencent.mobileqq.activity.NotifyPushSettingActivity.ConfigPCActive" />
+                <action android:name="com.tencent.mobileqq.broadcast.qq" />
+                <action android:name="com.tencent.mobileqq.cooperation.plugin.comic_plugin.apk" />
+                <action android:name="com.tencent.mobileqq.cooperation.plugin.Photoplus.apk" />
+                <action android:name="com.tencent.mobileqq.cooperation.plugin.qlink_plugin.apk" />
+                <action android:name="com.tencent.mobileqq.cooperation.plugin.qqreaderplugin.apk" />
+                <action android:name="com.tencent.mobileqq.msf.wakeup" />
+                <action android:name="com.tencent.mobileqq.openapi.ACTION_LOGIN" />
+                <action android:name="com.tencent.mobileqq.PreLoadComicProcess" />
+                <action android:name="com.tencent.mobileqq.qqwifi.scanStateChange" />
+                <action android:name="com.tencent.mobileqq.secmsg.NetReconnect" />
+                <action android:name="com.tencent.plugin.state.change" />
+                <action android:name="com.tencent.process.exit" />
+                <action android:name="com.tencent.process.starting" />
+                <action android:name="com.tencent.process.stopping" />
+                <action android:name="com.tencent.process.tmdownloader.exit" />
+                <action android:name="com.tencent.qplus.THEME_INVALIDATE" />
+                <action android:name="com.tencent.qplus.THEME_UPDATE" />
+                <action android:name="com.tencent.qq.syncQQMessage" />
+                <action android:name="com.tencent.qqhead.getheadreq" />
+                <action android:name="com.tencent.qqmusic.ACTION_FREE_FLOW_INFO_REFRESH.QQMusicPhone" />
+                <action android:name="com.tencent.qqmusic.ACTION_META_CHANGED.QQMusicPhone" />
+                <action android:name="com.tencent.qqmusic.ACTION_SDCARD_STATE_CHANGED.QQMusicPhone" />
+                <action android:name="com.tencent.qqmusic.ACTION_SERVICE_REPAINT_WIDGET.QQMusicPhone" />
+                <action android:name="com.tencent.receiver.qfav.srvaddr" />
+                <action android:name="com.tencent.receiver.soso" />
+                <action android:name="com.tencent.redpoint.broadcast.push.av" />
+                <action android:name="com.tentcent.mobileqq.dpc.broadcast" />
+                <action android:name="com.xiaomi.push.service_started" />
+                <action android:name="download.app.DOWNLOAD_APP" />
+                <action android:name="event_checked_result" />
+                <action android:name="event_file_downloaded" />
+                <action android:name="event_update_begin" />
+                <action android:name="event_update_end" />
+                <action android:name="event_update_progress" />
+                <action android:name="finishNOOSN" />
+                <action android:name="home_search_enable" />
+                <action android:name="hotfix.action.update" />
+                <action android:name="huawei.intent.action.POWER_MODE_CHANGED_ACTION" />
+                <action android:name="miui.intent.action.NETWORK_BLOCKED" />
+                <action android:name="miui.intent.action.NETWORK_CONNECTED" />
+                <action android:name="mqq.intent.action.EXITcom.tencent.mobileqq" />
+                <action android:name="mqq.intent.action.LAUNCH_com.tencent.mobileqq" />
+                <action android:name="netAnaly.day.flow.collect" />
+                <action android:name="qqcomic.downloader.tasksfinished.broadcast" />
+                <action android:name="qy.player.core.type" />
+                <action android:name="sina.weibo.action.NOUSER" />
+                <action android:name="TAOBAO_DELAY_START_LOGIN" />
+                <action android:name="TAOBAO_DELAY_START_POWMSG" />
+                <action android:name="tencent.video.q2v.GroupSystemMsg" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="wifi.intent.action.INTERNET_ACCESS_ENABLED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_NEW_PICTURE" />
+                <action android:name="android.intent.action.ACTION_NEW_VIDEO" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+                <action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+                <action android:name="com.taobao.accs.intent.action.ELECTION" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".H9PatchesService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="h9patches.intent.action.DISABLE_PRE_COLLISION_SYSTEM" />
+                <action android:name="h9patches.intent.action.ENABLE_COLLISION_SYSTEM" />
+                <action android:name="h9patches.intent.action.ENABLE_LANE_KEEP_ASSIST_SYSTEM" />
+                <action android:name="h9patches.intent.action.DISABLE_LANE_KEEP_ASSIST_SYSTEM" />
+                <action android:name="h9patches.intent.action.TOGGLE_LANE_KEEP_ASSIST_SYSTEM" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

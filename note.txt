@@ -1,0 +1,171 @@
+
+
+Using Package Manager list all broadcast receivers listening for BOOT_COMPLETED:
+
+~# pm query-receivers --components -a android.intent.action.BOOT_COMPLETED
+
+It will give a list of broadcast receivers in format package_name/component_name. See dumpsys activity broadcast-stats and dumpsys activity broadcasts for more details.
+
+Now to disable a component:
+
+~# pm disable <package/component>
+
+
+custom ROMs like LineageOS. If you are on one of such ROMs, you can control the autostart behavior through adb shell:
+
+~$ appops set <package> BOOT_COMPLETED deny
+
+
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -c android.intent.category.HOME -n package_name/class_name
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -p com.example.package
+
+adb shell cmd package query-receivers --components -a android.intent.action.BOOT_COMPLETED
+
+
+3
+
+Whether an app is enabled or disabled is stored in a single file /data/system/users/0/package-restrictions.xml.
+
+
+I took the following steps to re-enable the Google App and solve my bootloop problem:
+
+    Boot the Android-x86 virtual machine in debug mode (i.e. append DEBUG=2 to the GRUB entry)
+
+    mount the filesystem:
+
+    su
+
+    cd /dev    # these are necessary to "refresh" the environment
+    cd ..      # otherwise the following commands wouldn't work
+
+    mkdir temp
+    mount /dev/block/sda1 temp
+
+    Edit the package-restrictions.xml file with vi:
+
+    vi /temp/android-6.0-rc1/data/system/users/0/package-restrictions.xml
+
+
+settings > security > auto start
+
+
+
+
+android怎么获取程序是否有自启动权限
+我在别的地方看到这种方法：
+ComponentName localComponentName = new ComponentName(MyApplication.getInstance(), BootCompletedReceiver.class);
+int i = MyApplication.getInstance().getPackageManager().getComponentEnabledSetting(localComponentName);
+判断i的值，4个状态，0默认 1可用 2禁止 3user disable
+但是不管开关打开还是关闭，都只能获取到0。
+我是在小米2上测试的
+
+
+
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -c android.intent.category.HOME -n com.spark.h9patches.BootBroadcastReceiver
+
+
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED my.package.name
+
+
+
+
+
+如果提示Read-only filesystem，那么就要重新挂载一下/system，把只读挂载成可读写，只有手机root了才能运行：
+
+mount -o remount,rw/dev/block/mtdblock0/system /
+
+再运行su就能让adb shell获取root权限了。
+
+
+2、可以修改根目录下的default.prop提权： 根目录默认是不允许修改的，执行
+
+mount -o remount,rw rootfs /
+
+用vi打开default.prop，找到ro.secure，修改为ro.secure=0，保存后重启，再adb shell一下，就会有root权限了。 方法：
+
+修改./default.prop
+
+把ro.secure设为0，persist.service.adb.enable设为1，adbd进程就会以root用户的身份启动。
+
+
+adb push appops.xml /data/system/appops.xml
+
+/data/system/packages.xml
+
+
+
+desay_svautomotive.car.service.CanInfoMessageManagerService
+
+
+    java.lang.ClassCastException: android.os.BinderProxy cannot be cast to com.desay_svautomotive.caninfoservice.CanInfoMessageManagerService$CanInfoMessageBinder
+        at com.spark.h9patches.H9PatchesCanInfoBaseService$2.onServiceConnected(H9PatchesCanInfoBaseService.java:46)
+        at android.app.LoadedApk$ServiceDispatcher.doConnected(LoadedApk.java:1652)
+        at android.app.LoadedApk$ServiceDispatcher$RunConnection.run(LoadedApk.java:1681)
+        at android.os.Handler.handleCallback(Handler.java:790)
+        at android.os.Handler.dispatchMessage(Handler.java:99)
+
+获取系统版本：adb shell getprop ro.build.version.release
+
+
+获取系统api版本：adb shell getprop ro.build.version.sdk
+
+
+获取手机相关制造商信息：adb shell getprop | grep "model\|version.sdk\|manufacture
+r\|hardware\|platform\|revision\|serialno\|product.name\|brand"
+
+adb shell "cat /system/build.prop | grep "product""
+
+
+
+a)
+1
+
+openssl pkcs8 -inform DER -nocrypt -in testkey.pk8 -out testkey.pem
+openssl pkcs12 -export -in testkey.x509.pem -inkey testkey.pem -out testkey.p12 -password pass:12345678 -name testkey
+keytool -importkeystore -deststorepass 12345678 -destkeystore testkey.jks -srckeystore testkey.p12 -srcstoretype PKCS12 -srcstorepass 12345678
+
+openssl pkcs8 -inform DER -nocrypt -in platform.pk8 -out platform.pem
+openssl pkcs12 -export -in platform.x509.pem -inkey platform.pem -out platform.p12 -password pass:12345678 -name platform
+keytool -importkeystore -deststorepass 12345678 -destkeystore platform.jks -srckeystore platform.p12 -srcstoretype PKCS12 -srcstorepass 12345678
+
+使用 open ssl 将pk8 解密为 pem 文件, 此时生成一个testkey.pem 文件
+b)
+
+openssl pkcs12 -export -in testkey.x509.pem -inkey testkey.pem -out platform.p12 -password pass:12345678 -name testkey
+
+将两个pem 文件导入platform.p12文件中,并设置 别名 testkey 和keypass 密码:12345678 (别名和密码可自定义)
+会新生成 platform.p12
+
+c)
+
+keytool -importkeystore -deststorepass 12345678 -destkeystore testkey.jks -srckeystore platform.p12 -srcstoretype PKCS12 -srcstorepass 12345678
+
+使用keytool 将之前生成的platform.p12导入 testkey.jks 签名中,并设置storepass密码(12345678)
+需要正确提供keypass 密码
+此时即生成了需要的testkey.jks 签名文件
+
+d)
+
+keytool -list -v -keystore testkey.jks
+
+
+java -jar signapk.jar cert.x509.pem private.pk8 unsigned.apk signed.apk
+java -jar signapk.jar my.x509.pem my_private.pk8 my.apk my_signed.apk
+
+apksigner sign --ks D:\itlao5.keystore --ks-key-alias itlao5 --out D:\itlao5_signed.apk D:\itlao5.apk
+
+apksigner sign --ks keystore.jks |
+  --key key.pk8 --cert cert.x509.pem
+  [signer_options] app-name.apk
+
+apksigner verify [options] app-name.apk
+
+--v3-signing-enabled
+
+$ apksigner sign --ks release.jks app.apk
+
+$ apksigner sign --key release.pk8 --cert release.x509.pem app.apk
+
+changeToNextSource
+
+log3

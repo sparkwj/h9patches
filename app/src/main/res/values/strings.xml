@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">H9Patches</string>
+    <string name="item_vehicleCollision">Crash safety assist</string>
+    <string name="preference_file_key">com.spark.h9patches.default_preference</string>
+    <string name="preference_saved_AEB_key">preference_saved_AEB_key</string>
+    <string name="h9patches_main_title">H9 Patches Tool</string>
+    <string name="preference_saved_RADIO_key">preference_saved_RADIO_key</string>
+    <string name="item_pause_radio_when_boot">Pause raido when boot</string>
+    <string name="notification_channel">h9patches</string>
+    <string name="notification_title">H9Patches Tool</string>
+    <string name="notification_message">H9 Patches Service are running</string>
+    <string name="ticker_text">Running</string>
+    <string name="preference_saved_LANE_key">preference_saved_LANE_key</string>
+    <string name="item_lane_assist_shortcuts">Double click to toggle lane assist system</string>
+    <string name="copyright">Copyright © sparkwj@gmail.com. All Rights Reserved</string>
+</resources>

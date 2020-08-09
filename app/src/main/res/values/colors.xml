@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorTransparency">#00000000</color>
+    <color name="colorBlack">#80000000</color>
+    <color name="colorFalseGray">#ff6c6c6a</color>
+    <color name="colorLightWhite">#ffffffff</color>
+    <color name="deep_gray_thumb">#11ffffff</color>
+    <color name="gray_thumb">#ff5f6e7a</color>
+    <color name="blue_thumb">#ffeeeeee</color>
+    <color name="blue_track">#ff2883d4</color>
+    <color name="blue_track_enable">#8a2883d4</color>
+    <color name="deep_gray_track">#8816344b</color>
+    <color name="gray_track">#ff16344b</color>
+</resources>

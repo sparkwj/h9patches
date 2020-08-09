@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="curtain" type="id"></item>
+    <item name="carsettingsLayout" type="id"></item>
+    <item name="spaceAEB" type="id" />
+    <item name="swAEB" type="id" />
+</resources>
