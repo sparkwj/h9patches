@@ -2,19 +2,30 @@ package com.spark.h9patches;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private int a = 0;
+    private int b = 0;
 
     Switch swAEB_Veh;
     Switch swRADIO;
     Switch swLANE;
+    TextView txtH9PatchesTitle;
+
     SharedPreferences sharedPref;
+
+    private String developtag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "MainActivity started!");
 
+        this.developtag = SystemProperties.get("persist.sv.debug.adb_enable");
         sharedPref = H9PatchesApplication.getSharedPref();
         initViews();
 
@@ -65,6 +77,33 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putBoolean(getString(R.string.preference_saved_LANE_key), b);
                 editor.commit();
+            }
+        });
+        this.txtH9PatchesTitle = findViewById(R.id.txtH9PatchesTitle);
+        this.txtH9PatchesTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (MainActivity.this.developtag.equals("0") || MainActivity.this.developtag.equals("")) {
+                    MainActivity.this.a++;
+                    if (MainActivity.this.a == 6) {
+                        Toast toast=Toast.makeText(MainActivity.this, getString(R.string.txt_adb_enabled), Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                        SystemProperties.set("persist.sv.debug.adb_enable", "1");
+                        MainActivity.this.a = 0;
+                        MainActivity.this.developtag = "1";
+                    }
+                } else if (MainActivity.this.developtag.equals("1")) {
+                    MainActivity.this.b++;
+                    if (MainActivity.this.b == 3) {
+                        Toast toast=Toast.makeText(MainActivity.this, getString(R.string.txt_adb_disabled), Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                        SystemProperties.set("persist.sv.debug.adb_enable", "0");
+                        MainActivity.this.b = 0;
+                        MainActivity.this.developtag = "0";
+                    }
+                }
             }
         });
     }

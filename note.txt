@@ -169,3 +169,5 @@ $ apksigner sign --key release.pk8 --cert release.x509.pem app.apk
 changeToNextSource
 
 log3
+
+

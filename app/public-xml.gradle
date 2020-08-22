@@ -8,9 +8,7 @@ class PublicPlugin implements Plugin<Project> {
                 def android = project.extensions.getByName("android")
                 def aaptOptions = android.aaptOptions
                 android.applicationVariants.all {def variant ->
-                    project.logger.error "xxxxx ${variant.name.capitalize()}"
 //       def processResourcesTask = project.tasks.getByName("process${variant.name.capitalize()}Resources")
-                    project.logger.error "xxxxx ${aaptOptions}"
                     if (aaptOptions) {
 //                        def aaptOptions = processResourcesTask.aaptOptions
                         File publicTxtFile = project.rootProject.file('generate_public.txt')

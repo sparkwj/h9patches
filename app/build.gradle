@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply from: 'public-xml.gradle'
 
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
 android {
     compileSdkVersion 30
     buildToolsVersion '30.0.1'
@@ -34,7 +37,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }

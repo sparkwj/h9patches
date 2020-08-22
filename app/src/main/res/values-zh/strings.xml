@@ -14,4 +14,6 @@
     <string name="preference_saved_LANE_key">preference_saved_LANE_key</string>
     <string name="item_lane_assist_shortcuts">快速开启车道辅助功能</string>
     <string name="copyright">Copyright © sparkwj@gmail.com. All Rights Reserved</string>
+    <string name="txt_adb_enabled">ADB调试功能已打开</string>
+    <string name="txt_adb_disabled">ADB调试功能已关闭</string>
 </resources>

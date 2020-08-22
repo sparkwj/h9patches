@@ -4,7 +4,7 @@
         <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtH9PatchesTitle"
                 style="@style/h9patches_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
                         android:background="@drawable/check_bg"
                         android:checked="true"
                         android:focusable="true"
-                        android:tag="swRADIO" />
+                        android:tag="swAEB" />
 
                     <ImageView
                         style="@style/itemLine"
@@ -46,7 +46,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/spaceAEB"
+                    android:id="@+id/spaceRADIO"
                     style="@style/ItemStyle"
                     android:layout_width="match_parent"
                     android:gravity="center_vertical">
@@ -65,7 +65,7 @@
                         android:background="@drawable/check_bg"
                         android:checked="true"
                         android:focusable="true"
-                        android:tag="swAEB" />
+                        android:tag="swRADIO" />
 
                     <ImageView
                         style="@style/itemLine"
