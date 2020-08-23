@@ -1,5 +1,6 @@
 package com.spark.h9patches;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -11,17 +12,20 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.provider.Settings;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private int a = 0;
     private int b = 0;
+    private int clicks = 0;
 
     Switch swAEB_Veh;
     Switch swRADIO;
     Switch swLANE;
     TextView txtH9PatchesTitle;
+    TextView textView2;
 
     SharedPreferences sharedPref;
 
@@ -82,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         this.txtH9PatchesTitle = findViewById(R.id.txtH9PatchesTitle);
         this.txtH9PatchesTitle.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {//codes copy from dsv
                 if (MainActivity.this.developtag.equals("0") || MainActivity.this.developtag.equals("")) {
                     MainActivity.this.a++;
                     if (MainActivity.this.a == 6) {
@@ -103,6 +107,18 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.this.b = 0;
                         MainActivity.this.developtag = "0";
                     }
+                }
+            }
+        });
+        this.textView2 = findViewById(R.id.textView2);
+        this.textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.clicks++;
+                if (MainActivity.this.clicks == 3) {
+                    MainActivity.this.clicks = 0;
+                    Intent it = new Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS);
+                    startActivity(it);
                 }
             }
         });
