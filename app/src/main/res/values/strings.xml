@@ -16,4 +16,6 @@
     <string name="copyright">Copyright © sparkwj@gmail.com. All Rights Reserved</string>
     <string name="txt_adb_enabled">ADB enabled!</string>
     <string name="txt_adb_disabled">ADB disabled!</string>
+    <string name="item_wifi_hot_spot">Enable wifi hotspot when startup</string>
+    <string name="preference_saved_HOTSPOT_key">preference_saved_HOTSPOT_key</string>
 </resources>

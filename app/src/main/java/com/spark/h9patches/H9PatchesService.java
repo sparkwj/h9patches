@@ -77,6 +77,7 @@ public class H9PatchesService extends Service {
         } else {
             checkRadioPlay();
             togglePreCollisionSystem(false);
+            openWifiHotspot();
         }
         return super.onStartCommand(intent, flags, startId);
     }
@@ -95,6 +96,9 @@ public class H9PatchesService extends Service {
 
         mHandler.removeMessages(99);
         mHandler.sendEmptyMessageDelayed(99, 1000);
+
+        mHandler.removeMessages(101);
+        mHandler.sendEmptyMessageDelayed(101, 1000 * 60 * 5);
     }
 
     public OnCarSensorListener.Stub carSensorListener = new OnCarSensorListener.Stub() {
@@ -143,6 +147,10 @@ public class H9PatchesService extends Service {
                     removeMessages(99);
                     //H9PatchesService.this.disablePreCollisionSystem();
                 }
+            } else if (msg.what == 101) {
+
+                mHandler.removeMessages(101);
+                mHandler.sendEmptyMessageDelayed(101, 1000 * 60 * 5);
             }
         }
     };
@@ -342,19 +350,20 @@ public class H9PatchesService extends Service {
             return;
         }
         Log.d(TAG, "执行关闭收音机 ");
-        new Handler().postDelayed(new Runnable() {
-            public void run() {
-                Intent intent = new Intent("pause");
-                String packageName = "com.desay_svautomotive.svradio";
-                String className = "com.desay_svautomotive.svradio.service.RadioService";
-                intent.setClassName(packageName, className);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    startForegroundService(intent);
-                } else {
-                    startService(intent);
-                }
-            }
-        }, 1000);
+        Utils.requestAudioFocus();
+//        new Handler().postDelayed(new Runnable() {
+//            public void run() {
+//                Intent intent = new Intent("pause");
+//                String packageName = "com.desay_svautomotive.svradio";
+//                String className = "com.desay_svautomotive.svradio.service.RadioService";
+//                intent.setClassName(packageName, className);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//                    startForegroundService(intent);
+//                } else {
+//                    startService(intent);
+//                }
+//            }
+//        }, 1000);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -381,4 +390,13 @@ public class H9PatchesService extends Service {
 
         startForeground(ONGOING_NOTIFICATION_ID, notification);
     }
+
+    private void openWifiHotspot() {
+        boolean b = sharedPref.getBoolean(getString(R.string.preference_saved_HOTSPOT_key), false);
+        if (!b) {
+            return;
+        }
+        Utils.openWifiHotspot();
+    }
+
 }

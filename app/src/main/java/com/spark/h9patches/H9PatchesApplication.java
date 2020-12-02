@@ -17,6 +17,9 @@ public class H9PatchesApplication extends CarSettingsApplication {
     public void onCreate() {
         super.onCreate();
         _instance = this;
+        Utils.setContext(this);
+
+        Utils.setContentResolver(getContentResolver());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(new Intent(this, H9PatchesService.class));

@@ -16,4 +16,6 @@
     <string name="copyright">Copyright © sparkwj@gmail.com. All Rights Reserved</string>
     <string name="txt_adb_enabled">ADB调试功能已打开</string>
     <string name="txt_adb_disabled">ADB调试功能已关闭</string>
+    <string name="item_wifi_hot_spot">自动开启Wifi热点</string>
+    <string name="preference_saved_HOTSPOT_key">preference_saved_HOTSPOT_key</string>
 </resources>

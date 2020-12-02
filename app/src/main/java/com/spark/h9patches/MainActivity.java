@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     Switch swAEB_Veh;
     Switch swRADIO;
     Switch swLANE;
+    Switch swHOTSPOT;
+    SeekBar sbNIGHTBRIGHT;
     TextView txtH9PatchesTitle;
     TextView textView2;
 
@@ -41,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
         this.developtag = SystemProperties.get("persist.sv.debug.adb_enable");
         sharedPref = H9PatchesApplication.getSharedPref();
         initViews();
+
+//        Log.d(TAG, "Utils.getScreenBrightness: " + Utils.getSystemBrightness());
+//        Utils.setSystemBrightness(5);
+//        Utils.stopAutoBrightness();
+//        Utils.setSystemBrightness(5);
+//        Log.d(TAG, "Utils.getScreenBrightness: " + Utils.getSystemBrightness());
+//        Utils.requestAudioFocus();
 
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 //            startForegroundService(new Intent(this, H9PatchesService.class));
@@ -81,6 +91,19 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putBoolean(getString(R.string.preference_saved_LANE_key), b);
                 editor.commit();
+            }
+        });
+        this.swHOTSPOT = findViewById(R.id.swHOTSPOT);
+        this.swHOTSPOT.setChecked(sharedPref.getBoolean(getString(R.string.preference_saved_HOTSPOT_key), false));
+        this.swHOTSPOT.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putBoolean(getString(R.string.preference_saved_HOTSPOT_key), b);
+                editor.commit();
+                if (b) {
+                    Utils.openWifiHotspot();
+                }
             }
         });
         this.txtH9PatchesTitle = findViewById(R.id.txtH9PatchesTitle);

@@ -105,8 +105,37 @@
                         android:src="@drawable/long_line" />
                 </RelativeLayout>
 
-            </LinearLayout>
 
+                <RelativeLayout
+                    android:id="@+id/spaceHOTSPOT"
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/item_wifi_hot_spot" />
+
+                    <Switch
+                        android:id="@+id/swHOTSPOT"
+                        style="@style/SwitchStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/check_bg"
+                        android:checked="true"
+                        android:focusable="true"
+                        android:tag="swHOTSPOT" />
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/long_line" />
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
     </com.desay_svautomotive.svcarsettings.widget.MyScrollView>
     <TextView
