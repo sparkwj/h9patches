@@ -217,7 +217,7 @@ public class H9PatchesService extends Service {
     }
 
     private void toggleLaneKeepAssistSystemValue(int command) {
-        boolean b = sharedPref.getBoolean(getString(R.string.preference_saved_AEB_key), false);
+        boolean b = sharedPref.getBoolean(getString(R.string.preference_saved_LANE_key), false);
         if (!b) {
             return;
         }
@@ -250,7 +250,7 @@ public class H9PatchesService extends Service {
     }
 
     public void togglePreCollisionSystem(final boolean on) {
-        boolean b = sharedPref.getBoolean(getString(R.string.preference_saved_LANE_key), false);
+        boolean b = sharedPref.getBoolean(getString(R.string.preference_saved_AEB_key), false);
         Log.d(TAG, "------------------------b:" + b + "---on:" + on);
         if (!b) {
             return;
