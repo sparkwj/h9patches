@@ -27,3 +27,25 @@
     public static int v(...);
     public static int i(...);
 }
+# Please add these rules to your existing keep rules in order to suppress warnings.
+# This is generated automatically by the Android Gradle plugin.
+-dontwarn android.service.notification.ZenModeConfig
+-dontwarn android.text.FontConfig$Family
+-dontwarn android.util.Pools$SynchronizedPool
+-dontwarn android.util.Singleton
+-dontwarn android.view.DisplayAdjustments
+-dontwarn android.view.ViewHierarchyEncoder
+-dontwarn android.view.ViewRootImpl$ActivityConfigCallback
+-dontwarn android.view.Window$OnWindowDismissedCallback
+-dontwarn android.view.Window$WindowControllerCallback
+-dontwarn android.view.autofill.AutofillManager$AutofillClient
+-dontwarn android.view.autofill.AutofillPopupWindow
+-dontwarn android.view.autofill.IAutofillWindowPresenter
+-dontwarn com.android.internal.app.IAppOpsService
+-dontwarn com.android.internal.app.IVoiceInteractor
+-dontwarn com.android.internal.location.ProviderProperties
+-dontwarn com.android.internal.util.AsyncChannel
+-dontwarn com.android.internal.util.FunctionalUtils$ThrowingRunnable
+-dontwarn com.android.internal.util.FunctionalUtils$ThrowingSupplier
+-dontwarn com.android.internal.util.IndentingPrintWriter
+-dontwarn com.android.internal.util.NotificationColorUtil

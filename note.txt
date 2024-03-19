@@ -171,3 +171,49 @@ changeToNextSource
 log3
 
 
+
+If you're not afraid of the command prompt...
+
+To auto-hide only the status bar at the top of your screen, send this command:
+
+ adb shell settings put global policy_control immersive.status=*
+
+To auto-hide only the navigation bar at the bottom of your screen, send this command:
+
+ adb shell settings put global policy_control immersive.navigation=*
+
+To enable full Immersive Mode with both bars automatically hidden, send this command:
+
+ adb shell settings put global policy_control immersive.full=*
+
+To re-enable, remove the "*" at the end of the command
+
+adb shell settings put global policy_control immersive.full=apps,-com.sec.android.app.launcher
+
+To revert it: 
+adb shell settings put global policy_control null*
+
+To "remove" it, you can overscan it past the screen's view:
+
+adb shell wm overscan 0,0,0,-168  
+
+That number might have to be altered, but that's the one that worked for me.
+To revert it: adb shell wm 
+0,0,0,0
+
+If you have to do it in your app, you can request root access and run the commands in the app:
+
+val command = "settings put global policy_control immersive.navigation=*"
+val runtime = Runtime.getRuntime()
+runtime.exec("su")
+runtime.exec(command.split(" "))
+
+
+
+
+
+adb shell cmd shortcut get-default-launcher
+adb shell cmd package set-home-activity com.teslacoilsw.launcher/com.teslacoilsw.launcher.NovaLauncher
+
+
+com.teslacoilsw.launcher/com.teslacoilsw.launcher.NovaLauncher
