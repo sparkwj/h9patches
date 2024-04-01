@@ -54,6 +54,29 @@
         <item name="android:layout_alignParentEnd">true</item>
     </style>
 
+    <style name="buttonStyle">
+        <item name="android:paddingTop">18.0dip</item>
+        <item name="android:paddingBottom">18.0dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+        <item name="android:thumb">@drawable/thumb_bg</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:track">@drawable/track_bg</item>
+        <item name="android:minWidth">100.0dip</item>
+        <item name="android:layout_marginTop">18.0dip</item>
+        <item name="android:layout_marginBottom">18.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>>
+        <item name="android:paddingRight">18.0dip</item>
+        <item name="android:background">@color/colorTransparency</item>
+        <item name="android:paddingStart">10.0dip</item>
+        <item name="android:paddingEnd">10.0dip</item>
+        <item name="android:layout_marginEnd">105.0dip</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
     <style name="h9patches_title">
         <item name="android:textSize">36.0sp</item>
         <item name="android:textColor">@drawable/item_text_color</item>
@@ -66,8 +89,6 @@
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">#888888</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">bottom</item>
-        <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_marginBottom">32.0dip</item>
     </style>
 </resources>

@@ -1,21 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">H9Patches</string>
-    <string name="item_vehicleCollision">Crash safety assist</string>
-    <string name="preference_file_key">com.spark.h9patches.default_preference</string>
-    <string name="preference_saved_AEB_key">preference_saved_AEB_key</string>
-    <string name="h9patches_main_title">H9 Patches Tool</string>
-    <string name="preference_saved_RADIO_key">preference_saved_RADIO_key</string>
-    <string name="item_pause_radio_when_boot">Pause raido when boot</string>
-    <string name="notification_channel">h9patches</string>
-    <string name="notification_title">H9Patches Tool</string>
-    <string name="notification_message">H9 Patches Service are running</string>
-    <string name="ticker_text">Running</string>
-    <string name="preference_saved_LANE_key">preference_saved_LANE_key</string>
-    <string name="item_lane_assist_shortcuts">Double click to toggle lane assist system</string>
-    <string name="copyright">Copyright © sparkwj@gmail.com. All Rights Reserved</string>
-    <string name="txt_adb_enabled">ADB enabled!</string>
-    <string name="txt_adb_disabled">ADB disabled!</string>
-    <string name="item_wifi_hot_spot">Enable wifi hotspot when startup</string>
-    <string name="preference_saved_HOTSPOT_key">preference_saved_HOTSPOT_key</string>
+    <string name="app_name">H9 Plus</string>
+    <string name="text_turn_off_vehicle_collision">Turn off crash safety assist</string>
+    <string name="text_h9patches_main_title">H9 Patches Tool</string>
+    <string name="text_pause_radio_when_boot">Pause radio when boot</string>
+    <string name="key_notification_channel" translatable="false">h9patches</string>
+    <string name="text_notification_title">H9Patches Tool</string>
+    <string name="text_notification_message" translatable="false">H9 Patches Service are running</string>
+    <string name="text_ticker_tips" translatable="false">Running</string>
+    <string name="text_lane_assist_shortcuts">Double click to toggle lane assist system</string>
+    <string name="text_copyright" translatable="false">Copyright © sparkwj@gmail.com. All Rights Reserved</string>
+    <string name="text_adb_enabled">ADB enabled!</string>
+    <string name="text_adb_disabled">ADB disabled!</string>
+    <string name="text_wifi_hot_spot">Enable wifi hotspot when startup</string>
+    <string name="text_startup_script">Startup script</string>
+    <string name="text_hide_system_dock">Hide system dock</string>
+    <string name="text_show_assistive_button">Show assistive button</string>
+    <string name="text_startup_appr">Choose startup app</string>
+    <string name="preference_file_key" translatable="false">com.spark.h9patches.default_preference</string>
+    <string name="pref_turn_off_aeb" translatable="false">pref_turn_off_aeb</string>
+    <string name="pref_turn_off_radio" translatable="false">pref_turn_off_radio</string>
+    <string name="pref_lane_assist" translatable="false">pref_lane_assist</string>
+    <string name="pref_turn_on_wifi_spot" translatable="false">pref_turn_on_wifi_spot</string>
+    <string name="pref_hide_navigation_bar" translatable="false">pref_hide_navigation_bar</string>
+    <string name="pref_accessibility_dock" translatable="false">pref_accessibility_dock</string>
+    <string name="pref_default_launcher" translatable="false">pref_default_launcher</string>
+    <string name="pref_startup_script" translatable="false">pref_startup_script</string>
+    <string name="tag_settings_applications" translatable="false">android.settings.settings</string>
+    <string name="text_edit_startup_script">Edit Startup script</string>
+    <string name="text_save">Save</string>
+    <string name="text_run">Run\t</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="pref_value_startup_script" translatable="false">
+        am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver\n
+        #pm disable com.mapbar.android.mapbarnavi
+</string>
+    <string name="pref_value_gms_script" translatable="false">
+        pm grant com.google.android.gsf.login android.permission.BIND_JOB_SERVICE\n
+        pm grant com.google.android.gsf android.permission.BIND_JOB_SERVICE\n
+        pm grant com.google.android.gms android.permission.BIND_JOB_SERVICE\n
+        pm grant com.android.vending android.permission.BIND_JOB_SERVICE\n
+
+        pm grant com.google.android.gsf.login android.permission.FOREGROUND_SERVICE\n
+        pm grant com.google.android.gsf android.permission.FOREGROUND_SERVICE\n
+        pm grant com.google.android.gms android.permission.FOREGROUND_SERVICE\n
+        pm grant com.android.vending android.permission.FOREGROUND_SERVICE\n
+
+        pm grant com.google.android.gsf.login android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+        pm grant com.google.android.gsf android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+        pm grant com.google.android.gms android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+        pm grant com.android.vending android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+
+        pm grant com.google.android.gsf.login android.permission.WRITE_SECURE_SETTINGS\n
+        pm grant com.google.android.gsf android.permission.WRITE_SECURE_SETTINGS\n
+        pm grant com.google.android.gms android.permission.WRITE_SECURE_SETTINGS\n
+        pm grant com.android.vending android.permission.WRITE_SECURE_SETTINGS\n
+
+        pm grant com.google.android.gsf.login android.permission.MANAGE_USERS\n
+        pm grant com.google.android.gsf android.permission.MANAGE_USERS\n
+        pm grant com.google.android.gms android.permission.MANAGE_USERS\n
+        pm grant com.android.vending android.permission.MANAGE_USERS\n
+
+        pm grant com.google.android.gsf.login android.permission.INTERACT_ACROSS_USERS\n
+        pm grant com.google.android.gsf android.permission.INTERACT_ACROSS_USERS\n
+        pm grant com.google.android.gms android.permission.INTERACT_ACROSS_USERS\n
+        pm grant com.android.vending android.permission.INTERACT_ACROSS_USERS\n
+
+        pm grant com.google.android.gsf.login android.permission.BACKUP\n
+        pm grant com.google.android.gsf android.permission.BACKUP\n
+        pm grant com.google.android.gms android.permission.BACKUP\n
+        pm grant com.android.vending android.permission.BACKUP\n
+
+        dpm set-device-owner --user current com.google.android.gms/.mdm.receivers.MdmDeviceAdminReceiver\n
+
+        am start com.android.vending/com.google.android.finsky.activities.MainActivity --user 1000 -ei 1000
+</string>
+    <string name="text_default_launcher">Default launcher</string>
+    <string name="pref_startup_app" translatable="false">pref_startup_app</string>
+    <string name="str_system_launcher_package" translatable="false">com.android.launcher</string>
+    <string name="str_system_launcher_activity" translatable="false">com.desaysv.hmi.launcher.Launcher2Activity</string>
 </resources>

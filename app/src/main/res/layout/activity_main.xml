@@ -1,52 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.desay_svautomotive.svcarsettings.widget.MyScrollView android:paddingTop="15dp" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.desay_svautomotive.svcarsettings.widget.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtH9PatchesTitle"
+                android:id="@+id/textview_h9patches_tool"
                 style="@style/h9patches_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/h9patches_main_title" />
+                android:text="@string/text_h9patches_main_title" />
 
             <LinearLayout
+                android:id="@+id/layout_option_groups"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/spaceAEB"
                     style="@style/ItemStyle"
                     android:layout_width="match_parent"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:tag="@string/tag_settings_applications">
 
                     <TextView
                         style="@style/SecondSubTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/item_vehicleCollision" />
+                        android:text="@string/text_turn_off_vehicle_collision" />
 
                     <Switch
-                        android:id="@+id/swAEB"
                         style="@style/SwitchStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/check_bg"
                         android:checked="true"
-                        android:focusable="true"
-                        android:tag="swAEB" />
+                        android:tag="@string/pref_turn_off_aeb" />
 
                     <ImageView
                         style="@style/itemLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/long_line" />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/spaceRADIO"
                     style="@style/ItemStyle"
                     android:layout_width="match_parent"
                     android:gravity="center_vertical">
@@ -55,28 +68,26 @@
                         style="@style/SecondSubTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/item_pause_radio_when_boot" />
+                        android:text="@string/text_pause_radio_when_boot" />
 
                     <Switch
-                        android:id="@+id/swRADIO"
                         style="@style/SwitchStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/check_bg"
                         android:checked="true"
-                        android:focusable="true"
-                        android:tag="swRADIO" />
+                        android:tag="@string/pref_turn_off_radio" />
 
                     <ImageView
                         style="@style/itemLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/long_line" />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/spaceLANE"
                     style="@style/ItemStyle"
                     android:layout_width="match_parent"
                     android:gravity="center_vertical">
@@ -85,29 +96,27 @@
                         style="@style/SecondSubTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/item_lane_assist_shortcuts" />
+                        android:text="@string/text_lane_assist_shortcuts" />
 
                     <Switch
-                        android:id="@+id/swLANE"
                         style="@style/SwitchStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/check_bg"
                         android:checked="true"
-                        android:focusable="true"
-                        android:tag="swLANE" />
+                        android:tag="@string/pref_lane_assist" />
 
                     <ImageView
                         style="@style/itemLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/long_line" />
                 </RelativeLayout>
 
 
                 <RelativeLayout
-                    android:id="@+id/spaceHOTSPOT"
                     style="@style/ItemStyle"
                     android:layout_width="match_parent"
                     android:gravity="center_vertical">
@@ -116,33 +125,264 @@
                         style="@style/SecondSubTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/item_wifi_hot_spot" />
+                        android:text="@string/text_wifi_hot_spot" />
 
                     <Switch
-                        android:id="@+id/swHOTSPOT"
                         style="@style/SwitchStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/check_bg"
-                        android:checked="true"
-                        android:focusable="true"
-                        android:tag="swHOTSPOT" />
+                        android:checked="false"
+                        android:tag="@string/pref_turn_on_wifi_spot" />
 
                     <ImageView
                         style="@style/itemLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/long_line" />
                 </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_hide_system_dock" />
+
+                    <Switch
+                        style="@style/SwitchStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/check_bg"
+                        android:checked="true"
+                        android:tag="@string/pref_hide_navigation_bar"/>
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_show_assistive_button" />
+
+                    <Switch
+                        style="@style/SwitchStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/check_bg"
+                        android:checked="true"
+                        android:tag="@string/pref_accessibility_dock"/>
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_default_launcher" />
+
+                    <Spinner
+                        android:id="@+id/spinner_default_launcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="95dip"
+                        android:minWidth="300dip"
+                        android:minHeight="50dip"
+                        android:paddingStart="10dip"
+                        android:paddingEnd="10dip" />
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_startup_appr" />
+
+                    <Spinner
+                        android:id="@+id/spinner_startup_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="95dip"
+                        android:minWidth="300dip"
+                        android:minHeight="50dip"
+                        android:paddingStart="10dip"
+                        android:paddingEnd="10dip" />
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_startup_script" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditScript"
+                        style="@style/buttonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:contentDescription="@string/text_edit_startup_script"
+                        android:focusable="true"
+                        android:scaleType="center"
+                        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+
+                </RelativeLayout>
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_copyright"
+                style="@style/copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:layout_marginBottom="80dip"
+                android:text="@string/text_copyright" />
+
         </LinearLayout>
     </com.desay_svautomotive.svcarsettings.widget.MyScrollView>
-    <TextView
-        android:id="@+id/textView2"
+
+    <LinearLayout
+        android:id="@+id/layoutScriptEditor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/copyright"
-        android:text="@string/copyright" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="60dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/scriptEditor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:background="@color/blue_thumb"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:textColor="#000000"
+                tools:ignore="LabelFor" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginTop="0sp"
+                    android:layout_marginEnd="2sp"
+                    android:layout_marginBottom="5sp"
+                    android:minWidth="100dp"
+                    android:text="@string/text_save" />
+
+                <Button
+                    android:id="@+id/btnRun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginTop="0sp"
+                    android:layout_marginEnd="2sp"
+                    android:layout_marginBottom="5sp"
+                    android:minWidth="100dp"
+                    android:text="@string/text_run" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2sp"
+                    android:layout_marginTop="0sp"
+                    android:layout_marginEnd="5sp"
+                    android:layout_marginBottom="5sp"
+                    android:minWidth="100dp"
+                    android:text="@string/text_cancel" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

@@ -166,6 +166,14 @@ $ apksigner sign --ks release.jks app.apk
 
 $ apksigner sign --key release.pk8 --cert release.x509.pem app.apk
 
+
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6_mod.apk
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6_mod.apk
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6_mod.apk
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6_mod.apk
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6_mod.apk
+
+
 changeToNextSource
 
 log3
@@ -188,14 +196,22 @@ To enable full Immersive Mode with both bars automatically hidden, send this com
 
 To re-enable, remove the "*" at the end of the command
 
-adb shell settings put global policy_control immersive.full=apps,-com.sec.android.app.launcher
+
+adb shell settings put global policy_control immersive.full=apps,-com.android.app.launcher
 
 To revert it: 
 adb shell settings put global policy_control null*
 
 To "remove" it, you can overscan it past the screen's view:
 
-adb shell wm overscan 0,0,0,-168  
+adb shell wm overscan 0,0,0,-168
+
+adb shell pm grant com.google.android.gsf.login android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.google.android.gsf android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.google.android.gms android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.android.vending android.permission.WRITE_SECURE_SETTINGS
+
+adb shell pm grant -g {the package}
 
 That number might have to be altered, but that's the one that worked for me.
 To revert it: adb shell wm 
@@ -217,3 +233,230 @@ adb shell cmd package set-home-activity com.teslacoilsw.launcher/com.teslacoilsw
 
 
 com.teslacoilsw.launcher/com.teslacoilsw.launcher.NovaLauncher
+
+
+
+pm uninstall -k --user 0 NameOfPackage
+
+
+find top
+adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
+
+
+
+
+
+
+
+
+
+
+pm grant com.google.android.gsf.login android.permission.BIND_JOB_SERVICE\n
+pm grant com.google.android.gsf android.permission.BIND_JOB_SERVICE\n
+pm grant com.google.android.gms android.permission.BIND_JOB_SERVICE\n
+pm grant com.android.vending android.permission.BIND_JOB_SERVICE\n
+
+pm grant com.google.android.gsf.login android.permission.FOREGROUND_SERVICE\n
+pm grant com.google.android.gsf android.permission.FOREGROUND_SERVICE\n
+pm grant com.google.android.gms android.permission.FOREGROUND_SERVICE\n
+pm grant com.android.vending android.permission.FOREGROUND_SERVICE\n
+
+pm grant com.google.android.gsf.login android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+pm grant com.google.android.gsf android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+pm grant com.google.android.gms android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+pm grant com.android.vending android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST\n
+
+pm grant com.google.android.gsf.login android.permission.WRITE_SECURE_SETTINGS\n
+pm grant com.google.android.gsf android.permission.WRITE_SECURE_SETTINGS\n
+pm grant com.google.android.gms android.permission.WRITE_SECURE_SETTINGS\n
+pm grant com.android.vending android.permission.WRITE_SECURE_SETTINGS\n
+
+pm grant com.google.android.gsf.login android.permission.MANAGE_USERS\n
+pm grant com.google.android.gsf android.permission.MANAGE_USERS\n
+pm grant com.google.android.gms android.permission.MANAGE_USERS\n
+pm grant com.android.vending android.permission.MANAGE_USERS\n
+
+pm grant com.google.android.gsf.login android.permission.INTERACT_ACROSS_USERS\n
+pm grant com.google.android.gsf android.permission.INTERACT_ACROSS_USERS\n
+pm grant com.google.android.gms android.permission.INTERACT_ACROSS_USERS\n
+pm grant com.android.vending android.permission.INTERACT_ACROSS_USERS
+
+
+
+                adb shell dumpsys package com.softmedia.receiver
+                Activity Resolver Table:
+                  Non-Data Actions:
+                      android.intent.action.MAIN:
+                        d62afc2 com.softmedia.receiver/.app.SettingActivity filter e80b853
+                          Action: "android.intent.action.MAIN"
+                          Category: "android.intent.category.LAUNCHER"
+                        d62afc2 com.softmedia.receiver/.app.SettingActivity filter 829f590
+                          Action: "android.intent.action.MAIN"
+                          Category: "android.intent.category.LEANBACK_LAUNCHER"
+                      com.softmedia.receiver.SETTING:
+                        d62afc2 com.softmedia.receiver/.app.SettingActivity filter f9e89
+                          Action: "com.softmedia.receiver.SETTING"
+                          Category: "android.intent.category.DEFAULT"
+
+                Receiver Resolver Table:
+                  Non-Data Actions:
+                      android.net.conn.CONNECTIVITY_CHANGE:
+                        69e21d3 com.softmedia.receiver/.app.NetworkStateReceiver filter 7c857b7
+                          Action: "android.net.conn.CONNECTIVITY_CHANGE"
+                      com.softmedia.receiver.action.COMMAND:
+                        bd4e110 com.softmedia.receiver/.app.BootCompletedReceiver filter c6f9042
+                          Action: "com.softmedia.receiver.action.COMMAND"
+                      android.intent.action.BOOT_COMPLETED:
+                        bd4e110 com.softmedia.receiver/.app.BootCompletedReceiver filter 9914b24
+                          Action: "android.intent.action.BOOT_COMPLETED"
+                      android.intent.action.MY_PACKAGE_REPLACED:
+                        bd4e110 com.softmedia.receiver/.app.BootCompletedReceiver filter 99a268d
+                          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+
+                Key Set Manager:
+                  [com.softmedia.receiver]
+                      Signing KeySets: 28
+
+                Packages:
+                  Package [com.softmedia.receiver] (896e409):
+                    userId=10148
+                    pkg=Package{9b0060e com.softmedia.receiver}
+                    codePath=/data/app/com.softmedia.receiver-OLoCjROfTO34d39Cgp1tyw==
+                    resourcePath=/data/app/com.softmedia.receiver-OLoCjROfTO34d39Cgp1tyw==
+                    legacyNativeLibraryDir=/data/app/com.softmedia.receiver-OLoCjROfTO34d39Cgp1tyw==/lib
+                    primaryCpuAbi=armeabi-v7a
+                    secondaryCpuAbi=null
+                    versionCode=2020164751 minSdk=16 targetSdk=33
+                    versionName=5.0.3
+                    splits=[base]
+                    apkSigningVersion=2
+                    applicationInfo=ApplicationInfo{e9f082f com.softmedia.receiver}
+                    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+                    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+                    dataDir=/data/user/0/com.softmedia.receiver
+                    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+                    timeStamp=2024-03-26 17:57:04
+                    firstInstallTime=2024-03-26 17:57:06
+                    lastUpdateTime=2024-03-26 17:57:06
+                    signatures=PackageSignatures{18efe3c [8478b9f2]}
+                    installPermissionsFixed=true installStatus=1
+                    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+                    requested permissions:
+                      android.permission.INTERNET
+                      android.permission.FOREGROUND_SERVICE
+                      android.permission.MANAGE_EXTERNAL_STORAGE
+                      android.permission.READ_EXTERNAL_STORAGE
+                      android.permission.WRITE_EXTERNAL_STORAGE
+                      android.permission.RECEIVE_BOOT_COMPLETED
+                      android.permission.ACCESS_WIFI_STATE
+                      android.permission.ACCESS_NETWORK_STATE
+                      android.permission.CHANGE_WIFI_MULTICAST_STATE
+                      android.permission.WAKE_LOCK
+                      android.permission.READ_MEDIA_IMAGES
+                      android.permission.READ_MEDIA_AUDIO
+                      android.permission.READ_MEDIA_VIDEO
+                      android.permission.POST_NOTIFICATIONS
+                      android.permission.CHANGE_WIFI_STATE
+                      android.permission.SYSTEM_ALERT_WINDOW
+                      com.android.vending.BILLING
+                    install permissions:
+                      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+                      android.permission.CHANGE_WIFI_MULTICAST_STATE: granted=true
+                      android.permission.INTERNET: granted=true
+                      android.permission.CHANGE_WIFI_STATE: granted=true
+                      android.permission.ACCESS_NETWORK_STATE: granted=true
+                      android.permission.ACCESS_WIFI_STATE: granted=true
+                      android.permission.WAKE_LOCK: granted=true
+                    User 0: ceDataInode=392419 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+                      gids=[3003]
+                      runtime permissions:
+                        android.permission.READ_EXTERNAL_STORAGE: granted=true
+                        android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+
+                Package Changes:
+                  Sequence number=1
+                  User 0:
+                    seq=0, package=com.softmedia.receiver
+
+
+                Dexopt state:
+                  [com.softmedia.receiver]
+                    path: /data/app/com.softmedia.receiver-OLoCjROfTO34d39Cgp1tyw==/base.apk
+                      arm: /data/app/com.softmedia.receiver-OLoCjROfTO34d39Cgp1tyw==/oat/arm/base.odex[status=kOatUpToDate, compilation_
+                      filter=quicken]
+
+
+                Compiler stats:
+                  [com.softmedia.receiver]
+                     base.apk - 1521
+
+adb shell am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+
+
+adb shell monkey -p app.package.name -c android.intent.category.LAUNCHER 1
+
+
+com.google.android.gms.common.broadcast.DELIVER_BROADCAST
+
+android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST
+
+CAPTURE_VIDEO_OUTPUT or CAPTURE_SECURE_VIDEO_OUTPUT
+
+
+
+java -jar /mnt/Backup/h9/bin/apktool.jar -f -p ~/Downloads/h9_merged_framework/ b SystemUI_G6
+java -jar /mnt/Backup/h9/bin/apktool.jar -f -r -p ~/Downloads/h9_merged_framework/ d SystemUI_G6 -o smali
+
+
+
+Modified 8 years, 3 months ago
+Viewed 2k times
+Part of Mobile Development Collective
+5
+
+I'm using apktool using the following command
+
+apktool decode "[APK PATH]"
+
+For some reason the decoded androidmanifest.xml doesn't contain attributes versionCode and versionName. I know they are there on the original file since, if I open the encoded file, I can see the attribute in the middle of the encrypted text.
+
+I need to verify if the versionCode is automatically updated by gradle after implementing some code to do this.
+
+    androidapktool
+
+Share
+Improve this question
+Follow
+edited Dec 28, 2015 at 15:19
+asked Dec 9, 2014 at 16:04
+StackOverflower's user avatar
+StackOverflower
+5,6111313 gold badges6060 silver badges9191 bronze badges
+Add a comment
+1 Answer
+Sorted by:
+13
+
+it is saved to another file. as I remember, some extension with .yml. when you again encode the package, apktool command uses this file for versionCode
+
+
+java -jar /mnt/Backup/h9/bin/apktool.jar -f -r --force-manifest -p ~/Downloads/h9_merged_framework/ d SystemUI_G6.apk
+java -jar /mnt/Backup/h9/bin/apktool.jar -f -p ~/Downloads/h9_merged_framework/ b SystemUI_G6
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6/dist/SystemUI_G6.apk
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6/dist/SystemUI_G6.apk
+
+java -jar /mnt/Backup/h9/bin/apktool.jar --use-aapt2 -f -r --force-manifest  d SystemUI_G6.apk
+
+
+
+
+ava -jar /mnt/Backup/h9/bin/apktool.jar if /mnt/Backup/h9/system/framework/framework-res.apk -t h9
+
+
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6/dist/SystemUI_G6.apk
+
+apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platform --out SystemUI_G6_mod_platform.apk SystemUI_G6/dist/SystemUI_G6.apk
+
+
+
+adb shell dpm set-device-owner --user current com.google.android.gms/.mdm.receivers.MdmDeviceAdminReceiver

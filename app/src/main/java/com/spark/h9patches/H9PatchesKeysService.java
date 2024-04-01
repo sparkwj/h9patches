@@ -8,8 +8,10 @@ import android.app.Service;
 import android.car.CarNotConnectedException;
 import android.car.hardware.CarPropertyValue;
 import android.car.hardware.CarVendorExtensionManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.RequiresApi;
@@ -22,6 +24,7 @@ public class H9PatchesKeysService extends Service {
     private static final int ONGOING_NOTIFICATION_ID = 2;
     private final String TAG = H9PatchesKeysService.class.getSimpleName();
     private Car mCarApiClient;
+    private H9PatchesService h9PatchesService;
     private CarVendorExtensionManager mCarVendorManager;
     private CarVendorExtensionManager.CarVendorExtensionCallback callback = new CarVendorExtensionManager.CarVendorExtensionCallback() {
         public void onChangeEvent(CarPropertyValue var1) {
@@ -31,7 +34,18 @@ public class H9PatchesKeysService extends Service {
         public void onErrorEvent(int var1, int var2) {
         }
     };
-
+    ServiceConnection mServerConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            h9PatchesService = ((H9PatchesService.H9PatchesServiceBinder) iBinder).getPatchesService();
+            isServiceBound = true;
+        }
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            isServiceBound = false;
+        }
+    };
+    private boolean isServiceBound;
 
     public H9PatchesKeysService() {
     }
@@ -43,8 +57,9 @@ public class H9PatchesKeysService extends Service {
         if (Build.VERSION.SDK_INT >= 26) {
             setForegroundService();
         }
-
         this.initCar();
+        android.content.Intent intent = new android.content.Intent(this, H9PatchesService.class);
+        bindService(intent, mServerConnection, Context.BIND_AUTO_CREATE);
     }
 
     @Override
@@ -130,13 +145,14 @@ public class H9PatchesKeysService extends Service {
                 if (data[0] == 1) {
                     if (System.currentTimeMillis() - lastPressTime < 1500) {
                         Log.i(TAG, "检测到双击，执行切换车道保持辅助");
-                        Intent pi = new Intent(H9PatchesKeysService.this, H9PatchesService.class);
-                        pi.setAction(H9PatchesService.ACTION_TOGGLE_LANE_KEEP_ASSIST_SYSTEM);
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                            startForegroundService(pi);
-                        } else {
-                            startService(pi);
-                        }
+                        h9PatchesService.toggleLaneKeepAssistSystem(2);
+//                        Intent pi = new Intent(H9PatchesKeysService.this, H9PatchesService.class);
+//                        pi.setAction(com.spark.h9patches.Intent.ACTION_TOGGLE_LANE_KEEP_ASSIST_SYSTEM);
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//                            startForegroundService(pi);
+//                        } else {
+//                            startService(pi);
+//                        }
 //                        Intent intent = new Intent(H9PatchesService.ACTION_TOGGLE_LANE_KEEP_ASSIST_SYSTEM);
 //                        sendBroadcast(intent);
                     }
@@ -155,8 +171,8 @@ public class H9PatchesKeysService extends Service {
     public void  setForegroundService() {
         NotificationManager notifManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationChannel serviceChannel = new NotificationChannel(
-                getString(R.string.notification_channel),
-                getString(R.string.notification_title),
+                getString(R.string.key_notification_channel),
+                getString(R.string.text_notification_title),
                 NotificationManager.IMPORTANCE_HIGH);
         notifManager.createNotificationChannel(serviceChannel);
 
@@ -165,12 +181,12 @@ public class H9PatchesKeysService extends Service {
                 PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
         Notification notification =
-                new Notification.Builder(this, getString(R.string.notification_channel))
-                        .setContentTitle(getString(R.string.notification_title))
-                        .setContentText(getString(R.string.notification_message))
+                new Notification.Builder(this, getString(R.string.key_notification_channel))
+                        .setContentTitle(getString(R.string.text_notification_title))
+                        .setContentText(getString(R.string.text_notification_message))
                         .setSmallIcon(R.drawable.ic_launcher_background)
                         .setContentIntent(pendingIntent)
-                        .setTicker(getString(R.string.ticker_text))
+                        .setTicker(getString(R.string.text_ticker_tips))
                         .build();
 
         startForeground(ONGOING_NOTIFICATION_ID, notification);
