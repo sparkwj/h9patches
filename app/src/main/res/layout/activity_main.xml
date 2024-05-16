@@ -209,6 +209,34 @@
                         style="@style/SecondSubTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/text_enable_key_remapping" />
+
+                    <Switch
+                        style="@style/SwitchStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/check_bg"
+                        android:checked="true"
+                        android:tag="@string/pref_key_remapping"/>
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:text="@string/text_default_launcher" />
 
                     <Spinner
@@ -242,10 +270,77 @@
                         style="@style/SecondSubTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/text_startup_appr" />
+                        android:text="@string/text_startup_app" />
 
                     <Spinner
                         android:id="@+id/spinner_startup_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="95dip"
+                        android:minWidth="300dip"
+                        android:minHeight="50dip"
+                        android:paddingStart="10dip"
+                        android:paddingEnd="10dip" />
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_functional_app" />
+
+                    <Spinner
+                        android:id="@+id/spinner_functional_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="95dip"
+                        android:minWidth="300dip"
+                        android:minHeight="50dip"
+                        android:paddingStart="10dip"
+                        android:paddingEnd="10dip" />
+
+                    <ImageView
+                        style="@style/itemLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/long_line" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/SecondSubTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_default_map" />
+
+                    <Spinner
+                        android:id="@+id/spinner_default_map"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"

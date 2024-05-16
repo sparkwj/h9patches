@@ -460,3 +460,1153 @@ apksigner sign --ks /mnt/Backup/h9/signatures/platform.jks  --ks-key-alias platf
 
 
 adb shell dpm set-device-owner --user current com.google.android.gms/.mdm.receivers.MdmDeviceAdminReceiver
+
+adb shell am start -a android.net.vpn.SETTINGS
+com.softmedia.receiver/com.softmedia.receiver.app.YouTubeDialActivity
+
+adb shell am broadcast -a h9patches.intent.action.COMMAND -e cmd '"am start -n com.softmedia.receiver/com.softmedia.receiver.app.YouTubeDialActivity"'
+
+appwidget grantbind --package com.teslacoilsw.launcher --user 0
+
+
+
+04-09 19:47:22.164  3714  3789 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-09 19:47:22.164  3714  3789 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-09 19:47:22.165  3714  3789 I rmi     : routing_manager_impl::send2,size:33
+04-09 19:47:22.165  3714  3789 I rmi     : routing_manager_impl::send event,len:19,19
+04-09 19:47:22.165  3714  3789 I rmi     : routing_manager_impl::send event,session_:41bb
+04-09 19:47:22.165  3714  3789 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 41 bb 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-09 19:47:22.166  3714  3789 I someipServiceJNI: end notify event:9009,for service : 101
+04-09 19:47:22.166  3542  3581 V MediaService: notifyRequestActiveAudioSourceToApp
+04-09 19:47:22.171  4499  4560 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-09 19:47:22.172  4499  4560 V AudioSourceToIPManager: not find match source to ip,send None
+04-09 19:47:22.173  3542  3581 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-09 19:47:22.173  3714  3789 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-09 19:47:22.173  3714  3789 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-09 19:47:22.174  3714  3789 I rmi     : routing_manager_impl::send2,size:33
+04-09 19:47:22.174  3714  3789 I rmi     : routing_manager_impl::send event,len:19,19
+04-09 19:47:22.174  3714  3789 I rmi     : routing_manager_impl::send event,session_:41bc
+04-09 19:47:22.174  3714  3789 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 41 bc 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-09 19:47:22.174  3714  3789 I someipServiceJNI: end notify event:9009,for service : 101
+04-09 19:47:22.175  3542  3581 V MediaService: notifyRequestActiveAudioSourceToApp
+04-09 19:47:22.178  4499  4560 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-09 19:47:22.179  4499  4560 V AudioSourceToIPManager: not find match source to ip,send None
+04-09 19:47:22.180  3542  3581 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-09 19:47:22.181  3714  3789 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-09 19:47:22.181  3714  3789 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-09 19:47:22.181  3714  3789 I rmi     : routing_manager_impl::send2,size:33
+04-09 19:47:22.181  3714  3789 I rmi     : routing_manager_impl::send event,len:19,19
+04-09 19:47:22.181  3714  3789 I rmi     : routing_manager_impl::send event,session_:41bd
+04-09 19:47:22.181  3714  3789 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 41 bd 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-09 19:47:22.182  3714  3789 I someipServiceJNI: end notify event:9009,for service : 101
+04-09 19:47:22.182  3542  3581 V MediaService: notifyRequestActiveAudioSourceToApp
+04-09 19:47:22.185  4499  4560 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-09 19:47:22.186  4499  4560 V AudioSourceToIPManager: not find match source to ip,send None
+04-09 19:47:22.187  1474  1578 D VehiclePlatform|RemoteHAL|SPI: 0000177771 | Read: 04 44 01 03 00 00 00
+04-09 19:47:22.188  3542  3581 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-09 19:47:22.188  3714  3789 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-09 19:47:22.188  3714  3789 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-09 19:47:22.189  3714  3789 I rmi     : routing_manager_impl::send2,size:33
+04-09 19:47:22.189  3714  3789 I rmi     : routing_manager_impl::send event,len:19,19
+04-09 19:47:22.189  3714  3789 I rmi     : routing_manager_impl::send event,session_:41be
+04-09 19:47:22.189  3714  3789 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 41 be 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-09 19:47:22.189  3714  3789 I someipServiceJNI: end notify event:9009,for service : 101
+04-09 19:47:22.190  3542  3581 V MediaService: notifyRequestActiveAudioSourceToApp
+04-09 19:47:22.192  4499  4560 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-09 19:47:22.193  4499  4560 V AudioSourceToIPManager: not find match source to ip,send None
+04-09 19:47:22.194  3542  3581 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-09 19:47:22.196  3714  3789 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-09 19:47:22.196  3714  3789 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-09 19:47:22.196  3714  3789 I rmi     : routing_manager_impl::send2,size:33
+04-09 19:47:22.196  3714  3789 I rmi     : routing_manager_impl::send event,len:19,19
+04-09 19:47:22.196  3714  3789 I rmi     : routing_manager_impl::send event,session_:41bf
+04-09 19:47:22.196  3714  3789 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 41 bf 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-09 19:47:22.196  3714  3789 I someipServiceJNI: end notify event:9009,for service : 101
+04-09 19:47:22.197  3542  3581 V MediaService: notifyRequestActiveAudioSourceToApp
+04-09 19:47:22.204  4499  4560 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-09 19:47:22.204  4499  4560 V AudioSourceToIPManager: not find match source to ip,send None
+04-09 19:47:22.205  3542  3581 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-09 19:47:22.205  3714  3789 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-09 19:47:22.206  3714  3789 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-09 19:47:22.206  3714  3789 I rmi     : routing_manager_impl::send2,size:33
+04-09 19:47:22.206  3714  3789 I rmi     : routing_manager_impl::send event,len:19,19
+04-09 19:47:22.206  3714  3789 I rmi     : routing_manager_impl::send event,session_:41c0
+04-09 19:47:22.206  3714  3789 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 41 c0 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-09 19:47:22.206  3714  3789 I someipServiceJNI: end notify event:9009,for service : 101
+04-09 19:47:22.206  3542  3581 V MediaService: notifyRequestActiveAudioSourceToApp
+04-09 19:47:22.210  4499  4560 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-09 19:47:22.211  4499  4560 V AudioSourceToIPManager: not find match source to ip,send None
+04-09 19:47:22.212  3542  3581 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+
+
+
+
+
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: java.lang.RuntimeException: Unable to create application com.microsoft.sapphire.app.SapphireApplication: java.lang.NullPointerException: Attempt to invoke virtual method 'android.os.Bundle android.content.RestrictionsManager.getApplicationRestrictions()' on a null object reference
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5771)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.app.ActivityThread.access$2000(ActivityThread.java:176)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6520)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.os.Bundle android.content.RestrictionsManager.getApplicationRestrictions()' on a null object reference
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.ins.va.c(AllowedAccountsBehaviorImpl.java:12)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.ins.va.getAllowedAccounts(AllowedAccountsBehaviorImpl.java:1)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.ins.ua.d(AllowedAccounts.java:21)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.microsoft.sapphire.features.accounts.microsoft.intuneMAM.IntuneAllowedAccountManager.d(IntuneAllowedAccountManager.kt:6)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.microsoft.sapphire.features.accounts.microsoft.intuneMAM.IntuneAllowedAccountManager.a(IntuneAllowedAccountManager.kt:1)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.microsoft.sapphire.features.accounts.microsoft.intuneMAM.IntuneManager.f(IntuneManager.kt:124)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.microsoft.sapphire.app.SapphireApplication$onCreate$1.invoke(SapphireApplication.kt:13)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.microsoft.onecore.core.WebEngineInitializer.onCreate(WebEngineInitializer.kt:41)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.microsoft.sapphire.app.SapphireApplication.onMAMCreate(SapphireApplication.kt:23)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.ins.lp5$a.a(MAMApplication.java:30)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at com.ins.lp5.onCreate(MAMApplication.java:92)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1119)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5766)
+04-09 19:55:55.216  7430  7430 E AndroidRuntime: 	... 8 more
+04-09 19:55:55.216  4626  4671 I VehiclePlatform: [linkdevicemanager] : event add@/kernel/slab/:t-0004096/cgroup/kmalloc-4096(421:pid_7430)
+04-09 19:55:55.216  4626  4671 I VehiclePlatform: [linkdevicemanager] : SVPLinkDeviceManager::GetUniquePath ::run on renesas
+04-09 19:55:55.217  3542  3665 V MediaService: media_sourece = 1
+04-09 19:55:55.219  2596  2672 W ActivityManager:   Force finishing activity com.microsoft.copilot/com.microsoft.sapphire.app.main.SapphireMainActivity
+
+
+com.desay_svautomotive.svsomeip
+
+
+
+
+
+
+
+
+
+
+
+
+Tasks: 331 total,   1 running, 329 sleeping,   0 stopped,   0 zombie
+Mem:   3587716k total,  3485520k used,   102196k free,    16296k buffers
+Swap:        0k total,        0k used,        0k free,   970228k cached
+200%cpu  87%user  35%nice  62%sys  12%idle   2%iow   0%irq   1%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS
+ 3907 u0_a108      20   0 4.1G  98M  75M S 35.3   2.7   0:01.98 android.process.media
+ 3600 system       20   0 4.1G 109M  81M S 31.3   3.1   0:12.10 com.desay_svautomotive.svsomeip
+ 4253 system       20   0 4.1G  93M  70M S 23.0   2.6   0:08.46 com.desay_svautomotive.svthirdparty
+ 3774 u0_a141      20   0 4.1G  89M  70M S 18.0   2.5   0:07.02 com.sv.someip
+ 2593 system       18  -2 4.2G 208M 152M S 11.3   5.9   0:24.10 system_server
+ 1932 logd         30  10  23M 8.6M 2.4M S  8.6   0.2   0:02.15 logd
+ 6639 u0_a151      20   0 1.6G 157M 128M S  6.6   4.4   0:02.60 com.autonavi.amapauto
+ 5744 system       20   0 4.1G  98M  71M S  5.6   2.7   0:01.93 com.desaysv_automotive.svmedia
+ 2931 system       20   0 4.1G 104M  80M S  4.6   2.9   0:05.53 com.android.car
+ 4372 navigation   20   0 4.2G 176M 113M S  4.3   5.0   0:04.03 com.mapbar.android.mapbarnavi
+ 4837 system       20   0 4.1G 109M  81M S  3.0   3.1   0:01.50 com.desay_sv.netmusic
+ 6423 shell        20   0  10M 6.9M 2.9M R  2.6   0.1   0:01.06 top
+ 4031 system       12  -8 4.6G 382M 112M S  2.6  10.9   0:06.22 com.iflytek.cutefly.speechclient.hmi
+ 2040 gps          20   0  17M  11M 4.6M S  2.6   0.3   0:01.93 android.hardware.gnss@1.0-service
+ 5553 system       20   0 4.1G  93M  68M S  2.3   2.6   0:00.85 com.desaysv.netradio
+ 5098 system       20   0 4.1G  89M  69M S  2.3   2.5   0:00.88 com.desay_svautomotive.svradio
+ 1912 root         20   0    0    0    0 S  2.0   0.0   0:00.31 [kworker/u4:4]
+ 3078 system       20   0 4.1G  90M  70M S  1.6   2.5   0:01.71 platformadapter.svauto.com.platformadaptermultivr:sdvc
+ 6850 root         20   0    0    0    0 S  1.3   0.0   0:00.14 [kworker/u4:7]
+ 1474 root         20   0  21M 9.4M 4.2M S  1.3   0.2   0:02.12 android.hardware.automotive.vehicle@2.0-service.g6
+  899 root         -2   0    0    0    0 S  1.3   0.0   0:07.22 [mmcqd/0]
+ 4400 system       20   0 4.1G 100M  78M S  1.0   2.8   0:01.06 com.desaysv.vehicle.carplayapp
+ 3636 system       20   0 4.1G 111M  86M S  1.0   3.1   0:02.12 com.iflytek.Rn2Adapter
+ 3011 system       20   0 4.1G 118M  83M S  1.0   3.3   0:01.35 com.desay_svautomotive.service.rvcsupportservice
+ 1476 root         20   0  25M  11M 3.8M S  1.0   0.2   0:00.75 fastaudio
+  404 root         20   0    0    0    0 S  1.0   0.0   0:01.42 [kworker/0:1]
+ 3671 u0_a156      20   0 5.3G 135M  95M S  0.6   3.8   0:01.97 com.v2ray.ang:RunSoLibV2RayDaemon
+ 3493 system       20   0 4.1G  86M  66M S  0.6   2.4   0:00.72 com.desaysv.vehicle.TspBigDataPointService
+ 3088 root         -2   0    0    0    0 S  0.6   0.0   0:00.56 [ksdioirqd/mmc1]
+ 2955 u0_a121       5 -15 4.2G 218M 134M S  0.6   6.2   0:08.90 com.android.systemui
+ 2815 system       20   0 4.1G  93M  73M S  0.6   2.6   0:01.55 platformadapter.svauto.com.platformadaptermultivr
+
+
+
+
+
+
+
+
+Tasks: 329 total,   1 running, 327 sleeping,   0 stopped,   0 zombie
+Mem:   3587716k total,  3474092k used,   113624k free,    16572k buffers
+Swap:        0k total,        0k used,        0k free,   972108k cached
+200%cpu  78%user  13%nice  52%sys  56%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS
+ 3600 system       20   0 4.1G 108M  81M S 32.0   3.0   0:18.41 com.desay_svautomotive.svsomeip
+ 4253 system       20   0 4.1G  92M  70M S 24.3   2.6   0:12.93 com.desay_svautomotive.svthirdparty
+ 3774 u0_a141      20   0 4.1G  88M  70M S 19.3   2.5   0:10.80 com.sv.someip
+ 2593 system       18  -2 4.2G 209M 152M S  9.6   5.9   0:26.36 system_server
+ 1932 logd         30  10  23M 8.6M 2.4M S  9.6   0.2   0:04.16 logd
+ 5744 system       20   0 4.1G  98M  71M S  5.3   2.8   0:03.04 com.desaysv_automotive.svmedia
+ 2931 system       20   0 4.1G 105M  80M S  4.6   2.9   0:06.49 com.android.car
+ 4372 navigation   20   0 4.2G 177M 114M S  3.3   5.0   0:04.80 com.mapbar.android.mapbarnavi
+ 4837 system       20   0 4.1G 109M  81M S  3.0   3.1   0:02.08 com.desay_sv.netmusic
+ 7044 shell        20   0  10M 6.8M 2.8M R  2.6   0.1   0:00.24 top
+ 5553 system       20   0 4.1G  90M  69M S  2.6   2.5   0:01.35 com.desaysv.netradio
+ 5098 system       20   0 4.1G  89M  69M S  2.3   2.5   0:01.37 com.desay_svautomotive.svradio
+ 4031 system       12  -8 4.6G 379M 112M S  2.3  10.8   0:06.72 com.iflytek.cutefly.speechclient.hmi
+ 2501 root         20   0    0    0    0 S  2.0   0.0   0:01.04 [kworker/u4:6]
+ 2040 gps          20   0  17M  11M 4.6M S  2.0   0.3   0:02.44 android.hardware.gnss@1.0-service
+ 1474 root         20   0  21M 9.4M 4.2M S  1.6   0.2   0:02.41 android.hardware.automotive.vehicle@2.0-service.g6
+ 6850 root         20   0    0    0    0 S  1.3   0.0   0:00.40 [kworker/u4:7]
+ 6639 u0_a151      20   0 1.6G 157M 128M S  1.3   4.4   0:02.93 com.autonavi.amapauto
+ 3636 system       20   0 4.1G 111M  86M S  1.3   3.1   0:02.34 com.iflytek.Rn2Adapter
+ 3078 system       20   0 4.1G  90M  70M S  1.3   2.5   0:02.04 platformadapter.svauto.com.platformadaptermultivr:sdvc
+ 4400 system       20   0 4.1G  98M  78M S  1.0   2.8   0:01.29 com.desaysv.vehicle.carplayapp
+ 2815 system       20   0 4.1G  93M  73M S  1.0   2.6   0:01.71 platformadapter.svauto.com.platformadaptermultivr
+ 5771 root         10 -10  26M  14M 6.8M S  0.6   0.3   0:00.27 vehicle.ipodservice -nice -10
+ 4483 system       20   0 4.1G  99M  80M S  0.6   2.8   0:00.64 com.android.settings
+ 3304 system       20   0 4.1G 107M  78M S  0.6   3.0   0:02.12 com.desay_svautomotive.caninfoservice
+ 3088 root         -2   0    0    0    0 S  0.6   0.0   0:00.64 [ksdioirqd/mmc1]
+ 3011 system       20   0 4.1G 116M  83M S  0.6   3.3   0:01.53 com.desay_svautomotive.service.rvcsupportservice
+ 1979 audioserver  20   0  19M  10M 3.9M S  0.6   0.2   0:00.78 android.hardware.broadcastradio@2.0-service.g6
+ 1476 root         20   0  25M  11M 3.8M S  0.6   0.2   0:00.89 fastaudio
+ 6859 system       20   0 4.1G  94M  74M S  0.3   2.6   0:00.25 com.dsv.transmit_pushmsg
+ 6033 shell        20   0 8.7M 6.5M 2.3M S  0.3   0.1   0:00.23 process-tracker --interval 1000
+g6sa:/ $
+
+
+
+
+
+
+
+
+Tasks: 331 total,   1 running, 329 sleeping,   0 stopped,   0 zombie
+Mem:   3587716k total,  3466156k used,   121560k free,    17588k buffers
+Swap:        0k total,        0k used,        0k free,   977488k cached
+200%cpu  20%user   2%nice  16%sys 162%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS
+ 2931 system       20   0 4.1G 104M  80M S  4.0   2.9   0:10.86 com.android.car
+ 4372 navigation   20   0 4.2G 176M 113M S  3.0   5.0   0:07.63 com.mapbar.android.mapbarnavi
+ 2593 system       18  -2 4.2G 208M 152M S  3.0   5.9   0:34.40 system_server
+ 4031 system       12  -8 4.6G 363M 112M S  2.6  10.3   0:09.27 com.iflytek.cutefly.speechclient.hmi
+ 7055 shell        20   0  10M 6.8M 2.9M R  2.0   0.1   0:01.30 top
+ 3774 u0_a141      20   0 4.1G  88M  70M S  1.6   2.5   0:18.77 com.sv.someip
+ 1474 root         20   0  21M 9.3M 4.2M S  1.6   0.2   0:03.76 android.hardware.automotive.vehicle@2.0-service.g6
+ 4400 system       20   0 4.1G  99M  79M S  1.3   2.8   0:02.38 com.desaysv.vehicle.carplayapp
+ 3078 system       20   0 4.1G  90M  70M S  1.3   2.5   0:03.35 platformadapter.svauto.com.platformadaptermultivr:sdvc
+ 2040 gps          20   0  17M  11M 4.6M S  1.3   0.3   0:04.07 android.hardware.gnss@1.0-service
+   21 root         20   0    0    0    0 S  1.3   0.0   0:01.64 [kworker/u4:1]
+ 4253 system       20   0 4.1G  92M  70M S  1.0   2.6   0:22.12 com.desay_svautomotive.svthirdparty
+ 3636 system       20   0 4.1G 112M  87M S  1.0   3.1   0:03.71 com.iflytek.Rn2Adapter
+ 3011 system       20   0 4.1G 117M  83M S  1.0   3.3   0:02.14 com.desay_svautomotive.service.rvcsupportservice
+ 1932 logd         30  10  23M 8.5M 2.5M S  1.0   0.2   0:09.86 logd
+ 6639 u0_a151      20   0 1.6G 157M 128M S  0.6   4.4   0:03.67 com.autonavi.amapauto
+ 2501 root         20   0    0    0    0 S  0.6   0.0   0:01.74 [kworker/u4:6]
+ 6859 system       20   0 4.1G  94M  75M S  0.3   2.6   0:00.54 com.dsv.transmit_pushmsg
+ 6033 shell        20   0 8.7M 6.5M 2.3M S  0.3   0.1   0:00.47 process-tracker --interval 1000
+ 5694 system       20   0 4.1G  92M  71M S  0.3   2.6   0:00.74 com.desaysv.vehicle.tspdataburieddeamon
+ 4553 navigation   20   0 4.1G 111M  84M S  0.3   3.1   0:00.96 com.mapbar.android.mapbarnavi:ni_pushservice
+ 3600 system       20   0 4.1G 108M  81M S  0.3   3.0   0:30.86 com.desay_svautomotive.svsomeip
+ 3493 system       20   0 4.1G  87M  67M S  0.3   2.4   0:01.22 com.desaysv.vehicle.TspBigDataPointService
+ 3304 system       20   0 4.1G 103M  78M S  0.3   2.9   0:02.59 com.desay_svautomotive.caninfoservice
+ 2955 u0_a121       5 -15 4.2G 220M 134M S  0.3   6.2   0:10.75 com.android.systemui
+ 2815 system       20   0 4.1G  93M  74M S  0.3   2.6   0:02.51 platformadapter.svauto.com.platformadaptermultivr
+ 2394 audioserver  20   0  55M  20M  11M S  0.3   0.5   0:00.79 audioserver
+ 2137 system       20   0  15M  10M 3.4M S  0.3   0.2   0:00.79 android.hardware.sensors@1.0-service
+ 1979 audioserver  20   0  24M  10M 3.9M S  0.3   0.2   0:01.43 android.hardware.broadcastradio@2.0-service.g6
+ 1966 audioserver  20   0  24M  13M 6.4M S  0.3   0.3   0:00.51 android.hardware.audio@2.0-service
+ 1476 root         20   0  25M  11M 3.8M S  0.3   0.2   0:01.35 fastaudio
+
+
+
+
+
+
+
+
+
+
+
+04-09 20:03:09.542  7366  7366 D AndroidRuntime: Shutting down VM
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: FATAL EXCEPTION: main
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: Process: com.microsoft.copilot, PID: 7366
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: java.lang.RuntimeException: Unable to create application com.microsoft.sapphire.app.SapphireApplication: java.lang.NullPointerException: Attempt to invoke virtual method 'android.os.Bundle android.content.RestrictionsManager.getApplicationRestrictions()' on a null object reference
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5771)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.app.ActivityThread.access$2000(ActivityThread.java:176)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6520)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.os.Bundle android.content.RestrictionsManager.getApplicationRestrictions()' on a null object reference
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.ins.va.c(AllowedAccountsBehaviorImpl.java:12)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.ins.va.getAllowedAccounts(AllowedAccountsBehaviorImpl.java:1)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.ins.ua.d(AllowedAccounts.java:21)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.microsoft.sapphire.features.accounts.microsoft.intuneMAM.IntuneAllowedAccountManager.d(IntuneAllowedAccountManager.kt:6)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.microsoft.sapphire.features.accounts.microsoft.intuneMAM.IntuneAllowedAccountManager.a(IntuneAllowedAccountManager.kt:1)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.microsoft.sapphire.features.accounts.microsoft.intuneMAM.IntuneManager.f(IntuneManager.kt:124)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.microsoft.sapphire.app.SapphireApplication$onCreate$1.invoke(SapphireApplication.kt:13)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.microsoft.onecore.core.WebEngineInitializer.onCreate(WebEngineInitializer.kt:41)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.microsoft.sapphire.app.SapphireApplication.onMAMCreate(SapphireApplication.kt:23)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.ins.lp5$a.a(MAMApplication.java:30)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at com.ins.lp5.onCreate(MAMApplication.java:92)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1119)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5766)
+04-09 20:03:09.543  7366  7366 E AndroidRuntime: 	... 8 more
+04-09 20:03:09.544  4515  4549 I VehiclePlatform: [linkdevicemanager] : event add@/kernel/slab/:t-0004096/cgroup/kmalloc-4096(421:pid_7366)
+04-09 20:03:09.544  4515  4549 I VehiclePlatform: [linkdevicemanager] : SVPLinkDeviceManager::GetUniquePath ::run on renesas
+04-09 20:03:09.549  2593  2927 W ActivityManager:   Force finishing activity com.microsoft.copilot/com.microsoft.sapphire.app.main.SapphireMainActivity
+04-09 20:03:09.553  2593  2927 I WindowManager: hide navigation...
+
+
+com.sv.someip/MainActivity
+
+Packages:
+  Package [com.mgoogle.android.gms] (882aaf4):
+    userId=10212
+    pkg=Package{736b354 com.mgoogle.android.gms}
+    codePath=/data/app/com.mgoogle.android.gms-oAuV9ZX2x-w8kryaLklbBQ==
+    resourcePath=/data/app/com.mgoogle.android.gms-oAuV9ZX2x-w8kryaLklbBQ==
+    legacyNativeLibraryDir=/data/app/com.mgoogle.android.gms-oAuV9ZX2x-w8kryaLklbBQ==/lib
+    primaryCpuAbi=arm64-v8a
+    secondaryCpuAbi=armeabi-v7a
+    versionCode=231613000 minSdk=23 targetSdk=29
+    versionName=mMicroG 0.2.27.231613-vtm-noen
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{b5e82a7 com.mgoogle.android.gms}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.mgoogle.android.gms
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    dynamic libraries:
+      com.mgoogle.android.gms
+    usesLibraries:
+      com.android.location.provider
+    usesOptionalLibraries:
+      androidx.window.extensions
+      androidx.window.sidecar
+    usesLibraryFiles:
+      /system/framework/com.android.location.provider.jar
+    timeStamp=2024-04-10 14:02:59
+    firstInstallTime=2024-04-10 14:03:22
+    lastUpdateTime=2024-04-10 14:03:22
+    signatures=PackageSignatures{3e622fd [4fb03180]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    declared permissions:
+      com.mgoogle.android.c2dm.permission.RECEIVE: prot=normal, INSTALLED
+      com.mgoogle.android.c2dm.permission.SEND: prot=signature|privileged, INSTALLED
+      com.mgoogle.android.gtalkservice.permission.GTALK_SERVICE: prot=signature, INSTALLED
+      com.mgoogle.android.googleapps.permission.GOOGLE_AUTH: prot=normal, INSTALLED
+      com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.cp: prot=dangerous, INSTALLED
+      com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.local: prot=dangerous, INSTALLED
+      com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.mail: prot=dangerous, INSTALLED
+      com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.writely: prot=dangerous, INSTALLED
+      com.mgoogle.gms.STATUS_BROADCAST: prot=normal, INSTALLED
+      com.mgoogle.gms.EXTENDED_ACCESS: prot=dangerous, INSTALLED
+      com.mgoogle.gms.PROVISION: prot=signature|privileged, INSTALLED
+      com.mgoogle.android.gms.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.FAKE_PACKAGE_SIGNATURE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.INTERNET
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.ACCESS_BACKGROUND_LOCATION
+      android.permission.READ_PHONE_STATE
+      android.permission.AUTHENTICATE_ACCOUNTS
+      android.permission.GET_ACCOUNTS
+      android.permission.MANAGE_ACCOUNTS
+      android.permission.USE_CREDENTIALS
+      android.permission.WAKE_LOCK
+      android.permission.READ_SYNC_SETTINGS
+      android.permission.WRITE_SYNC_SETTINGS
+      android.permission.READ_SYNC_STATS
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.READ_EXTERNAL_STORAGE
+      com.mgoogle.android.c2dm.permission.RECEIVE
+      com.mgoogle.android.c2dm.permission.SEND
+      com.mgoogle.android.gtalkservice.permission.GTALK_SERVICE
+      org.microg.gms.STATUS_BROADCAST
+      android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.FOREGROUND_SERVICE
+      android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST
+      android.permission.UPDATE_APP_OPS_STATS
+      android.permission.RECEIVE_SMS
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.USE_BIOMETRIC
+      android.permission.USE_FINGERPRINT
+      android.permission.NFC
+      android.permission.MANAGE_USB
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.BODY_SENSORS
+      android.permission.LOCATION_HARDWARE
+      android.permission.NETWORK_SCAN
+      android.permission.MODIFY_PHONE_STATE
+      android.permission.UPDATE_DEVICE_STATS
+      android.permission.WATCH_APPOPS
+      com.mgoogle.android.gms.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.USE_CREDENTIALS: granted=true
+      android.permission.MANAGE_ACCOUNTS: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.NFC: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS: granted=true
+      android.permission.AUTHENTICATE_ACCOUNTS: granted=true
+      android.permission.INTERNET: granted=true
+      com.mgoogle.android.c2dm.permission.SEND: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      com.mgoogle.android.gms.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      com.mgoogle.android.gtalkservice.permission.GTALK_SERVICE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      com.mgoogle.android.c2dm.permission.RECEIVE: granted=true
+    User 0: ceDataInode=262202 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      gids=[3003]
+      runtime permissions:
+        android.permission.ACCESS_FINE_LOCATION: granted=true
+        android.permission.BODY_SENSORS: granted=true
+        android.permission.RECEIVE_SMS: granted=true
+        android.permission.READ_EXTERNAL_STORAGE: granted=true
+        android.permission.ACCESS_COARSE_LOCATION: granted=true
+        android.permission.READ_PHONE_STATE: granted=true
+        android.permission.GET_ACCOUNTS: granted=true
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+
+
+
+adb shell am start -a android.settings.ADD_ACCOUNT_SETTINGS
+
+跨用户的 adb 互动
+
+在处理多用户时，有几个 adb 命令很有用。但其中部分命令仅 Android 9 及更高版本才支持：
+
+    adb shell am instrument --user <userId> 可针对特定用户运行插桩测试。默认情况下，此命令使用当前用户。
+    adb install --user <userId> 可为特定用户安装软件包。要确保为所有用户安装软件包，您必须为每个用户调用此命令。
+    adb uninstall --user <userId> 可为特定用户卸载软件包。如果调用此命令时不带 --user 标记，可为所有用户卸载软件包。
+    adb shell am get-current-user 可获取当前（前台）用户 ID。
+    adb shell pm list users 可获取所有现有用户的列表。
+    adb shell pm create-user 可创建新用户并返回 ID。
+    adb shell pm remove-user 可按 ID 移除特定用户。
+    adb shell pm disable --user <userId> 可为特定用户停用软件包。
+    adb shell pm enable --user <userId> 可为特定用户启用软件包。
+    adb shell pm list packages --user <userId> 可为特定用户列出软件包（-e 可列出已启用的软件包，-d 可列出已停用的软件包）。默认情况下，此命令始终为系统用户列出软件包。
+
+https://source.android.com/docs/devices/admin/multi-user-testing?hl=zh-cn
+
+04-15 21:08:28.975  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:28.975  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:28.975  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:28.975  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:28.975  4241  4291 I rmi     : routing_manager_impl::send event,session_:4029
+04-15 21:08:28.975  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 29 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:28.976  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:28.976  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:28.979  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:28.979  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:28.980  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:28.981  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:28.981  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:28.981  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:28.981  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:28.981  4241  4291 I rmi     : routing_manager_impl::send event,session_:402a
+04-15 21:08:28.982  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 2a 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:28.982  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:28.982  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:28.984  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:28.985  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:28.986  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:28.986  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:28.986  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:28.987  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:28.987  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:28.987  4241  4291 I rmi     : routing_manager_impl::send event,session_:402b
+04-15 21:08:28.987  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 2b 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:28.987  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:28.987  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:28.988  4234  4234 V Thirdparty_GPS: gps nmeaMessage = $GNRMC,130829.000,A,3045.202126,N,10342.422489,E,0.000,205.977,150424,,E,A*3E
+04-15 21:08:28.989  4234  4234 V ReceiveNavInfoMessageService: SEND_DIRECT_AND_ALTITUDE_FROM_HUT = false
+04-15 21:08:28.991  2620  2752 I GnssLocationProvider:  m_quality= 1 m_status= A moveStatus= 0 m_hdop= 0.772 m_pdop= 1.555 m_vdop= 1.349 fix= 3 m_tracked_sat= 21 m_used_sat= 16 m_ttff= 997 m_pos_acc= 1245 m_cold_time= 0 m_warm_time= 0 m_hot_time= 0
+04-15 21:08:28.992  4234  4234 D Thirdparty_GPS: 经度：103.70704148333334
+04-15 21:08:28.992  4234  4234 D Thirdparty_GPS: 纬度：30.75336876666667
+04-15 21:08:28.993  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186400 | Read: 04 44 01 03 00 00 00
+04-15 21:08:28.995  3905  3905 D ClientLocation: Location[gps 30.753369,103.707041 hAcc=1 et=+3m6s397ms alt=535.757 vel=0.0 bear=205.977 vAcc=??? sAcc=??? bAcc=??? {Bundle[mParcelledData.dataSize=640]}]
+04-15 21:08:28.996  3395  3395 D gnssSyncTimeReceiver: onLocationChanged system:1713186508996 time:1713157709000
+04-15 21:08:28.996  3395  3395 D gnssSyncTimeReceiver: Set time and the TimeZone 28800000
+04-15 21:08:28.997  2620  5034 D AlarmManagerService: Setting time of day to sec=1713186509
+04-15 21:08:29.000  2620  5034 W AlarmManagerService: Unable to set rtc to 1713186509: No such device
+04-15 21:08:29.003  4241  4515 I rmi     : routing_manager_impl::send2,size:132
+04-15 21:08:29.003  4241  4515 I rmi     : routing_manager_impl::send event,len:7c,7c
+04-15 21:08:29.003  4241  4515 I usei    : usei::sq(239.192.255.251:30490): ff ff 81 00 00 00 00 7c 00 00 00 a3 01 01 02 00 c0 00 00 00 00 00 00 50 01 00 00 20 01 01 00 01 01 00 00 03 00 00 00 00 01 00 00 20 01 02 00 01 01 00 00 03 00 00 00 00 01 00 00 20 01 03 00 01 01 00 00 03 00 00 00 00 01 00 00 10 01 05 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 00 00 01 01 00 00 03 00 00 00 00 00 00 00 18 00 09 04 00 ac 10 00 63 00 06 d6 d8 00 09 04 00 ac 10 00 63 00 11 d6 d8
+04-15 21:08:29.003  2006  2006 I android.hardware.dsp@1.0-service: SVDSP sleep
+04-15 21:08:29.006  3458  3458 E [TDP][LocationService]: OnGroInfoChanged GroInfo is Null
+04-15 21:08:29.011  4241  4317 I usei    : usei::rcb(Success): ff ff 81 00 00 00 00 6c 00 00 09 41 01 01 02 00 c0 00 00 00 00 00 00 40 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 02 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 03 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 05 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 d9 00 09 04 00 ac 10 00 60 00 11 d6 d9
+04-15 21:08:29.011  4241  4317 I rmi     : rmi::on_message: ff ff 81 00 00 00 00 6c 00 00 09 41 01 01 02 00 c0 00 00 00 00 00 00 40 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 02 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 03 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 05 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 d9 00 09 04 00 ac 10 00 60 00 11 d6 d9
+04-15 21:08:29.011  4241  4317 I sdi     : sdi::on_message: ff ff 81 00 00 00 00 6c 00 00 09 41 01 01 02 00 c0 00 00 00 00 00 00 40 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 02 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 03 06 00 00 20 01 01 00 01 01 00 00 03 00 00 00 05 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 d9 00 09 04 00 ac 10 00 60 00 11 d6 d9
+04-15 21:08:29.012  4241  4317 I usei    : usei::sq(172.16.0.96:30490): ff ff 81 00 00 00 00 54 00 00 01 dd 01 01 02 00 c0 00 00 00 00 00 00 40 07 00 00 00 01 01 00 01 01 00 00 03 00 00 00 01 07 00 00 00 01 01 00 01 01 00 00 03 00 00 00 02 07 00 00 00 01 01 00 01 01 00 00 03 00 00 00 03 07 00 00 00 01 01 00 01 01 00 00 03 00 00 00 05 00 00 00 00
+04-15 21:08:29.012  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:402c
+04-15 21:08:29.012  4241  4317 I rmi     : routing_manager_impl::send event,len:e,e
+04-15 21:08:29.012  4241  4317 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 06 00 00 00 0e 00 00 40 2c 01 01 02 00 00 00 00 02 64 00
+04-15 21:08:29.012  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:402d
+04-15 21:08:29.012  4241  4317 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.013  4241  4317 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 2d 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.013  4241  4317 I usei    : usei::rcb(Success): ff ff 81 00 00 00 00 4c 00 00 09 42 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 20 01 02 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 02 00 01 01 00 00 03 00 00 00 02 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 da 00 09 04 00 ac 10 00 60 00 11 d6 da
+04-15 21:08:29.016  6189  7517 I PermissionUtils: checkPermissions, permission:android.permission.ACCESS_FINE_LOCATION,op:android:fine_location
+04-15 21:08:29.017  4241  4317 I rmi     : rmi::on_message: ff ff 81 00 00 00 00 4c 00 00 09 42 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 20 01 02 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 02 00 01 01 00 00 03 00 00 00 02 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 da 00 09 04 00 ac 10 00 60 00 11 d6 da
+04-15 21:08:29.018  4241  4317 I sdi     : sdi::on_message: ff ff 81 00 00 00 00 4c 00 00 09 42 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 20 01 02 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 02 00 01 01 00 00 03 00 00 00 02 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 da 00 09 04 00 ac 10 00 60 00 11 d6 da
+04-15 21:08:29.019  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.020  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.018  4241  4317 I usei    : usei::sq(172.16.0.96:30490): ff ff 81 00 00 00 00 34 00 00 01 de 01 01 02 00 c0 00 00 00 00 00 00 20 07 00 00 00 01 02 00 01 01 00 00 03 00 00 00 01 07 00 00 00 01 02 00 01 01 00 00 03 00 00 00 02 00 00 00 00
+04-15 21:08:29.020  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:402e
+04-15 21:08:29.020  4241  4317 I rmi     : routing_manager_impl::send event,len:1b,1b
+04-15 21:08:29.021  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.021  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.021  4241  4317 I tsei    : tsei<172.16.0.96:55002>::sq: 01 02 90 04 00 00 00 1b 00 00 40 2e 01 01 02 00 00 00 00 0f 00 00 00 04 ef bb bf 00 01 00 00 00 00 00 00
+04-15 21:08:29.022  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.022  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.022  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.022  4241  4291 I rmi     : routing_manager_impl::send event,session_:402f
+04-15 21:08:29.022  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 2f 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.022  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.023  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186427 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.023  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186427 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.023  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.025  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:4030
+04-15 21:08:29.025  4241  4317 I rmi     : routing_manager_impl::send event,len:21,21
+04-15 21:08:29.025  4241  4317 I usei    : usei::sq(172.16.0.96:55002): 01 02 90 01 00 00 00 21 00 00 40 30 01 01 02 00 00 00 00 15 00 00 00 00 00 00 04 ef bb bf 00 00 00 00 00 00 04 ef bb bf 00
+04-15 21:08:29.025  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.026  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:4031
+04-15 21:08:29.026  4241  4317 I rmi     : routing_manager_impl::send event,len:e,e
+04-15 21:08:29.026  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:4032
+04-15 21:08:29.026  4241  4317 I rmi     : routing_manager_impl::send event,len:23,23
+04-15 21:08:29.026  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.026  4241  4317 I tsei    : tsei<172.16.0.96:55002>::sq: 01 02 90 02 00 00 00 23 00 00 40 32 01 01 02 00 00 00 00 17 00 00 00 00 00 04 ef bb bf 00 00 00 00 04 ef bb bf 00 00 00 00 00 00
+04-15 21:08:29.026  4241  4515 I usei    : usei::sq(172.16.0.96:55002): 01 02 90 03 00 00 00 0e 00 00 40 31 01 01 02 00 00 00 00 00 00 00
+04-15 21:08:29.027  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.028  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.028  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.028  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.028  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.028  4241  4291 I rmi     : routing_manager_impl::send event,session_:4033
+04-15 21:08:29.029  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 33 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.029  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.029  4241  4317 I usei    : usei::rcb(Success): ff ff 81 00 00 00 00 4c 00 00 09 43 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 20 01 03 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 03 00 01 01 00 00 03 00 00 00 02 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 db 00 09 04 00 ac 10 00 60 00 11 d6 db
+04-15 21:08:29.029  4241  4317 I rmi     : rmi::on_message: ff ff 81 00 00 00 00 4c 00 00 09 43 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 20 01 03 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 03 00 01 01 00 00 03 00 00 00 02 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 db 00 09 04 00 ac 10 00 60 00 11 d6 db
+04-15 21:08:29.029  4241  4317 I sdi     : sdi::on_message: ff ff 81 00 00 00 00 4c 00 00 09 43 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 20 01 03 00 01 01 00 00 03 00 00 00 01 06 00 00 20 01 03 00 01 01 00 00 03 00 00 00 02 00 00 00 18 00 09 04 00 ac 10 00 60 00 06 d6 db 00 09 04 00 ac 10 00 60 00 11 d6 db
+04-15 21:08:29.030  4241  4317 I usei    : usei::sq(172.16.0.96:30490): ff ff 81 00 00 00 00 34 00 00 01 df 01 01 02 00 c0 00 00 00 00 00 00 20 07 00 00 00 01 03 00 01 01 00 00 03 00 00 00 01 07 00 00 00 01 03 00 01 01 00 00 03 00 00 00 02 00 00 00 00
+04-15 21:08:29.031  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:4034
+04-15 21:08:29.031  4241  4317 I rmi     : routing_manager_impl::send event,len:3c,3c
+04-15 21:08:29.031  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.031  4241  4317 I tsei    : tsei<172.16.0.96:55003>::sq: 01 03 90 03 00 00 00 3c 00 00 40 34 01 01 02 00 00 00 00 30 00 03 00 00 00 04 ef bb bf 00 00 00 00 04 ef bb bf 00 00 00 00 04 ef bb bf 00 00 00 00 00 00 00 00 00 04 ef bb bf 00 00 00 00 04 ef bb bf 00 00
+04-15 21:08:29.032  4241  4317 I rmi     : routing_manager_impl::send_to event,session_:4035
+04-15 21:08:29.032  4241  4317 I rmi     : routing_manager_impl::send event,len:74,74
+04-15 21:08:29.032  4241  4317 I tsei    : tsei<172.16.0.96:55003>::sq: 01 03 90 04 00 00 00 74 00 00 40 35 01 01 02 00 00 00 00 68 00 00 00 14 ef bb bf 44 65 73 74 69 6e 61 74 69 6f 6e 20 4c 69 73 74 00 01 02 02 00 00 00 49 00 00 00 1c 00 00 00 00 16 ef bb bf e9 98 b3 e5 85 89 e6 96 b0 e4 b8 9a e4 b8 ad e5 bf 83 00 00 00 00 00 25 01 00 00 00 1f ef bb bf e5 9b 9b e5 b7 9d e7 9c 81 e6 88 90 e9 83 bd e5 b8 82 e9 9d 92 e7 be 8a e5 8c ba 00 00
+04-15 21:08:29.034  6189  7517 I PermissionUtils: checkPermissions, noteProxyOp,result:0
+04-15 21:08:29.038  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.038  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.043  4241  4515 I usei    : usei::rcb(Success): ff ff 81 00 00 00 00 50 00 00 00 c2 01 01 02 00 c0 00 00 00 00 00 00 30 01 00 00 10 02 01 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 02 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 05 00 01 01 00 00 03 00 00 00 00 00 00 00 0c 00 09 04 00 ac 10 00 61 00 11 d6 d8
+04-15 21:08:29.043  4241  4515 I rmi     : rmi::on_message: ff ff 81 00 00 00 00 50 00 00 00 c2 01 01 02 00 c0 00 00 00 00 00 00 30 01 00 00 10 02 01 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 02 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 05 00 01 01 00 00 03 00 00 00 00 00 00 00 0c 00 09 04 00 ac 10 00 61 00 11 d6 d8
+04-15 21:08:29.043  4241  4515 I sdi     : sdi::on_message: ff ff 81 00 00 00 00 50 00 00 00 c2 01 01 02 00 c0 00 00 00 00 00 00 30 01 00 00 10 02 01 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 02 00 01 01 00 00 03 00 00 00 00 01 00 00 10 02 05 00 01 01 00 00 03 00 00 00 00 00 00 00 0c 00 09 04 00 ac 10 00 61 00 11 d6 d8
+04-15 21:08:29.044  4241  4515 I usei    : usei::sq(172.16.0.97:30490): ff ff 81 00 00 00 00 40 00 00 00 9c 01 01 02 00 c0 00 00 00 00 00 00 20 06 00 00 10 02 01 00 01 01 00 00 03 00 00 00 01 06 00 00 10 02 02 00 01 01 00 00 03 00 00 00 01 00 00 00 0c 00 09 04 00 ac 10 00 63 00 11 d6 d9
+04-15 21:08:29.044  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.044  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.044  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.045  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.045  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.045  4241  4291 I rmi     : routing_manager_impl::send event,session_:4036
+04-15 21:08:29.045  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 36 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.045  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.045  4241  4515 I usei    : usei::rcb(Success): ff ff 81 00 00 00 00 34 00 00 00 9c 01 01 02 00 c0 00 00 00 00 00 00 20 07 00 00 00 02 01 00 01 01 00 00 03 00 00 00 01 07 00 00 00 02 02 00 01 01 00 00 03 00 00 00 01 00 00 00 00
+04-15 21:08:29.046  4241  4515 I rmi     : rmi::on_message: ff ff 81 00 00 00 00 34 00 00 00 9c 01 01 02 00 c0 00 00 00 00 00 00 20 07 00 00 00 02 01 00 01 01 00 00 03 00 00 00 01 07 00 00 00 02 02 00 01 01 00 00 03 00 00 00 01 00 00 00 00
+04-15 21:08:29.046  4241  4515 I sdi     : sdi::on_message: ff ff 81 00 00 00 00 34 00 00 00 9c 01 01 02 00 c0 00 00 00 00 00 00 20 07 00 00 00 02 01 00 01 01 00 00 03 00 00 00 01 07 00 00 00 02 02 00 01 01 00 00 03 00 00 00 01 00 00 00 00
+04-15 21:08:29.046  4241  4515 I sdi     : receive eventgroup_subscription_ack service:201,eg:1
+04-15 21:08:29.046  4241  4515 I sdi     : receive eventgroup_subscription_ack service:202,eg:1
+04-15 21:08:29.046  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.048  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.049  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.051  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.052  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.052  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.052  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.052  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.052  4241  4291 I rmi     : routing_manager_impl::send event,session_:4037
+04-15 21:08:29.052  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 37 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.053  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.053  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.054  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186458 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.054  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186458 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.056  3905  3905 W MapController: onGpsEvent: GpsEvent_update,ordinal: 0
+04-15 21:08:29.057  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.058  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.059  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.059  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.059  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.060  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.060  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.060  4241  4291 I rmi     : routing_manager_impl::send event,session_:4038
+04-15 21:08:29.060  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 38 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.060  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.060  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.063  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.064  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.068  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.069  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.069  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.070  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.070  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.070  4241  4291 I rmi     : routing_manager_impl::send event,session_:4039
+04-15 21:08:29.070  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 39 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.070  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.070  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.075  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.076  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.077  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.077  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.077  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.077  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.077  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.077  4241  4291 I rmi     : routing_manager_impl::send event,session_:403a
+04-15 21:08:29.077  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 3a 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.078  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.078  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.080  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.081  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.082  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.082  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.082  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.083  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.083  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.083  4241  4291 I rmi     : routing_manager_impl::send event,session_:403b
+04-15 21:08:29.083  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 3b 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.083  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.084  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.085  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186489 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.086  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.087  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.088  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.088  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.088  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.089  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.089  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.089  4241  4291 I rmi     : routing_manager_impl::send event,session_:403c
+04-15 21:08:29.089  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 3c 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.089  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.089  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.092  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.092  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.093  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.094  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.094  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.094  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.094  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.094  4241  4291 I rmi     : routing_manager_impl::send event,session_:403d
+04-15 21:08:29.094  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 3d 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.095  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.095  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.100  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.100  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.101  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.102  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.102  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.102  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.102  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.102  4241  4291 I rmi     : routing_manager_impl::send event,session_:403e
+04-15 21:08:29.102  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 3e 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.103  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.103  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.104  4241  4515 I ucei    : ucei::rcb(Success): 02 01 90 05 00 00 00 0a 00 00 00 00 01 01 02 00 00 04
+04-15 21:08:29.104  4241  4515 I rmi     : rmi::on_message: 02 01 90 05 00 00 00 0a 00 00 00 00 01 01 02 00 00 04
+04-15 21:08:29.104  4241  4515 I rmi     : rmi::on_message(0201, 1): 02 01 90 05 00 00 00 0a 00 00 00 00 01 01 02 00 00 04
+04-15 21:08:29.106  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.106  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.107  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.108  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.108  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.108  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.108  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.108  4241  4291 I rmi     : routing_manager_impl::send event,session_:403f
+04-15 21:08:29.108  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 3f 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.109  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.109  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.111  4241  4515 I ucei    : ucei::rcb(Success): 02 01 90 08 00 00 00 0b 00 00 00 00 01 01 02 00 05 ff b5
+04-15 21:08:29.111  4241  4515 I rmi     : rmi::on_message: 02 01 90 08 00 00 00 0b 00 00 00 00 01 01 02 00 05 ff b5
+04-15 21:08:29.111  4241  4515 I rmi     : rmi::on_message(0201, 1): 02 01 90 08 00 00 00 0b 00 00 00 00 01 01 02 00 05 ff b5
+04-15 21:08:29.111  4241  4515 I ucei    : ucei::rcb(Success): 02 01 90 06 00 00 00 20 00 00 00 00 01 01 02 00 00 00 00 14 01 cc 09 00 00 00 0d ef bb bf 43 48 4e 2d 43 55 47 53 4d 00
+04-15 21:08:29.111  4241  4515 I rmi     : rmi::on_message: 02 01 90 06 00 00 00 20 00 00 00 00 01 01 02 00 00 00 00 14 01 cc 09 00 00 00 0d ef bb bf 43 48 4e 2d 43 55 47 53 4d 00
+04-15 21:08:29.111  4241  4515 I rmi     : rmi::on_message(0201, 1): 02 01 90 06 00 00 00 20 00 00 00 00 01 01 02 00 00 00 00 14 01 cc 09 00 00 00 0d ef bb bf 43 48 4e 2d 43 55 47 53 4d 00
+04-15 21:08:29.111  4241  4515 I ucei    : ucei::rcb(Success): 02 02 90 01 00 00 00 09 00 00 00 00 01 01 02 00 01
+04-15 21:08:29.111  4241  4515 I rmi     : rmi::on_message: 02 02 90 01 00 00 00 09 00 00 00 00 01 01 02 00 01
+04-15 21:08:29.111  4241  4515 I rmi     : rmi::on_message(0202, 1): 02 02 90 01 00 00 00 09 00 00 00 00 01 01 02 00 01
+04-15 21:08:29.112  4241  4511 I someipServiceJNI: Received a message type:2, with Client/Session [0/0].
+04-15 21:08:29.112  4241  4511 I someipServiceJNI: onClientDataReceivedCallBackJni.
+04-15 21:08:29.112  4241  4511 I SomeIPService: onClientDataReceived:201,methodEventID:9008,len:3
+04-15 21:08:29.112  4241  4511 I SomeIPService: onClientDataReceived callback:201,methodEventID:9008,len:3
+04-15 21:08:29.112  4159  4625 I com.sv.vsomeip.SomeIPManager: onClientDataReceived, serverID:201,methodEventID:9008
+04-15 21:08:29.112  4159  4210 I VSomeIPClient: DataReceivedCallBackRunnable,methodID:9008
+04-15 21:08:29.113  4159  4213 V TBoxTelephonyService: receiver tbox message = 36872
+04-15 21:08:29.113  4159  4213 V TBoxTelephonyService: NOTIFY_TBoxSignalStrength
+04-15 21:08:29.113  4049  4150 V TboxTelephonyManager: notifyTBoxConnectState = true
+04-15 21:08:29.113  4049  4150 D TBoxFunctionHolder: {SvBtPhone_Z}<>{20200224_111553} notifyTBoxConnectState state = true
+04-15 21:08:29.114  4234  4280 V TboxTelephonyManager: notifyTBoxConnectState = true
+04-15 21:08:29.114  4234  4280 V TBoxMessageToSystemUIService: isExitsTBox = true
+04-15 21:08:29.114  4234  4280 D PA_TboxManager: noticeIconShow
+04-15 21:08:29.114  2812  3370 D PlatformTboxService: PlatformTboxService , noticeIconShow , iconShow = false
+04-15 21:08:29.115  2812  3370 D PlatformTboxService: PlatformTboxService , sendTboxBroadcast ,ACTION_TBOX_ICON_CHANGED show = false , iconType = 2001
+04-15 21:08:29.115  4234  4344 V AudioSourceToIPManager: sourceName = , packageName =
+04-15 21:08:29.115  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186519 | Read: 01 51 15 03 00 01 01
+04-15 21:08:29.115  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186519 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.115  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186519 | Read: 01 7C FF 2D 00 03 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+04-15 21:08:29.115  1479  1539 W automotive.vehicle@2.0-service.salvator.EmulatedVehicleHal: Config not set property: 0x21407cff
+04-15 21:08:29.115  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186520 | Read: 04 44 01 03 00 00 00
+04-15 21:08:29.116  1479  1539 D VehiclePlatform|RemoteHAL|SPI: 0000186520 | Read: 04 44 11 04 00 11 F8 00
+04-15 21:08:29.115  2812  3370 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:966 android.content.ContextWrapper.sendBroadcast:437 platformadapter.svauto.com.services.PlatformTboxService.sendTboxBroadcast:297 platformadapter.svauto.com.services.PlatformTboxService.noticeIconShow:196 dsv.platformadapter.app.IPlatformTboxService$Stub.onTransact:159
+04-15 21:08:29.116  4234  4344 V AudioSourceToIPManager: not find match source to ip,send None
+04-15 21:08:29.117  4159  4182 V MediaService: SVThirdpart audioSourceStruct : 00  00  00  0D  11  00  00  00  08  EF  BB  BF  4E  6F  6E  65  00
+04-15 21:08:29.117  2620  5051 E ActivityManager: Sending non-protected broadcast com.android.tbox.icon.changed from system 2812:platformadapter.svauto.com.platformadaptermultivr/1000 pkg platformadapter.svauto.com.platformadaptermultivr
+04-15 21:08:29.118  4241  4291 I SomeIPService: notifyEvent.serverID:101,eventID:9009,dataLen:17
+04-15 21:08:29.118  4241  4291 I someipServiceJNI: Java_com_sv_someip_service_SomeIPService_notifyEventNative event:9009,for service : 101
+04-15 21:08:29.118  4241  4291 I rmi     : routing_manager_impl::send2,size:33
+04-15 21:08:29.118  4241  4291 I rmi     : routing_manager_impl::send event,len:19,19
+04-15 21:08:29.118  4241  4291 I rmi     : routing_manager_impl::send event,session_:4040
+04-15 21:08:29.118  4241  4291 I usei    : usei::sq(172.16.0.96:55001): 01 01 90 09 00 00 00 19 00 00 40 40 01 01 02 00 00 00 00 0d 11 00 00 00 08 ef bb bf 4e 6f 6e 65 00
+04-15 21:08:29.118  4241  4291 I someipServiceJNI: end notify event:9009,for service : 101
+04-15 21:08:29.119  4159  4182 V MediaService: notifyRequestActiveAudioSourceToApp
+04-15 21:08:29.119  2620  5051 E ActivityManager: Sending non-protected broadcast com.android.tbox.icon.changed from system 2812:platformadapter.svauto.com.platformadaptermultivr/1000 pkg platformadapter.svauto.com.platformadaptermultivr
+04-15 21:08:29.121  2812  3370 I PlatformTboxService: PlatformTboxDevice , notictTboxStateToEveryIPlatformTboxDispatcher , ptd = dsv.platformadapter.app.IPlatformTboxDispatcher$Stub$Proxy@f21beb3, clientIdPackageName = CarStateManagerServicedsv.carstate.service
+04-15 21:08:29.121  2812  3370 D PlatformTboxService: PlatformTboxDevice , tboxIconShow
+04-15 21:08:29.121  2812  3370 I PlatformTboxService: PlatformTboxDevice , notictTboxStateToEveryIPlatformTboxDispatcher , ptd = dsv.platformadapter.app.IPlatformTboxDispatcher$Stub$Proxy@b81e4c4, clientIdPackageName = /vendor/app/Rn2VrAdapter/Rn2VrAdapter.apkcom.iflytek.Rn2Adapter
+04-15 21:08:29.121  2812  3370 D PlatformTboxService: PlatformTboxDevice , tboxIconShow
+
+
+
+spark@MacBook-Pro:~/Downloads$ fastboot getvar all
+< waiting for any device >
+(bootloader) version-baseband:N/A
+(bootloader) version-bootloader:U-Boot 2015.04-00002-gc07382c
+(bootloader) version:0.4
+(bootloader) product:g6sa
+(bootloader) platform:r8a77965
+(bootloader) revision:1.1
+(bootloader) serialno:00001234
+(bootloader) variant:
+(bootloader) secure:no
+(bootloader) unlocked:yes
+(bootloader) max-download-size:0x1000000
+(bootloader) partition-size:bootloader:0x180000
+(bootloader) partition-size:misc:0x80000
+(bootloader) partition-size:pst:0x80000
+(bootloader) partition-size:appcfg:0x80000
+(bootloader) partition-size:vbmeta_a:0x80000
+(bootloader) partition-size:vbmeta_b:0x80000
+(bootloader) partition-size:dtb_a:0x80000
+(bootloader) partition-size:dtb_b:0x80000
+(bootloader) partition-size:boot_a:0x1000000
+(bootloader) partition-size:boot_b:0x1000000
+(bootloader) partition-size:metadata:0x1000000
+(bootloader) partition-size:system_a:0x40000000
+(bootloader) partition-size:system_b:0x40000000
+(bootloader) partition-size:vendor_a:0x50000000
+(bootloader) partition-size:vendor_b:0x50000000
+(bootloader) partition-size:mcu_a:0x400000
+(bootloader) partition-size:mcu_b:0x400000
+(bootloader) partition-size:extradata:0x200000000
+(bootloader) partition-size:vrdata:0x40000000
+(bootloader) partition-size:fotadata:0xa0000000
+(bootloader) partition-size:userdata:0x343e7be00
+(bootloader) partition-type:bootloader:raw
+(bootloader) partition-type:misc:raw
+(bootloader) partition-type:pst:raw
+(bootloader) partition-type:appcfg:raw
+(bootloader) partition-type:vbmeta_a:raw
+(bootloader) partition-type:vbmeta_b:raw
+(bootloader) partition-type:dtb_a:raw
+(bootloader) partition-type:dtb_b:raw
+(bootloader) partition-type:boot_a:raw
+(bootloader) partition-type:boot_b:raw
+(bootloader) partition-type:metadata:raw
+(bootloader) partition-type:system_a:ext4
+(bootloader) partition-type:system_b:ext4
+(bootloader) partition-type:vendor_a:ext4
+(bootloader) partition-type:vendor_b:ext4
+(bootloader) partition-type:mcu_a:ext4
+(bootloader) partition-type:mcu_b:ext4
+(bootloader) partition-type:extradata:ext4
+(bootloader) partition-type:vrdata:ext4
+(bootloader) partition-type:fotadata:ext4
+(bootloader) partition-type:userdata:ext4
+(bootloader) has-slot:bootloader:no
+(bootloader) has-slot:misc:no
+(bootloader) has-slot:pst:no
+(bootloader) has-slot:appcfg:no
+(bootloader) has-slot:vbmeta:yes
+(bootloader) has-slot:dtb:yes
+(bootloader) has-slot:boot:yes
+(bootloader) has-slot:metadata:no
+(bootloader) has-slot:system:yes
+(bootloader) has-slot:vendor:yes
+(bootloader) has-slot:mcu:yes
+(bootloader) has-slot:extradata:no
+(bootloader) has-slot:vrdata:no
+(bootloader) has-slot:fotadata:no
+(bootloader) has-slot:userdata:no
+(bootloader) slot-suffixes:a,b
+(bootloader) slot-count:2
+(bootloader) current-slot:a
+(bootloader) slot-successful:a:yes
+(bootloader) slot-successful:b:no
+(bootloader) slot-unbootable:a:no
+(bootloader) slot-unbootable:b:yes
+(bootloader) slot-retry-count:a:0
+(bootloader) slot-retry-count:b:0
+all: listed above
+Finished. Total time: 0.242s
+
+
+V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:17.831  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:17.841  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:17.856  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:17.899  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:17.911  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:17.920  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:18.011  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:18.069  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:18.220  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
+04-15 22:07:18.233  4610  4804 V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h
+
+
+04-15 22:31:37.417  4998  4998 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.CarEnergyManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:43 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:31:37.426  4998  4998 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.CarSensorManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:52 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:31:38.656  2594  2701 V ActivityManager: Attempted to start a foreground service (ComponentInfo{com.spark.h9patches/com.spark.h9patches.H9PatchesService}) with a broken notification (no icon: Notification(channel=null pri=0 contentView=com.spark.h9patches/0x109008e vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE))
+04-15 22:31:40.444  4998  4998 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:31:40.452  4998  4998 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:32:27.193  2594  3910 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.spark.h9patches flg=0x4000010 (has extras) } to com.navinfo.appstore/.Receivers.UninstallReceiver
+04-15 22:32:27.196  2594  2701 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.spark.h9patches flg=0x4000010 (has extras) } to com.svox.pico/.VoiceDataInstallerReceiver
+04-15 22:34:31.320  2594  2716 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.SYSTEM_OVERLAY_WINDOW in package: com.spark.h9patches at: Binary XML file line #111
+04-15 22:34:31.413  7322  7322 I dex2oat : /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=9 --compiler-filter=quicken --classpath-dir=/data/app/com.spark.h9patches-ENkaTYSNihmxht3wFaxw9A== --class-loader-context=PCL[]
+04-15 22:34:35.044  2594  2701 I ActivityManager: Force stopping com.spark.h9patches appid=1000 user=-1: installPackageLI
+04-15 22:34:35.045  2594  2701 I ActivityManager: Killing 4998:com.spark.h9patches/1000 (adj 100): stop com.spark.h9patches
+04-15 22:34:35.050  2594  2701 W ActivityManager: Scheduling restart of crashed service com.spark.h9patches/.H9AccessibilityService in 1000ms
+04-15 22:34:35.050  2594  2701 W ActivityManager: Scheduling restart of crashed service com.spark.h9patches/.H9PatchesService in 10999ms
+04-15 22:34:35.070  2594  2701 I ActivityManager:   Force stopping service ServiceRecord{a43f22 u0 com.spark.h9patches/.H9PatchesService}
+04-15 22:34:35.072  2594  2701 I ActivityManager:   Force stopping service ServiceRecord{c65b7c2 u0 com.spark.h9patches/.H9AccessibilityService}
+04-15 22:34:35.116  2594  3910 I WindowManager: WIN DEATH: Window{950e3ef u0 com.spark.h9patches}
+04-15 22:34:35.118  2594  3910 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:34:35.215  2594  2716 I PackageManager: Package com.spark.h9patches codePath changed from /data/app/com.spark.h9patches-3VeLpzBh2WQWnRhPxnnKXw== to /data/app/com.spark.h9patches-ENkaTYSNihmxht3wFaxw9A==; Retaining data and using new
+04-15 22:34:35.216  2594  2716 W PackageManager: Code path for com.spark.h9patches changing from /data/app/com.spark.h9patches-3VeLpzBh2WQWnRhPxnnKXw== to /data/app/com.spark.h9patches-ENkaTYSNihmxht3wFaxw9A==
+04-15 22:34:35.216  2594  2716 W PackageManager: Resource path for com.spark.h9patches changing from /data/app/com.spark.h9patches-3VeLpzBh2WQWnRhPxnnKXw== to /data/app/com.spark.h9patches-ENkaTYSNihmxht3wFaxw9A==
+04-15 22:34:35.745  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.spark.h9patches flg=0x4000010 (has extras) }: user 11 is stopped
+04-15 22:34:35.746  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.spark.h9patches flg=0x4000010 (has extras) }: user 10 is stopped
+04-15 22:34:35.749  2594  2716 I ActivityManager: Force stopping com.spark.h9patches appid=1000 user=0: pkg removed
+04-15 22:34:35.758  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.spark.h9patches flg=0x4000010 (has extras) }: user 10 is stopped
+04-15 22:34:35.758  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.spark.h9patches flg=0x4000010 (has extras) }: user 11 is stopped
+04-15 22:34:35.765  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:com.spark.h9patches flg=0x4000010 (has extras) }: user 10 is stopped
+04-15 22:34:35.766  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:com.spark.h9patches flg=0x4000010 (has extras) }: user 11 is stopped
+04-15 22:34:35.767  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.MY_PACKAGE_REPLACED flg=0x4000010 pkg=com.spark.h9patches (has extras) }: user 10 is stopped
+04-15 22:34:35.767  2594  2716 W ActivityManager: Skipping broadcast of Intent { act=android.intent.action.MY_PACKAGE_REPLACED flg=0x4000010 pkg=com.spark.h9patches (has extras) }: user 11 is stopped
+04-15 22:34:35.799  2594  2701 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.spark.h9patches flg=0x4000010 (has extras) } to com.navinfo.appstore/.Receivers.UninstallReceiver
+04-15 22:34:35.807  5552  5552 D Runtime : action:android.intent.action.PACKAGE_REMOVED    dataString:package:com.spark.h9patches
+04-15 22:34:35.827  2594  7327 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.spark.h9patches flg=0x4000010 (has extras) } to com.mgoogle.android.gms/org.microg.gms.gcm.UnregisterReceiver
+04-15 22:34:35.835  2594  2701 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.spark.h9patches flg=0x4000010 (has extras) } to com.navinfo.appstore/.Receivers.UninstallReceiver
+04-15 22:34:35.838  2594  2701 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.spark.h9patches flg=0x4000010 (has extras) } to com.svox.pico/.VoiceDataInstallerReceiver
+04-15 22:34:35.839  6926  6959 I e       : Installed com.spark.h9patches
+04-15 22:34:35.846  5552  5552 D Runtime : action:android.intent.action.PACKAGE_ADDED    dataString:package:com.spark.h9patches
+04-15 22:34:35.856  5552  5552 D Runtime : action:android.intent.action.PACKAGE_REPLACED    dataString:package:com.spark.h9patches
+04-15 22:34:35.905  4843  4843 D ImsResolver: maybeAddedImsService, packageName: com.spark.h9patches
+04-15 22:34:35.920  2594  3499 I ActivityManager: Start proc 7339:com.spark.h9patches/1000 for broadcast com.spark.h9patches/.BootBroadcastReceiver
+04-15 22:34:36.107  7339  7339 I chatty  : uid=1000(system) com.spark.h9patches expire 2 lines
+04-15 22:34:36.107  7339  7339 I spark.h9patches: type=1400 audit(0.0:599): avc: denied { write } for path="/data/app/com.spark.h9patches-ENkaTYSNihmxht3wFaxw9A==/base.apk.arm64.flock" dev="mmcblk0p21" ino=524067 scontext=u:r:system_app:s0 tcontext=u:object_r:apk_data_file:s0 tclass=file permissive=1
+04-15 22:34:36.140  7339  7339 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.DriverAssistManager.<init>:42 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:16 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:34:36.144  7339  7339 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.DriverDailyAssistManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:25 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:34:36.148  7339  7339 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.ReverseAssistManager.<init>:42 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:34 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:34:36.152  7339  7339 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.CarEnergyManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:43 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:34:36.157  7339  7339 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.CarSensorManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:52 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:34:36.189  7339  7339 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startForegroundService:1482 android.content.ContextWrapper.startForegroundService:655 com.spark.h9patches.Radio$1$$ExternalSyntheticApiModelOutline0.m:0 com.spark.h9patches.H9PatchesApplication.onCreate:40 android.app.Instrumentation.callApplicationOnCreate:1119
+04-15 22:34:36.247  7339  7339 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:34:36.289  7339  7339 D com.spark.h9patches.H9AccessibilityService: onServiceConnected
+04-15 22:34:36.290  2594  2701 V ActivityManager: Attempted to start a foreground service (ComponentInfo{com.spark.h9patches/com.spark.h9patches.H9PatchesService}) with a broken notification (no icon: Notification(channel=null pri=0 contentView=com.spark.h9patches/0x109008e vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE))
+04-15 22:34:36.341  2979  2979 D StatusBar: shouldPeek entry.notifcaiton.packagesname=com.spark.h9patches
+04-15 22:34:36.442  2979  2979 D StatusBar: shouldPeek entry.notifcaiton.packagesname=com.spark.h9patches
+04-15 22:34:55.732  2594  2716 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.SYSTEM_OVERLAY_WINDOW in package: com.spark.h9patches at: Binary XML file line #111
+04-15 22:34:55.775  7396  7396 I dex2oat : /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=9 --compiler-filter=quicken --classpath-dir=/data/app/com.spark.h9patches-QDQUSb8k3zPyyGBFHYaIfQ== --class-loader-context=PCL[]
+04-15 22:34:59.387  2594  2701 I ActivityManager: Force stopping com.spark.h9patches appid=1000 user=-1: installPackageLI
+04-15 22:34:59.387  2594  2701 I ActivityManager: Killing 7339:com.spark.h9patches/1000 (adj 100): stop com.spark.h9patches
+04-15 22:34:59.388  2594  2701 W ActivityManager: Scheduling restart of crashed service com.spark.h9patches/.H9AccessibilityService in 1000ms
+04-15 22:34:59.388  2594  2701 W ActivityManager: Scheduling restart of crashed serv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+04-15 22:42:25.754 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220 com.spark.h9patches.Launcher$$ExternalSyntheticLambda3.run:0
+04-15 22:42:25.754 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220
+04-15 22:42:25.784  9137 14243 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:42:26.354 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:42:26.357 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:42:26.357 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:42:28.818 11384 11384 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:42:28.936 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:29.638  9137 14243 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:42:29.654 11384 11384 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:42:29.785 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:42:29.786 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:42:29.786 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:42:30.561 11384 11384 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:42:33.460 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:42:33.487 11384 11384 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:42:33.563 11384 11384 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:42:33.564 11384 11384 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:42:33.566  9137 14298 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:42:33.620 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220 com.spark.h9patches.Launcher$$ExternalSyntheticLambda3.run:0
+04-15 22:42:33.620 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220
+04-15 22:42:37.611 11384 11384 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:42:37.629 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:37.632 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:37.655 11384 11384 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:42:37.656 11384 11384 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:42:37.699 11384 11384 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:42:37.756 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:42:40.221 11384 11384 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:42:42.787 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:42:42.867 11384 11384 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:42:42.918 11384 11384 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:42:42.919 11384 11384 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:42:42.924  9137 14056 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:42:44.283 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:44.286 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:44.287 11384 11384 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:42:44.287 11384 11384 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:42:44.633 11384 11384 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:42:44.634 11384 11384 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:42:44.952 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:42:44.953 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:42:44.953 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:42:46.512 11384 11384 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:42:48.647 11384 11384 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:42:49.328 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:42:49.328 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:42:49.328 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:42:50.143 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:42:54.565 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220 com.spark.h9patches.Launcher$$ExternalSyntheticLambda3.run:0
+04-15 22:42:54.565 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220
+04-15 22:42:56.165 11384 11384 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:42:56.627 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:42:56.627 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:42:56.627 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:42:57.760 11384 11384 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:42:57.781 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:42:58.341 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:42:58.341 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:42:58.342 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:42:58.939 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:58.957 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:42:59.074 11384 11384 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:42:59.104 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:42:59.186 11384 11384 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:43:00.788 11384 11384 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:43:00.921 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:43:00.922 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:43:00.922 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:43:01.503 11384 11384 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:43:01.566 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:43:01.568 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:43:01.569 11384 11384 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:43:01.569 11384 11384 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:43:01.674 11384 11384 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:43:01.721 11384 11384 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:43:01.786 11384 11384 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:43:01.847 11384 11384 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:43:01.848 11384 11384 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:43:01.851  9137  9472 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:43:04.792 11384 11384 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:43:05.145 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:43:05.146 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:43:05.146 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:43:05.833 11384 11384 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:43:05.909 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:43:05.912 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:43:05.916 11384 11384 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:43:05.916 11384 11384 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:43:05.950 11384 11384 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:43:06.444 11384 11384 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:43:06.446 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:43:06.446 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:43:07.704 11384 11384 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:43:07.704 11384 11384 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:43:07.162 11384 11384 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:43:07.222 11384 11384 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:43:07.225 11384 11384 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:43:07.233 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220 com.spark.h9patches.Launcher$$ExternalSyntheticLambda3.run:0
+04-15 22:43:07.234 11384 11384 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220
+
+04-15 22:44:09.719  9137  9153 E ActivityManager:   1.2% 11384/com.spark.h9patches: 0.6% user + 0.5% kernel / faults: 8187 minor
+04-15 22:44:14.296  9137  9153 E ActivityManager:   1.2% 11384/com.spark.h9patches: 0.6% user + 0.5% kernel / faults: 8187 minor
+04-15 22:44:21.931  9137  9153 E ActivityManager:   0.3% 11384/com.spark.h9patches: 0.2% user + 0.1% kernel / faults: 8 minor
+04-15 22:44:27.183 11384 11384 E AndroidRuntime: Process: com.spark.h9patches, PID: 11384
+04-15 22:44:31.211 15550 15550 W PackageSettings: Skipping PackageSetting{d78b779 com.spark.h9patches/1000} due to missing metadata
+04-15 22:44:31.990 15550 15653 W PackageSettings: Skipping PackageSetting{d78b779 com.spark.h9patches/1000} due to missing metadata
+04-15 22:44:32.252 15550 15550 E RankingHelper: createDefaultChannelIfNeeded - Exception: android.content.pm.PackageManager$NameNotFoundException: com.spark.h9patches
+04-15 22:44:32.253 15550 15550 E RankingHelper: deleteDefaultChannelIfNeeded - Exception: android.content.pm.PackageManager$NameNotFoundException: com.spark.h9patches
+04-15 22:44:41.023 15550 15578 D PackageManager: try to parse dataapp /data/app/com.spark.h9patches-QDQUSb8k3zPyyGBFHYaIfQ==
+04-15 22:44:41.046 15550 16601 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.SYSTEM_OVERLAY_WINDOW in package: com.spark.h9patches at: Binary XML file line #111
+04-15 22:44:58.069 17749 17749 D ImsResolver: maybeAddedImsService, packageName: com.spark.h9patches
+04-15 22:45:07.224 15550 16237 I ActivityManager: Start proc 18966:com.spark.h9patches/1000 for broadcast com.spark.h9patches/.BootBroadcastReceiver
+04-15 22:45:07.463 18966 18966 I spark.h9patches: type=1400 audit(0.0:1176): avc: denied { write } for name="com.spark.h9patches-QDQUSb8k3zPyyGBFHYaIfQ==" dev="mmcblk0p21" ino=522538 scontext=u:r:system_app:s0 tcontext=u:object_r:apk_data_file:s0 tclass=dir permissive=1
+04-15 22:45:07.471 18966 18966 I spark.h9patches: type=1400 audit(0.0:1179): avc: denied { write } for path="/data/app/com.spark.h9patches-QDQUSb8k3zPyyGBFHYaIfQ==/base.apk.arm64.flock" dev="mmcblk0p21" ino=524124 scontext=u:r:system_app:s0 tcontext=u:object_r:apk_data_file:s0 tclass=file permissive=1
+04-15 22:45:07.679 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.DriverAssistManager.<init>:42 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:16 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:45:07.683 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.DriverDailyAssistManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:25 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:45:07.687 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.ReverseAssistManager.<init>:42 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:34 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:45:07.693 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.CarEnergyManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:43 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:45:07.703 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.desay_svautomotive.carlibs.hardware.CarSensorManager.<init>:49 com.desay_svautomotive.svcarsettings.CarSettingsApplication.onCreate:52 com.spark.h9patches.H9PatchesApplication.onCreate:29
+04-15 22:45:07.810 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startForegroundService:1482 android.content.ContextWrapper.startForegroundService:655 com.spark.h9patches.Radio$1$$ExternalSyntheticApiModelOutline0.m:0 com.spark.h9patches.H9PatchesApplication.onCreate:40 android.app.Instrumentation.callApplicationOnCreate:1119
+04-15 22:45:07.971 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:08.081 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:08.083 15550 15566 V ActivityManager: Attempted to start a foreground service (ComponentInfo{com.spark.h9patches/com.spark.h9patches.H9PatchesService}) with a broken notification (no icon: Notification(channel=null pri=0 contentView=com.spark.h9patches/0x109008e vibrate=null sound=null defaults=0x0 flags=0x40 color=0x00000000 vis=PRIVATE))
+04-15 22:45:08.147 15881 15881 D StatusBar: shouldPeek entry.notifcaiton.packagesname=com.spark.h9patches
+04-15 22:45:08.156 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:08.156 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:08.157 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:09.536 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:09.620 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:09.674 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:09.685 18966 18966 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:45:09.686 18966 18966 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:45:09.765 18966 18966 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:45:09.776 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:09.850 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:09.921 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:09.931 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:10.038 18966 19086 I com.spark.h9patches: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+04-15 22:45:10.141 18966 18966 D com.spark.h9patches.PreCollisionSystem: car connected!
+04-15 22:45:10.154 18966 18966 D com.spark.h9patches.PreCollisionSystem: checkPrefCollisionSystem
+04-15 22:45:10.156 18966 18966 D com.spark.h9patches.PreCollisionSystem: _togglePreCollisionSystem state: 0
+04-15 22:45:10.157 18966 18966 D com.spark.h9patches.PreCollisionSystem: car con!!!
+04-15 22:45:10.159 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:10.321 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:10.327 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:10.328 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:10.764 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:10.794 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:10.810 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:10.812 18966 18966 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:45:10.812 18966 18966 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:45:10.842 18966 18966 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:45:10.919 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:11.054 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:11.168 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:11.170 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:11.367 18966 18966 D com.spark.h9patches.PreCollisionSystem: ignitionStateListener:4
+04-15 22:45:11.381 15550 16226 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:45:11.403 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:11.810 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:11.848 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:11.849 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:12.540 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:12.663 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:12.664 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:12.666 18966 18966 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:45:12.667 18966 18966 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:45:12.915 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:12.925 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:13.184 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:13.184 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:13.187 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:13.471 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:13.797 18966 18966 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:45:13.834 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:13.887 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:13.973 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:13.974 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:14.053 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220 com.spark.h9patches.Launcher$$ExternalSyntheticLambda3.run:0
+04-15 22:45:14.053 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220
+04-15 22:45:14.080 15550 15817 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:45:14.096 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:14.407 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:14.407 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:14.407 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:14.604 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:15.272 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:15.343 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:15.413 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:15.416 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:15.860 15550 15886 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:45:15.876 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220 com.spark.h9patches.Launcher$$ExternalSyntheticLambda3.run:0
+04-15 22:45:15.876 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.runStartupApp:220
+04-15 22:45:23.246 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:23.247 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:23.247 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:23.829 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:24.317 18966 18966 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:45:24.629 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:24.747 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:25.694 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:25.695 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:25.695 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:25.949 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:25.979 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:44.427 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:44.607 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:44.607 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:44.608 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:45.083 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:45.100 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:45.102 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:45.104 18966 18966 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:45:45.105 18966 18966 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:45:45.109 18966 18966 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:45:45.112 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:45.114 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:45.117 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:45.121 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:45.126 15550 16210 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:45:45.647 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:45.716 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:45.717 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:45.717 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:46.096 18966 18966 I ConnectivityManager: startTethering caller:com.spark.h9patches
+04-15 22:45:46.130 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:46.137 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:46.148 18966 18966 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:45:46.148 18966 18966 D com.spark.h9patches.StartupScript: am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver
+04-15 22:45:46.295 18966 18966 D com.spark.h9patches.StartupScript: appwidget grantbind --package com.teslacoilsw.launcher --user 0
+04-15 22:45:46.363 18966 18966 D com.spark.h9patches.StartupScript: dumpsys deviceidle whitelist +com.mgoogle.android.gms
+04-15 22:45:46.426 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:46.467 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:46.469 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:46.478 15550 16237 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:45:47.024 18966 18966 D com.spark.h9patches.H9PatchesService: notifyOnStart
+04-15 22:45:47.174 18966 18966 D com.spark.h9patches.Launcher: start launcher: com.teslacoilsw.launcher
+04-15 22:45:47.174 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:854 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178 com.spark.h9patches.Launcher.onServiceStart:32
+04-15 22:45:47.181 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startActivity:866 android.app.ContextImpl.startActivity:855 android.content.ContextWrapper.startActivity:372 com.spark.h9patches.ServiceFacility.startActivity:43 com.spark.h9patches.Launcher.checkDefaultLauncher:178
+04-15 22:45:48.127 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1556 android.content.ContextWrapper.bindService:684 com.spark.h9patches.Radio.initManagers:84 com.spark.h9patches.Radio.onServiceStart:61 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:48.129 18966 18966 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1476 android.content.ContextWrapper.startService:650 com.spark.h9patches.Radio.checkRadio:92 com.spark.h9patches.Radio.onServiceStart:62 com.spark.h9patches.H9PatchesService.notifyOnStart:1042
+04-15 22:45:48.135 18966 18966 D com.spark.h9patches.StartupScript: runStartupScript
+04-15 22:45:48.264 18966 18966 D com.spark.h9patches.StartupScript: am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService
+04-15 22:45:48.300 18966 18966 D com.spark.h9patches.Accounts: com.spark.h9: accounts
+04-15 22:45:48.301 18966 18966 D com.spark.h9patches.Accounts: h9 get account: com.mgoogle/sparkwj@gmail.com/Account {name=sparkwj@gmail.com, type=com.mgoogle}
+04-15 22:45:48.304 15550 15892 W AppOps  : Finishing op nesting under-run: uid 1000 pkg com.spark.h9patches code 24 time=0 duration=0 nesting=0
+04-15 22:47:10.146 15550 15566 E ActivityManager:   0.3% 18966/com.spark.h9patches: 0.2% user + 0.1% kernel / faults: 45 minor
+04-15 22:47:19.665 15550 15566 W ActivityManager: Timeout executing service: ServiceRecord{5dd0161 u0 com.spark.h9patches/.H9AccessibilityService}
+04-15 22:47:22.752 15550 15566 E ActivityManager: ANR in com.spark.h9patches
+04-15 22:47:22.752 15550 15566 E ActivityManager: Reason: executing service com.spark.h9patches/.H9AccessibilityService
+04-15 22:47:22.752 15550 15566 E ActivityManager:   2.7% 18966/com.spark.h9patches: 2.1% user + 0.6% kernel / faults: 715 minor 1 major
+04-15 22:47:22.756 15550 15567 I ActivityManager: Killing 18966:com.spark.h9patches/1000 (adj 100): user request after error
+04-15 22:47:22.828 15550 15602 W InputDispatcher: channel '256a68 com.spark.h9patches (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+04-15 22:47:22.828 15550 15602 E InputDispatcher: channel '256a68 com.spark.h9patches (server)' ~ Channel is unrecoverably broken and will be disposed!
+04-15 22:47:25.305 15550 15566 E ActivityManager:   2.7% 18966/com.spark.h9patches: 2.1% user + 0.6% kernel / faults: 715 minor 1 major
+

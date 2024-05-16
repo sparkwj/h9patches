@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:description="@string/h9_accessibility_service_description"
+    android:packageNames="com.spark.h9patches"
+    android:accessibilityEventTypes="typeAllMask|typeWindowsChanged|typeTouchInteractionStart|typeTouchInteractionEnd"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRequestFilterKeyEvents"
+    android:canRequestFilterKeyEvents="true"
+    android:notificationTimeout="100"
+    tools:targetApi="jelly_bean_mr2" />

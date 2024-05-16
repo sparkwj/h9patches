@@ -1,23 +1,17 @@
 package com.spark.h9patches;
 
-import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.accessibility.AccessibilityManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -44,29 +38,12 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     private static final String TAG = "MainActivity";
     private LinearLayout layoutScriptEditor;
     private EditText scriptEditor;
-    private final SharedPreferences sharedPref = H9PatchesApplication.getSharedPref();
-    private H9PatchesService h9PatchesService;
-    private boolean isServiceBound = false;
-    LinkedHashMap<String, String> launcher_packages = new LinkedHashMap<>();
-    LinkedHashMap<String, String> installed_packages = new LinkedHashMap<>();
-
-    ServiceConnection mServerConnection = new ServiceConnection() {
-
-        @Override
-        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            h9PatchesService = ((H9PatchesService.H9PatchesServiceBinder) iBinder).getPatchesService();
-            isServiceBound = true;
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName componentName) {
-            isServiceBound = false;
-        }
-    };
+    private SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = H9PatchesApplication.getInstance().getSharedPreferences();
         setContentView(R.layout.activity_main);
 
 //        Log.d(TAG, "Utils.getScreenBrightness: " + Utils.getSystemBrightness());
@@ -89,17 +66,17 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     @Override
     protected void onStart() {
         super.onStart();
-        android.content.Intent intent = new android.content.Intent(this, H9PatchesService.class);
-        bindService(intent, mServerConnection, Context.BIND_AUTO_CREATE);
+//        android.content.Intent intent = new android.content.Intent(this, H9PatchesService.class);
+//        bindService(intent, mServerConnection, Context.BIND_AUTO_CREATE);
         initViews();
     }
 
     @Override
     protected void onStop() {
-        if (isServiceBound) {
-            unbindService(mServerConnection);
-            isServiceBound = false;
-        }
+//        if (isServiceBound) {
+//            unbindService(mServerConnection);
+//            isServiceBound = false;
+//        }
         super.onStop();
     }
 
@@ -121,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         init_switches();
         init_launcher_spinner();
         init_startup_app_spinner();
+        init_function_app_spinner();
+        init_map_spinner();
         init_script_editor();
     }
 
@@ -164,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                                 new InputStreamReader(process.getInputStream()));
                         String line;
                         while ((line = bufferedReader.readLine()) != null) {
-                            Log.i(TAG, "H9PatchesCommand info: " + line);
+                            Log.d(TAG, "H9PatchesCommand info: " + line);
                         }
                     } catch (Exception e) {
                         Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
@@ -200,34 +179,34 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         editor.putBoolean(pref_key, b);
         editor.apply();
 
-        if (pref_key.equals(getString(R.string.pref_turn_on_wifi_spot))) {
-            h9PatchesService.checkWifiHotspot();
-        }
-        if (pref_key.equals(getString(R.string.pref_turn_off_radio))) {
-            h9PatchesService.checkRadioPlay();
-        }
-        if (pref_key.equals(getString(R.string.pref_hide_navigation_bar))) {
-            h9PatchesService.checkNavigationBar();
-        }
-        if (pref_key.equals(getString(R.string.pref_accessibility_dock))) {
-            h9PatchesService.checkAccessibilityDock();
-        }
-
+//        if (pref_key.equals(getString(R.string.pref_turn_on_wifi_spot))) {
+//            h9PatchesService.checkWifiHotspot();
+//        }
+//        if (pref_key.equals(getString(R.string.pref_turn_off_radio))) {
+//            h9PatchesService.checkRadioPlay();
+//        }
+//        if (pref_key.equals(getString(R.string.pref_hide_navigation_bar))) {
+//            h9PatchesService.checkNavigationBar();
+//        }
+//        if (pref_key.equals(getString(R.string.pref_accessibility_dock))) {
+//            h9PatchesService.checkAccessibilityDock();
+//        }
     }
 
+    LinkedHashMap<String, String> launcher_packages = new LinkedHashMap<>();
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void init_launcher_spinner() {
         PackageManager pm = getPackageManager();
         Intent i = new Intent(Intent.ACTION_MAIN);
         i.addCategory(Intent.CATEGORY_HOME);
         i.addCategory(Intent.CATEGORY_DEFAULT);
-        List<ResolveInfo> lst = pm.queryIntentActivities(i, PackageManager.MATCH_DEFAULT_ONLY);
+        List<ResolveInfo> lst = pm.queryIntentActivities(i, PackageManager.MATCH_DEFAULT_ONLY | PackageManager.MATCH_DISABLED_COMPONENTS);
 //        launcher_packages.put("-", "");
         launcher_packages.clear();
         for (ResolveInfo resolveInfo : lst) {
-            String name = resolveInfo.loadLabel(pm).toString().trim();
-            if (!name.trim().isEmpty()) {
-                launcher_packages.put(resolveInfo.loadLabel(pm).toString(), resolveInfo.activityInfo.packageName);
+            String packageLabel = resolveInfo.loadLabel(pm).toString().trim();
+            if (!packageLabel.trim().isEmpty()) {
+                launcher_packages.put(packageLabel, resolveInfo.activityInfo.packageName);
             }
         }
         Spinner spinner_launcher = findViewById(R.id.spinner_default_launcher);
@@ -239,13 +218,45 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         ResolveInfo launcher_info = pm.resolveActivity(current_intent, PackageManager.MATCH_DEFAULT_ONLY);
 
         if (launcher_info != null) {
-            String current_launcher = launcher_info.loadLabel(pm).toString();
             SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putString(getString(R.string.pref_default_launcher), current_launcher);
+            editor.putString(getString(R.string.pref_default_launcher), launcher_info.activityInfo.packageName);
             editor.apply();
-            int pos = adapter.getPosition(current_launcher);
+            int pos = adapter.getPosition(launcher_info.loadLabel(pm).toString().trim());
             spinner_launcher.setOnItemSelectedListener(null);
             spinner_launcher.setSelection(pos == -1 ? 0 : pos, false);
+        }
+        spinner_launcher.setOnItemSelectedListener(this);
+    }
+
+    LinkedHashMap<String, String> map_packages = new LinkedHashMap<>();
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void init_map_spinner() {
+        PackageManager pm = getPackageManager();
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="));
+        List<ResolveInfo> lst = pm.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY | PackageManager.MATCH_DISABLED_COMPONENTS);
+        Intent intent2 = new Intent(Intent.ACTION_MAIN);
+        intent2.addCategory(Intent.CATEGORY_APP_MAPS);
+        List<ResolveInfo> lst2 = pm.queryIntentActivities(intent2, PackageManager.MATCH_DEFAULT_ONLY | PackageManager.MATCH_DISABLED_COMPONENTS);
+        lst.addAll(lst2);
+        map_packages.put("-", "");
+        map_packages.clear();
+        for (ResolveInfo resolveInfo : lst) {
+            String packageLabel = resolveInfo.loadLabel(pm).toString().trim();
+            if (!packageLabel.trim().isEmpty()) {
+                map_packages.put(packageLabel, resolveInfo.activityInfo.packageName);
+            }
+        }
+        Spinner spinner_launcher = findViewById(R.id.spinner_default_map);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new ArrayList<>(map_packages.keySet()));
+        spinner_launcher.setAdapter(adapter);
+
+        String map_app = sharedPref.getString(getString(R.string.pref_default_map), "");
+        for (Map.Entry<String, String> entry : map_packages.entrySet()) {
+            if (entry.getValue().equals(map_app)) {
+                spinner_launcher.setOnItemSelectedListener(null);
+                spinner_launcher.setSelection(adapter.getPosition(entry.getKey().trim()), false);
+                break;
+            }
         }
         spinner_launcher.setOnItemSelectedListener(this);
     }
@@ -257,16 +268,25 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString(getString(R.string.pref_default_launcher), launcher_packages.get(selected_launcher));
             editor.apply();
-            MainActivity.this.h9PatchesService.checkDefaultLauncher(false);
+        } else if (adapterView.getId() == R.id.spinner_default_map) {
+            String selected_map = adapterView.getSelectedItem().toString();
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString(getString(R.string.pref_default_map), map_packages.get(selected_map));
+            editor.apply();
         } else if (adapterView.getId() == R.id.spinner_startup_app) {
             String selected_app = adapterView.getSelectedItem().toString();
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString(getString(R.string.pref_startup_app), installed_packages.get(selected_app));
             editor.apply();
+        } else if (adapterView.getId() == R.id.spinner_functional_app) {
+            String selected_app = adapterView.getSelectedItem().toString();
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString(getString(R.string.pref_function_app), installed_packages2.get(selected_app));
+            editor.apply();
         }
     }
 
-
+    LinkedHashMap<String, String> installed_packages = new LinkedHashMap<>();
     private void init_startup_app_spinner() {
         PackageManager pm = getPackageManager();
         List<ApplicationInfo> lst = pm.getInstalledApplications(PackageManager.GET_META_DATA);
@@ -289,6 +309,31 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             }
         }
         spinner_startup_app.setOnItemSelectedListener(this);
+    }
+
+    LinkedHashMap<String, String> installed_packages2 = new LinkedHashMap<>();
+    private void init_function_app_spinner() {
+        PackageManager pm = getPackageManager();
+        List<ApplicationInfo> lst = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        installed_packages2.clear();
+        installed_packages2.put("-", "");
+        for (ApplicationInfo packageInfo : lst) {
+            if ((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM) <= 0) {
+                installed_packages2.put(packageInfo.loadLabel(pm).toString().trim(), packageInfo.packageName);
+            }
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new ArrayList<>(installed_packages2.keySet()));
+        Spinner spinner_function_app = findViewById(R.id.spinner_functional_app);
+        spinner_function_app.setAdapter(adapter);
+        String function_app = sharedPref.getString(getString(R.string.pref_function_app), "");
+        for (Map.Entry<String, String> entry : installed_packages2.entrySet()) {
+            if (entry.getValue().equals(function_app)) {
+                spinner_function_app.setOnItemSelectedListener(null);
+                spinner_function_app.setSelection(adapter.getPosition(entry.getKey().trim()), false);
+                break;
+            }
+        }
+        spinner_function_app.setOnItemSelectedListener(this);
     }
 
     @Override

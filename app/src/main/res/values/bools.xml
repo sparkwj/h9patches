@@ -3,7 +3,8 @@
     <bool name="pref_lane_assist">true</bool>
     <bool name="pref_turn_off_aeb">true</bool>
     <bool name="pref_turn_off_radio">true</bool>
-    <bool name="pref_turn_on_wifi_spot">false</bool>
+    <bool name="pref_turn_on_wifi_spot">true</bool>
     <bool name="pref_hide_navigation_bar">true</bool>
     <bool name="pref_accessibility_dock">true</bool>
+    <bool name="pref_key_remapping">true</bool>
 </resources>

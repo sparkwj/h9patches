@@ -11,11 +11,16 @@
     <string name="text_wifi_hot_spot">自动开启Wifi热点</string>
     <string name="text_startup_script">启动脚本</string>
     <string name="text_hide_system_dock">隐藏系统导航菜单</string>
-    <string name="text_startup_appr">开机启动</string>
+    <string name="text_startup_app">开机启动</string>
     <string name="text_edit_startup_script">Edit Startup script</string>
     <string name="text_save">保存</string>
     <string name="text_run">运行</string>
     <string name="text_cancel">取消</string>
     <string name="text_show_assistive_button">辅助浮动按钮</string>
     <string name="text_default_launcher">默认桌面</string>
+    <string name="h9_accessibility_service_label">H9 Patches Service</string>
+    <string name="h9_accessibility_service_description">H9 Patches Service</string>
+    <string name="text_default_map">默认导航地图</string>
+    <string name="text_enable_key_remapping">启用按键增强</string>
+    <string name="text_functional_app">方向盘左侧功能键长按</string>
 </resources>

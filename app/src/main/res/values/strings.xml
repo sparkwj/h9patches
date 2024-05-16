@@ -16,7 +16,8 @@
     <string name="text_startup_script">Startup script</string>
     <string name="text_hide_system_dock">Hide system dock</string>
     <string name="text_show_assistive_button">Show assistive button</string>
-    <string name="text_startup_appr">Choose startup app</string>
+    <string name="text_startup_app">Choose startup app</string>
+    <string name="text_functional_app">Choose function app</string>
     <string name="preference_file_key" translatable="false">com.spark.h9patches.default_preference</string>
     <string name="pref_turn_off_aeb" translatable="false">pref_turn_off_aeb</string>
     <string name="pref_turn_off_radio" translatable="false">pref_turn_off_radio</string>
@@ -26,14 +27,16 @@
     <string name="pref_accessibility_dock" translatable="false">pref_accessibility_dock</string>
     <string name="pref_default_launcher" translatable="false">pref_default_launcher</string>
     <string name="pref_startup_script" translatable="false">pref_startup_script</string>
+    <string name="pref_function_app" translatable="false">pref_function_app</string>
     <string name="tag_settings_applications" translatable="false">android.settings.settings</string>
     <string name="text_edit_startup_script">Edit Startup script</string>
     <string name="text_save">Save</string>
-    <string name="text_run">Run\t</string>
+    <string name="text_run">Run</string>
     <string name="text_cancel">Cancel</string>
     <string name="pref_value_startup_script" translatable="false">
         am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver\n
-        #pm disable com.mapbar.android.mapbarnavi
+        dumpsys deviceidle whitelist +com.mgoogle.android.gms\n
+        am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService\n
 </string>
     <string name="pref_value_gms_script" translatable="false">
         pm grant com.google.android.gsf.login android.permission.BIND_JOB_SERVICE\n
@@ -79,4 +82,10 @@
     <string name="pref_startup_app" translatable="false">pref_startup_app</string>
     <string name="str_system_launcher_package" translatable="false">com.android.launcher</string>
     <string name="str_system_launcher_activity" translatable="false">com.desaysv.hmi.launcher.Launcher2Activity</string>
+    <string name="h9_accessibility_service_label">H9 Patches Service</string>
+    <string name="h9_accessibility_service_description">H9 Patches Service</string>
+    <string name="text_default_map">Default navigation map</string>
+    <string name="pref_default_map" translatable="false">pref_default_map</string>
+    <string name="text_enable_key_remapping">Enable key remapping</string>
+    <string name="pref_key_remapping" translatable="false">pref_key_remapping</string>
 </resources>
