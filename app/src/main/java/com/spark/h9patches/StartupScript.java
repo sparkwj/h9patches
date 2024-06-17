@@ -76,7 +76,7 @@ public class StartupScript extends ServiceFacility {
                 }
             }
         } catch (Exception e) {
-            //
+            Log.d(TAG, e.getMessage());
         }
 //        SystemProperties.set(DEFAULT_HOME, );
     }

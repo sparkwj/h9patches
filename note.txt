@@ -1610,3 +1610,4 @@ V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
 04-15 22:47:22.828 15550 15602 E InputDispatcher: channel '256a68 com.spark.h9patches (server)' ~ Channel is unrecoverably broken and will be disposed!
 04-15 22:47:25.305 15550 15566 E ActivityManager:   2.7% 18966/com.spark.h9patches: 2.1% user + 0.6% kernel / faults: 715 minor 1 major
 
+adb shell am broadcast -a h9patches.intent.action.COMMAND -e cmd '"pm disable com.mapbar.android.mapbarnavi"'

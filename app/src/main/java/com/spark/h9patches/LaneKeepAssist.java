@@ -8,9 +8,13 @@ import android.car.hardware.CarVendorExtensionManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.ServiceConnection;
+import android.os.Handler;
 import android.os.IBinder;
 
 import com.desay_svautomotive.svcarsettings.manager.CarSettingsManager;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class LaneKeepAssist extends ServiceFacility {
     static long lastPressTime = 0;
@@ -105,7 +109,7 @@ public class LaneKeepAssist extends ServiceFacility {
                     if (System.currentTimeMillis() - lastPressTime < 1500) {
 //                        Log.d(TAG, "检测到双击，执行切换车道保持辅助");
                         if (enableLaneKeepAssistToggle) {
-                            toggleLaneKeepAssistSystem(2);
+                            _toggleLaneKeepAssistSystem(2);
                         }
 //                        Intent pi = new Intent(H9PatchesKeysService.this, H9PatchesService.class);
 //                        pi.setAction(com.spark.h9patches.Intent.ACTION_TOGGLE_LANE_KEEP_ASSIST_SYSTEM);
@@ -128,6 +132,17 @@ public class LaneKeepAssist extends ServiceFacility {
     }
 
     public void toggleLaneKeepAssistSystem(int state) {
+        if (enableLaneKeepAssistToggle) {
+            _toggleLaneKeepAssistSystem(state);
+        }
+    }
+
+    Timer stateTimer;
+    public void _toggleLaneKeepAssistSystem(int state) {
+        if (stateTimer != null) {
+            stateTimer.cancel();
+            stateTimer = null;
+        }
         int accState = getIgnitionState();
 //        Log.d(TAG, "toggleLaneKeepAssistSystemValuea cc状态: " + accState);
         if (accState != 4) {
@@ -135,15 +150,32 @@ public class LaneKeepAssist extends ServiceFacility {
             return;
         }
         int curState = mCarSettingsManager.getLaneKeepAssistSystemValue();
+        if (2 == state) {
+            state = curState == 1 ? 0 : 1;
+        }
         if (1 == curState && 0 == state) {
             mCarSettingsManager.setLaneKeepAssistSystemValue(0);
 //            Log.d(TAG, "关闭车道保持辅助");
-        } else if (0 == curState && 1 == state) {
-            mCarSettingsManager.setLaneKeepAssistSystemValue(1);
+//        } else if (0 == curState && 1 == state) {
+//            mCarSettingsManager.setLaneKeepAssistSystemValue(1);
 //            Log.d(TAG, "打开车道保持辅助");
-        } else if (2 == state) {
-            mCarSettingsManager.setLaneKeepAssistSystemValue(curState == 1 ? 0 : 1);
-//            Log.d(TAG, "切换车道保持辅助为: " + (curState == 1 ? 0 : 1));
+        } else if (1 == state) {
+            stateTimer = new Timer();
+            stateTimer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+//                    if (1 == curState) {
+//                        mCarSettingsManager.setLaneKeepAssistSystemValue(0);
+//                        try {
+//                            Thread.sleep(1000);
+//                        } catch (InterruptedException e) {
+//                            //
+//                        }
+//                    }
+                    mCarSettingsManager.setLaneKeepAssistSystemValue(1);
+                }
+//            }, 0, 10 * 1000);
+            }, 0);
         }
     }
 

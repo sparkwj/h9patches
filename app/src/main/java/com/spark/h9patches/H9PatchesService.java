@@ -967,7 +967,9 @@ import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
@@ -999,8 +1001,9 @@ public class H9PatchesService extends Service {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.d(TAG, "onStartCommand");
         setForegroundService();
-        notifyOnStart();
+        new Handler(Looper.getMainLooper()).postDelayed(H9PatchesService.this::notifyOnStart, 5000);
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -1038,6 +1041,7 @@ public class H9PatchesService extends Service {
     public void notifyOnStart() {
         Log.d(TAG, "notifyOnStart");
         for (H9PatchesService.IFacility facility : mFacilities.values()) {
+            Log.d(TAG, "start facility " + facility.getClass().getSimpleName());
             try {
                 facility.onServiceStart();
             } catch (Exception e) {

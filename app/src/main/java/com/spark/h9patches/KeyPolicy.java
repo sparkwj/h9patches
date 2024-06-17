@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.RemoteException;
@@ -116,7 +117,26 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
             return sendKeyCode(KeyEvent.KEYCODE_BACK);
         }
 
-        if (eventDeviceId == H9_DEVICEID_STEERING_WHEEL && ActivityWatcher.isTvApp(activeActivityPackageName)) {
+        if (eventDeviceId == H9_DEVICEID_STEERING_WHEEL && !ActivityWatcher.isTvApp(activeActivityPackageName) && eventKeyCode == H9_KEYCODE_MODE) {
+            if (eventAction == KeyEvent.ACTION_DOWN) {
+                longPressHandler = new Handler();
+                longPressHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        LaneKeepAssist laneKeepAssist = (LaneKeepAssist)getFacility(LaneKeepAssist.class);
+                        laneKeepAssist.toggleLaneKeepAssistSystem(2);
+                        lastRemappedKeyCode = eventKeyCode;
+                    }
+                }, LONG_PRESS_TIME);
+                return true;
+            } else if (eventAction == KeyEvent.ACTION_UP) {
+                lastRemappedKeyCode = eventKeyCode;
+                launchFunctionalApp();
+                return true;
+            }
+        }
+
+        if (eventDeviceId == H9_DEVICEID_STEERING_WHEEL && (ActivityWatcher.isTvApp(activeActivityPackageName))) {
             int mapToDPadKeyCode = 0;
             switch (eventKeyCode) {
                 case H9_KEYCODE_PREV:
@@ -138,27 +158,22 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
             if (mapToDPadKeyCode > 0 && eventAction == KeyEvent.ACTION_DOWN) {
                 int finalMapToDPadKeyCode = mapToDPadKeyCode;
                 longPressHandler = new Handler();
-                longPressHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        int reverseKeyCode = finalMapToDPadKeyCode;
-                        switch (finalMapToDPadKeyCode) {
-                            case KeyEvent.KEYCODE_DPAD_LEFT:
-                                reverseKeyCode = H9_KEYCODE_PREV;
-                                break;
-                            case KeyEvent.KEYCODE_DPAD_RIGHT:
-                                reverseKeyCode = H9_KEYCODE_NEXT;
-                                break;
-                            case KeyEvent.KEYCODE_DPAD_CENTER:
-                                reverseKeyCode = 0;
-                                launchFunctionalApp();
-                                break;
-                        }
-                        if (reverseKeyCode > 0) {
-                            KeyPolicy.this.sendKeyCode(reverseKeyCode);
-                        }
-                        lastRemappedKeyCode = eventKeyCode;
+                longPressHandler.postDelayed(() -> {
+                    int reverseKeyCode = finalMapToDPadKeyCode;
+                    switch (finalMapToDPadKeyCode) {
+                        case KeyEvent.KEYCODE_DPAD_LEFT:
+                            reverseKeyCode = H9_KEYCODE_PREV;
+                            break;
+                        case KeyEvent.KEYCODE_DPAD_RIGHT:
+                            reverseKeyCode = H9_KEYCODE_NEXT;
+                            break;
+//                        case KeyEvent.KEYCODE_DPAD_CENTER:
+//                            reverseKeyCode = 0;
+//                            launchFunctionalApp();
+//                            break;
                     }
+                    KeyPolicy.this.sendKeyCode(reverseKeyCode);
+                    lastRemappedKeyCode = eventKeyCode;
                 }, LONG_PRESS_TIME);
                 return true;
             } else if (mapToDPadKeyCode > 0 && eventAction == KeyEvent.ACTION_UP) {
@@ -206,6 +221,12 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
         }
         PackageManager pm = getPackageManager();
         Intent intent = pm.getLaunchIntentForPackage(packageName);
+        String YOUTUBE_MUSIC = "app.rvx.android.apps.youtube.music|com.google.android.youtube.music";
+        String MY_SUPER_MIX_PLAYLIST = "https://music.youtube.com/watch?v=&list=RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY";
+        if (YOUTUBE_MUSIC.contains(packageName)) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(MY_SUPER_MIX_PLAYLIST));
+            intent.setPackage(packageName);
+        }
         if (intent != null) {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
