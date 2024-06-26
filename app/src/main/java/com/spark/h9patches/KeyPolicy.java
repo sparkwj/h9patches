@@ -16,6 +16,9 @@ import android.util.Log;
 import android.view.InputDevice;
 import android.view.KeyEvent;
 
+import java.io.IOException;
+import java.util.Objects;
+
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopActivityChangedListener {
     final static int H9_KEYCODE_VOLUME_UP = 24;
@@ -128,10 +131,17 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
                         lastRemappedKeyCode = eventKeyCode;
                     }
                 }, LONG_PRESS_TIME);
+                lastRemappedKeyCode = 0;
                 return true;
             } else if (eventAction == KeyEvent.ACTION_UP) {
-                lastRemappedKeyCode = eventKeyCode;
-                launchFunctionalApp();
+//                lastRemappedKeyCode = eventKeyCode;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        launchFunctionalApp();
+                    }
+                }, 0);
+                lastRemappedKeyCode = 0;
                 return true;
             }
         }
@@ -214,20 +224,36 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
         return false;
     }
 
+    boolean refreshPlayListFlag = true;
     private void launchFunctionalApp(){
         String packageName = sharedPreferences.getString(getString(R.string.pref_function_app), "");
         if (packageName == null || packageName.isEmpty() || "-".equals(packageName)) {
             return;
         }
-        PackageManager pm = getPackageManager();
-        Intent intent = pm.getLaunchIntentForPackage(packageName);
         String YOUTUBE_MUSIC = "app.rvx.android.apps.youtube.music|com.google.android.youtube.music";
-        String MY_SUPER_MIX_PLAYLIST = "https://music.youtube.com/watch?v=&list=RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY";
         if (YOUTUBE_MUSIC.contains(packageName)) {
-            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(MY_SUPER_MIX_PLAYLIST));
-            intent.setPackage(packageName);
-        }
-        if (intent != null) {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setPackage(packageName);
+                intent.setData(Uri.parse("https://music.youtube.com"));
+                startActivity(intent);
+                String waitScript = "r=%s; while ! dumpsys activity top|grep -zq \"%s\"; do sleep 1; ((--r))||break; done";
+                Runtime.getRuntime().exec(new String[]{"sh", "-c", String.format(waitScript, 15, "youtube.music.activities.MusicActivity.*avatar")}).waitFor();
+                intent.setData(Uri.parse("https://music.youtube.com/playlist?list=RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY"));
+                startActivity(intent);
+                Runtime.getRuntime().exec(new String[]{"sh", "-c", String.format(waitScript, 5, "youtube.music.activities.MusicActivity.*music_play_button")}).waitFor();
+                intent.setData(Uri.parse("https://music.youtube.com/watch?list=RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY"));
+                startActivity(intent);
+            } catch (Exception e) {
+                Log.e(TAG, Objects.requireNonNull(e.getMessage()));
+            }
+        } else {
+            PackageManager pm = getPackageManager();
+            Intent intent = pm.getLaunchIntentForPackage(packageName);
+            if (intent == null) {
+                return;
+            }
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }

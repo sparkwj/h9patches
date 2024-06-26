@@ -1,0 +1,785 @@
+spark@MacBook-Pro:~/Projects/h9patches$ adb logcat|grep carPropertyValue
+06-20 22:00:24.550  9788  9788 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 6300 6300 6300
+06-20 22:00:24.550  9788  9788 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 10 10 10 10
+06-20 22:00:24.553  9788  9788 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 6 6 6 6
+06-20 22:00:24.669  9788  9788 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903874  value:  1 1 1
+06-20 22:00:24.881  9788  9788 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903874  value:  1 1 1
+06-20 22:00:25.122  9788  9788 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 29523 29523 29523 29523 29523
+06-20 22:00:34.341 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:34.345 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:34.551 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:34.556 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:34.561 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:35.542 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:36.021 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:00:36.531 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:36.536 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:36.536 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:37.344 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:00:37.431 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:37.553 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:38.331 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:38.337 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:38.543 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:38.549 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:38.554 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:39.410 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 13
+06-20 22:00:39.505 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:39.537 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:39.716 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 13
+06-20 22:00:40.102 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:40.552 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:40.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:40.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:41.005 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 43 2 3 185
+06-20 22:00:41.013 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:00:41.557 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:41.826 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:00:41.947 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:42.017 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:42.343 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:42.343 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:42.373 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 12
+06-20 22:00:42.373 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:42.373 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:42.373 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:42.404 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:42.553 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:42.553 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:42.557 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:42.615 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:42.704 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:43.213 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:43.542 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:44.324 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:44.375 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:00:44.375 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:44.385 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:44.386 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:44.411 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:44.471 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 7
+06-20 22:00:44.471 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:44.471 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:44.471 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:44.535 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:44.535 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:44.535 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:44.593 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 6
+06-20 22:00:44.607 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:44.607 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:44.607 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:44.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 9
+06-20 22:00:44.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:44.777 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:44.777 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:44.803 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:44.897 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:00:44.897 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:44.897 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:44.900 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:45.344 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:00:45.531 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 8 2 0 198
+06-20 22:00:45.540 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:45.541 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:45.983 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 10
+06-20 22:00:45.995 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:45.995 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:45.995 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:46.014 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:00:46.344 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:46.344 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:46.553 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:46.557 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:46.557 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:46.712 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:47.531 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:48.231 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:00:48.322 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:48.536 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:48.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:48.539 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:48.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 6
+06-20 22:00:48.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:48.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:48.613 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:48.626 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:00:48.685 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:00:48.699 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:48.699 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:48.699 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:48.729 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:48.787 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:00:48.787 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:48.787 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:48.787 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:48.872 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 3
+06-20 22:00:48.872 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:48.872 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:48.872 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:48.967 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 5
+06-20 22:00:48.967 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:48.967 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:48.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:49.148 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:49.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 3
+06-20 22:00:49.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:49.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:49.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:49.238 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:00:49.267 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 5
+06-20 22:00:49.274 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:49.275 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:49.275 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:49.387 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:00:49.388 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:49.396 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:49.396 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:49.446 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:49.484 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 12
+06-20 22:00:49.484 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:49.498 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:49.498 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:49.543 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:50.353 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:50.360 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:50.532 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:50.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:50.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:50.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:00:50.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:50.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:50.605 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:50.686 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 10
+06-20 22:00:50.686 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:50.686 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:50.693 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:50.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 7
+06-20 22:00:50.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:50.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:50.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:50.892 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 3
+06-20 22:00:50.901 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:50.901 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:50.903 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:50.924 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:00:50.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 0
+06-20 22:00:50.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:50.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:50.984 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.011 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:00:51.084 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:00:51.084 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.084 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.084 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.172 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 3
+06-20 22:00:51.184 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.184 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.184 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.278 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 6
+06-20 22:00:51.279 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.290 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.290 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.314 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:51.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 9
+06-20 22:00:51.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.432 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:00:51.473 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 13
+06-20 22:00:51.473 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.475 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.480 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.532 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:51.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 18
+06-20 22:00:51.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.594 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.624 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 110
+06-20 22:00:51.685 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 22
+06-20 22:00:51.685 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.685 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.685 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:51.743 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 108
+06-20 22:00:51.922 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:00:51.983 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 14
+06-20 22:00:51.991 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:51.991 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:51.991 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:52.045 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:52.074 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 2
+06-20 22:00:52.074 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:00:52.074 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:52.079 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:52.193 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 3
+06-20 22:00:52.195 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:52.195 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:52.195 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:52.532 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:52.532 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:52.532 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:52.713 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:00:53.473 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 2
+06-20 22:00:53.482 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:00:53.482 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:00:53.485 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:00:53.564 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:54.343 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:54.346 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:54.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:54.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:54.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+
+
+06-20 22:00:55.543 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+
+
+
+06-20 22:00:56.023 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:00:56.562 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:56.565 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:56.569 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:00:57.011 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:57.223 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+
+06-20 22:00:57.551 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+
+06-20 22:00:57.704 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+
+06-20 22:00:57.912 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+
+06-20 22:00:58.123 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:00:58.331 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:00:58.335 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:00:58.424 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:00:58.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:58.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:58.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:00:58.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+06-20 22:00:59.324 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+
+06-20 22:00:59.448 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:00:59.563 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:00:59.627 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:00.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:00.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:00.555 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:00.576 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:01:00.583 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:01:00.583 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:00.583 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:01.004 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:01:01.010 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 43 2 3 186
+06-20 22:01:01.558 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:01.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 2
+06-20 22:01:01.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:01:01.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:01.981 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:02.038 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:01:02.127 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:02.332 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:01:02.339 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:02.339 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:02.426 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+
+06-20 22:01:02.545 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:02.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:02.548 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+
+
+
+
+06-20 22:01:03.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:04.471 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903874  value:  1 0 0
+06-20 22:01:04.552 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:04.558 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:04.558 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:04.671 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903874  value:  1 0 0
+06-20 22:01:05.552 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:05.944 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:01:06.004 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:01:06.008 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:06.031 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:06.124 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:06.333 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:06.336 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:06.544 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:06.550 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:06.550 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:07.533 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:08.473 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:01:08.473 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:01:08.473 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:08.484 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:08.567 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:08.567 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:08.570 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:08.671 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 0
+06-20 22:01:08.678 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:08.682 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:08.689 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:08.765 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:01:08.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:08.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:08.778 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:09.488 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 0
+06-20 22:01:09.495 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:01:09.496 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:09.496 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:09.545 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:09.569 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:01:09.577 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:01:09.577 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:09.577 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:10.326 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:10.327 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:10.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:10.550 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:10.550 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:10.812 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:11.027 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:11.027 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 43 2 3 187
+06-20 22:01:11.027 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:01:11.112 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:11.532 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:01:11.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:11.622 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:11.828 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 114
+06-20 22:01:11.893 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 0
+06-20 22:01:11.896 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 1
+06-20 22:01:11.896 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:11.896 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:11.924 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:11.978 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 1
+06-20 22:01:11.978 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:11.978 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:11.978 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.066 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 6
+06-20 22:01:12.066 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.066 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.075 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.200 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:01:12.201 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.209 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.209 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.225 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:12.279 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 18
+06-20 22:01:12.279 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.283 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.287 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.344 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 110
+06-20 22:01:12.363 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 28
+06-20 22:01:12.369 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.376 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.387 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.405 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:12.431 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 105
+06-20 22:01:12.472 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 35
+06-20 22:01:12.472 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.479 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.488 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.537 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 98
+06-20 22:01:12.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:12.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:12.542 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:12.596 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 34
+06-20 22:01:12.602 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.602 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.606 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.629 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 96
+06-20 22:01:12.685 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 26
+06-20 22:01:12.689 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.693 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.701 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.749 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 99
+06-20 22:01:12.768 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 15
+06-20 22:01:12.769 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.775 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.780 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+
+06-20 22:01:12.834 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 106
+06-20 22:01:12.894 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 9
+06-20 22:01:12.901 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:12.901 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:12.905 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:12.927 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 110
+06-20 22:01:13.046 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:13.132 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+
+06-20 22:01:13.223 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+
+
+06-20 22:01:13.564 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+06-20 22:01:14.345 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:14.345 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:14.558 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:14.565 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:14.565 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:14.767 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 10
+06-20 22:01:14.767 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:14.767 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:14.768 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:14.886 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 14
+06-20 22:01:14.893 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:14.893 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:14.897 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:14.977 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 19
+06-20 22:01:14.977 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:14.980 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:14.980 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.037 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:15.066 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 24
+06-20 22:01:15.077 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.084 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.091 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.177 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 26
+06-20 22:01:15.184 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.186 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.195 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.338 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:15.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 22
+06-20 22:01:15.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.366 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.487 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 15
+06-20 22:01:15.489 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.496 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.500 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:15.575 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:01:15.575 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.575 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.575 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.666 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 10
+06-20 22:01:15.673 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.673 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.673 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.874 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 12
+06-20 22:01:15.874 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.874 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.874 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.966 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 16
+06-20 22:01:15.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:15.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:15.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:15.996 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:01:16.087 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 22
+06-20 22:01:16.096 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.096 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.096 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:16.146 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:16.168 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 27
+06-20 22:01:16.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.179 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:16.266 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 28
+06-20 22:01:16.273 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.273 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.273 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:16.388 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 27
+06-20 22:01:16.388 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.388 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.393 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:16.446 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:16.479 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 23
+06-20 22:01:16.485 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.485 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.489 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:16.537 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:16.542 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:16.542 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:16.566 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 15
+06-20 22:01:16.572 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.572 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.572 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:16.687 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 10
+06-20 22:01:16.690 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:16.690 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:16.694 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.019 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:17.105 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:17.368 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 11
+06-20 22:01:17.369 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.369 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.378 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.468 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 13
+06-20 22:01:17.468 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.468 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.481 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.558 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:17.586 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 17
+06-20 22:01:17.592 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.592 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.599 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.668 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 23
+06-20 22:01:17.673 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.673 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.677 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.754 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:17.771 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 28
+06-20 22:01:17.776 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.780 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.786 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.886 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 32
+06-20 22:01:17.891 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.892 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.894 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:17.947 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:17.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 35
+06-20 22:01:17.983 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:17.990 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:17.994 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:18.038 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 109
+06-20 22:01:18.072 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 38
+06-20 22:01:18.072 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:18.072 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:18.072 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:18.126 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 108
+06-20 22:01:18.192 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 40
+06-20 22:01:18.192 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:18.192 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:18.193 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:18.275 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 42
+06-20 22:01:18.283 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:18.283 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:18.283 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:18.338 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:18.343 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:18.343 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:18.548 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:18.554 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:18.554 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:18.558 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:18.877 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903874  value:  1 0 0
+06-20 22:01:19.088 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903874  value:  1 0 0
+06-20 22:01:19.237 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:19.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:19.547 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:19.933 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:20.026 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:20.143 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:20.232 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+
+06-20 22:01:20.539 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:20.539 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:20.539 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+
+
+
+
+
+
+
+06-20 22:01:20.863 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+
+
+
+
+
+
+
+06-20 22:01:21.016 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+
+
+
+
+
+
+
+
+06-20 22:01:21.172 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+
+
+
+06-20 22:01:21.264 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+
+
+
+
+
+
+
+06-20 22:01:21.385 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+
+
+
+
+06-20 22:01:21.531 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+
+
+
+
+
+
+06-20 22:01:21.683 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+
+
+
+
+06-20 22:01:21.771 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+
+
+
+
+
+
+
+
+06-20 22:01:21.984 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+06-20 22:01:22.073 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+06-20 22:01:22.343 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:22.347 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:22.551 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:22.556 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:22.556 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:22.584 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+06-20 22:01:22.612 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:22.824 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+
+06-20 22:01:23.004 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+
+
+06-20 22:01:23.212 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+
+
+06-20 22:01:23.274 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+
+
+
+
+
+
+
+
+
+
+
+
+
+06-20 22:01:23.545 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:23.576 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+
+
+06-20 22:01:23.666 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+
+
+
+
+
+
+
+
+
+
+
+06-20 22:01:23.873 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+
+06-20 22:01:23.974 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+06-20 22:01:24.364 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+06-20 22:01:24.545 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:24.545 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:24.545 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:24.873 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+06-20 22:01:25.269 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+06-20 22:01:25.388 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 117
+06-20 22:01:25.481 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 29 1 116
+06-20 22:01:25.508 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:25.538 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:26.018 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859332  value:  0 0
+06-20 22:01:26.346 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 2 1 10
+06-20 22:01:26.346 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 12 3 1 10
+06-20 22:01:26.406 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:26.471 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 43
+06-20 22:01:26.475 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:26.475 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:26.475 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:26.524 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:26.553 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0
+06-20 22:01:26.553 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  10 69 0 0 0
+06-20 22:01:26.561 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557873413  value:  6 63 0 0 0
+06-20 22:01:26.585 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 49
+06-20 22:01:26.593 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:26.593 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:26.593 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:26.646 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 109
+06-20 22:01:26.673 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 57
+06-20 22:01:26.677 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:26.679 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:26.682 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:26.734 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 104
+06-20 22:01:26.827 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 102
+06-20 22:01:26.879 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 53
+06-20 22:01:26.880 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:26.880 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:26.880 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:26.914 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:26.946 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 105
+06-20 22:01:26.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 42
+06-20 22:01:26.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:26.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:26.976 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:27.033 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 110
+06-20 22:01:27.065 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 33
+06-20 22:01:27.073 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:27.073 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:27.073 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:27.125 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 111
+06-20 22:01:27.184 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 0 2 0 30
+06-20 22:01:27.191 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 1 1 0
+06-20 22:01:27.197 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 2 2 0 0
+06-20 22:01:27.205 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 4 3 2 0 0
+06-20 22:01:27.244 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 112
+06-20 22:01:27.306 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:27.334 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 30 2 5 113
+06-20 22:01:27.425 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 11
+06-20 22:01:27.518 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557903872  value:  29523 254 12 2 1 12
+06-20 22:01:27.544 10102 10102 D com.spark.h9patches.LaneKeepAssist: carPropertyValue.getPropertyId(): 557859857  value:  6300 0 0 0

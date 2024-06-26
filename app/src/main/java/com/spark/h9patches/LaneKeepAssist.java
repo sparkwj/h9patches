@@ -8,9 +8,11 @@ import android.car.hardware.CarVendorExtensionManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.ServiceConnection;
-import android.os.Handler;
 import android.os.IBinder;
+import android.os.RemoteException;
+import android.util.Log;
 
+import com.desay_svautomotive.caninfoservice.OnCarAccStateListener;
 import com.desay_svautomotive.svcarsettings.manager.CarSettingsManager;
 
 import java.util.Timer;
@@ -21,6 +23,7 @@ public class LaneKeepAssist extends ServiceFacility {
     Car mCar;
     CarSettingsManager mCarSettingsManager;
     CarSensorManager mCarSensorManager;
+    com.desay_svautomotive.carlibs.hardware.CarSensorManager mCarSensorManager2;
     CarVendorExtensionManager mCarVendorManager;
     boolean enableLaneKeepAssistToggle = false;
 
@@ -66,6 +69,15 @@ public class LaneKeepAssist extends ServiceFacility {
 //            Log.e(TAG, "onChangeEvent: Null value SPI message!!!");
             return;
         }
+        StringBuilder sp = new StringBuilder();
+        int l =0;
+        while (l < params.length) {
+            sp.append(" ").append(((Integer) params[l]).intValue());
+            l++;
+        }
+//        Log.d(TAG,"carPropertyValue.getPropertyId(): " + carPropertyValue.getPropertyId()
+//                        + "  value: " + sp);
+
         switch (carPropertyValue.getPropertyId()) {
             case 557903872:
                 if (((Integer) params[0]).intValue() == 29523) {
@@ -137,12 +149,9 @@ public class LaneKeepAssist extends ServiceFacility {
         }
     }
 
-    Timer stateTimer;
+    Timer laneKeepTimer;
     public void _toggleLaneKeepAssistSystem(int state) {
-        if (stateTimer != null) {
-            stateTimer.cancel();
-            stateTimer = null;
-        }
+        stopLaneKeepTimerIfNeeds();
         int accState = getIgnitionState();
 //        Log.d(TAG, "toggleLaneKeepAssistSystemValuea cc状态: " + accState);
         if (accState != 4) {
@@ -160,25 +169,40 @@ public class LaneKeepAssist extends ServiceFacility {
 //            mCarSettingsManager.setLaneKeepAssistSystemValue(1);
 //            Log.d(TAG, "打开车道保持辅助");
         } else if (1 == state) {
-            stateTimer = new Timer();
-            stateTimer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-//                    if (1 == curState) {
-//                        mCarSettingsManager.setLaneKeepAssistSystemValue(0);
-//                        try {
-//                            Thread.sleep(1000);
-//                        } catch (InterruptedException e) {
-//                            //
-//                        }
-//                    }
-                    mCarSettingsManager.setLaneKeepAssistSystemValue(1);
-                }
-//            }, 0, 10 * 1000);
-            }, 0);
+            mCarSettingsManager.setLaneKeepAssistSystemValue(1);
+//            startLaneKeepTimer();
         }
     }
 
+    private void startLaneKeepTimer() {
+        stopLaneKeepTimerIfNeeds();
+        laneKeepTimer = new Timer();
+        int period = 2 * 1000;
+        laneKeepTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+//                        int direction = (int) Math.round(Math.random());
+                    int direction = 1;
+                    LaneKeepAssist.this.mCarVendorManager.setGlobalProperty(Integer[].class, 557903872, new Integer[]{29523, 4, 1, 1, direction});
+                    LaneKeepAssist.this.mCarVendorManager.setGlobalProperty(Integer[].class, 557903872, new Integer[]{29523, 4, 0, 2, 0, 11});
+                    LaneKeepAssist.this.mCarVendorManager.setGlobalProperty(Integer[].class, 557903872, new Integer[]{29523, 4, 1, 1, 0});
+                    LaneKeepAssist.this.mCarVendorManager.setGlobalProperty(Integer[].class, 557903872, new Integer[]{29523, 4, 2, 2, 0, 0});
+                    LaneKeepAssist.this.mCarVendorManager.setGlobalProperty(Integer[].class, 557903872, new Integer[]{29523, 4, 3, 2, 0, 0});
+//                    Log.d(TAG, "SENDCAN");
+                } catch (CarNotConnectedException e) {
+                    //
+                }
+            }
+        }, 0, period);
+    }
+
+    private void stopLaneKeepTimerIfNeeds() {
+        if (laneKeepTimer != null) {
+            laneKeepTimer.cancel();
+            laneKeepTimer = null;
+        }
+    }
 
     public int getIgnitionState() {
         try {
@@ -190,13 +214,21 @@ public class LaneKeepAssist extends ServiceFacility {
         return 2;
     }
 
+    OnCarAccStateListener.Stub accStateListener = new OnCarAccStateListener.Stub() {
+        @Override
+        public void onAccStateCallback(int i) throws RemoteException {
+            Log.d(TAG, "onAccStateCallback: " + i);
+        }
+    };
 
     ServiceConnection mCarConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             try {
                 mCarSensorManager = (CarSensorManager) mCar.getCarManager(Car.SENSOR_SERVICE);
+                mCarSensorManager2 = (com.desay_svautomotive.carlibs.hardware.CarSensorManager)H9PatchesApplication.getInstance().getCarPropertyManager(2);
                 mCarVendorManager = (CarVendorExtensionManager) mCar.getCarManager("vendor_extension");
+                mCarSensorManager2.registerCarAccStateListener(accStateListener);
                 mCarVendorManager.registerCallback(carVendorExtensionCallback);
             } catch (Exception ignored) {
             }

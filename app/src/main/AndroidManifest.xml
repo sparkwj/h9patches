@@ -168,6 +168,8 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.DUMP"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:name=".H9PatchesApplication"
