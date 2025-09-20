@@ -230,7 +230,7 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
         if (packageName == null || packageName.isEmpty() || "-".equals(packageName)) {
             return;
         }
-        String YOUTUBE_MUSIC = "app.rvx.android.apps.youtube.music|com.google.android.youtube.music";
+        String YOUTUBE_MUSIC = "app.revanced.android.apps.youtube.music|app.rvx.android.apps.youtube.music|com.google.android.youtube.music";
         if (YOUTUBE_MUSIC.contains(packageName)) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
