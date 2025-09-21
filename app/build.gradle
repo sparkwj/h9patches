@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.spark.h9patches"
         minSdkVersion 17
-        targetSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "0.1"
 
@@ -53,8 +53,9 @@ android {
 dependencies {
 //    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.linkedin.dexmaker:dexmaker-mockito:2.12.1'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+//    implementation 'com.linkedin.dexmaker:dexmaker-mockito:2.25.0'
+    compileOnly files('libs/dexmaker-2.21.0.jar')
     implementation files('libs/SVCarSettingsService.jar')
     implementation 'android.arch.lifecycle:livedata:1.1.1'
     implementation 'android.arch.lifecycle:viewmodel:1.1.1'
@@ -70,7 +71,7 @@ dependencies {
 }
 
 
-this.afterEvaluate { Project project ->
+this.afterEvaluate {  project ->
     project.logger.error "start afterEvaluate"
     tasks.matching {
         project.logger.error "test task ${it.name}"

@@ -88,3 +88,5 @@ lint/tmp/
 
 app/release
 app/debug
+
+.DS_Store
