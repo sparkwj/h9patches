@@ -964,7 +964,11 @@
 package com.spark.h9patches;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
@@ -1034,7 +1038,28 @@ public class H9PatchesService extends Service {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void setForegroundService() {
-        Notification notification = new NotificationCompat.Builder(this).build();
+//        Notification notification = new NotificationCompat.Builder(this).build();
+//        startForeground(ONGOING_NOTIFICATION_ID, notification);
+        NotificationManager notifManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationChannel serviceChannel = new NotificationChannel(
+                getString(R.string.key_notification_channel),
+                getString(R.string.text_notification_title),
+                NotificationManager.IMPORTANCE_HIGH);
+        notifManager.createNotificationChannel(serviceChannel);
+
+        Intent notificationIntent = new Intent(this, MainActivity.class);
+        PendingIntent pendingIntent =
+                PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
+
+        Notification notification =
+                new Notification.Builder(this, getString(R.string.key_notification_channel))
+                        .setContentTitle(getString(R.string.text_notification_title))
+                        .setContentText(getString(R.string.text_notification_message))
+                        .setSmallIcon(R.drawable.ic_launcher_background)
+                        .setContentIntent(pendingIntent)
+                        .setTicker(getString(R.string.text_ticker_tips))
+                        .build();
+
         startForeground(ONGOING_NOTIFICATION_ID, notification);
     }
 
@@ -1076,4 +1101,6 @@ public class H9PatchesService extends Service {
     public static H9PatchesService getInstance() {
         return instance;
     }
+
+
 }

@@ -59,13 +59,13 @@ public class Wifi extends ServiceFacility {
         try {
             @SuppressLint("PrivateApi") Class classOnStartTetheringCallback = Class.forName("android.net.ConnectivityManager$OnStartTetheringCallback");
             Method startTethering = connectivityManager.getClass().getDeclaredMethod("startTethering", int.class, boolean.class, classOnStartTetheringCallback);
-            Object proxy = ProxyBuilder.forClass(classOnStartTetheringCallback).handler(new InvocationHandler() {
-                @Override
-                public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
-                    return null;
-                }
-            }).build();
-            startTethering.invoke(connectivityManager, 0, true, proxy);
+//            Object proxy = ProxyBuilder.forClass(classOnStartTetheringCallback).handler(new InvocationHandler() {
+//                @Override
+//                public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
+//                    return null;
+//                }
+//            }).build();
+//            startTethering.invoke(connectivityManager, 0, true, proxy);
         } catch (Exception e) {
             Log.e(TAG, "打开热点失败");
         }
