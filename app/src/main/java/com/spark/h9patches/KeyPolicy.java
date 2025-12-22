@@ -231,7 +231,7 @@ public class KeyPolicy extends ServiceFacility implements ActivityWatcher.OnTopA
             return;
         }
         String YOUTUBE_MUSIC = "app.revanced.android.apps.youtube.music|app.rvx.android.apps.youtube.music|com.google.android.youtube.music";
-        if (YOUTUBE_MUSIC.contains(packageName)) {
+        if (YOUTUBE_MUSIC.contains(packageName) || packageName.contains("youtube.music")) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
