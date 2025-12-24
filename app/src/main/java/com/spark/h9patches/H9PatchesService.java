@@ -978,6 +978,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.LinkedHashMap;
 import java.util.Objects;
@@ -1061,6 +1062,7 @@ public class H9PatchesService extends Service {
                         .build();
 
         startForeground(ONGOING_NOTIFICATION_ID, notification);
+        Toast.makeText(H9PatchesService.this.getApplicationContext(),"Patches Service started",Toast.LENGTH_LONG).show();
     }
 
     public void notifyOnStart() {
