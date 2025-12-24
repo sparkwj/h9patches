@@ -1611,3 +1611,6 @@ V AudioSourceToIPManager: sourceName = null, packageName = com.spark.h9patches
 04-15 22:47:25.305 15550 15566 E ActivityManager:   2.7% 18966/com.spark.h9patches: 2.1% user + 0.6% kernel / faults: 715 minor 1 major
 
 adb shell am broadcast -a h9patches.intent.action.COMMAND -e cmd '"pm disable com.mapbar.android.mapbarnavi"'
+
+
+find . -name "*.apk" -type f -exec sh -c 'd="$(dirname "$1")"; cd $d; n="$(basename $(ls *.apk | head -n 1) .apk)";echo $n; unzip -oq $n.apk -d $n; vdexExtractor -f -i "oat/arm64/$n.vdex" -o "oat/arm64";cp oat/arm64/*.dex $n/; zip -m -r -X "$n.dex.apk" $n; ' _ {} \;
