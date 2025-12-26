@@ -4,9 +4,15 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.hardware.dsp.V1_0.IDspHwDevice;
 import android.os.Build;
+import android.os.RemoteException;
+import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
+
+import com.dsv.personalsettings.Constants;
+import com.dsv.personalsettings.SettingsAgent;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
@@ -59,6 +65,17 @@ public class StartupScript extends ServiceFacility {
 //        pm.clearPackagePreferredActivities("com.android.launcher");
 //        pm.addPreferredActivity(filter, IntentFilter.MATCH_CATEGORY_EMPTY, components, component);
         Log.d(TAG, "runStartupScript");
+        try {
+            IDspHwDevice dspHwDevice = IDspHwDevice.getService();
+            SettingsAgent settingsAgent = new SettingsAgent(getContext());
+            dspHwDevice.setBexStatus(0);
+            Settings.Global.putInt(getContext().getContentResolver(), "sv_sound_quality", 0);
+            dspHwDevice.setSurroundStatus(1);
+            settingsAgent.setLocalSet(Constants.SUPPORT_SETTINGS[15], "1");
+            Settings.Global.putInt(getContext().getContentResolver(), "sv_surround", 1);
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }
         String script = sharedPreferences.getString(getString(R.string.pref_startup_script), getString(R.string.pref_value_startup_script));
         try {
             BufferedReader br = new BufferedReader(new StringReader(script));

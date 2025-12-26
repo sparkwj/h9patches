@@ -34,10 +34,10 @@
     <string name="text_run">Run</string>
     <string name="text_cancel">Cancel</string>
     <string name="pref_value_startup_script" translatable="false">
+        am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService\n
         am broadcast -a android.intent.action.MY_PACKAGE_REPLACED -n com.softmedia.receiver/.app.BootCompletedReceiver\n
         #dumpsys deviceidle whitelist +com.mgoogle.android.gms\n
-        #am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService\n
-        #sleep 60;am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService &amp;\n
+        sleep 60;am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService &amp;\n
 </string>
     <string name="pref_value_gms_script" translatable="false">
         pm grant com.google.android.gsf.login android.permission.BIND_JOB_SERVICE\n
