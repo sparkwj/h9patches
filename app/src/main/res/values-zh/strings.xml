@@ -23,4 +23,5 @@
     <string name="text_default_map">默认导航地图</string>
     <string name="text_enable_key_remapping">启用按键增强</string>
     <string name="text_functional_app">方向盘左侧功能键</string>
+    <string name="car_play">CarPlay</string>
 </resources>

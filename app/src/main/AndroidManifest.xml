@@ -176,9 +176,9 @@
         android:directBootAware="true"
         android:persistent="true"
         android:allowBackup="true"
-        android:icon="@drawable/ic_app_icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_app_icon"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
@@ -304,6 +304,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:icon="@mipmap/ic_launcher"
             android:resizeableActivity="true"
             android:launchMode="singleTop"
             android:exported="true">
@@ -313,6 +314,18 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".CarPlayActivity"
+            android:label="@string/car_play"
+            android:icon="@mipmap/ic_carplay"
+            android:resizeableActivity="true"
+            android:launchMode="singleTop"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <service android:name=".MyAuthenticationService"
             android:exported="true">

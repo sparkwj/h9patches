@@ -1062,7 +1062,7 @@ public class H9PatchesService extends Service {
                         .build();
 
         startForeground(ONGOING_NOTIFICATION_ID, notification);
-        Toast.makeText(H9PatchesService.this.getApplicationContext(),"Patches Service started",Toast.LENGTH_LONG).show();
+//        Toast.makeText(H9PatchesService.this.getApplicationContext(),"Patches Service started",Toast.LENGTH_LONG).show();
     }
 
     public void notifyOnStart() {

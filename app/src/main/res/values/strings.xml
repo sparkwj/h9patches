@@ -89,4 +89,5 @@
     <string name="pref_default_map" translatable="false">pref_default_map</string>
     <string name="text_enable_key_remapping">Enable key remapping</string>
     <string name="pref_key_remapping" translatable="false">pref_key_remapping</string>
+    <string name="car_play">CarPlay</string>
 </resources>
