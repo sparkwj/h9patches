@@ -178,8 +178,7 @@ public class Launcher extends ServiceFacility {
             Log.d(TAG, "start launcher: " + resolveInfo.activityInfo.packageName);
 
             sendKeyCode(KeyEvent.KEYCODE_BACK);
-            sendKeyCode(KeyEvent.KEYCODE_HOME);
-
+//            sendKeyCode(KeyEvent.KEYCODE_HOME);
             scheduleRunStartupApp();
         }
     }

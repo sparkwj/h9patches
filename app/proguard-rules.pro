@@ -13,6 +13,7 @@
 #}
 -keep class android.hardware.dsp.** { *; }
 -keep class android.hidl.** { *; }
+-keep class com.android.dx.rop.** { *; }
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable

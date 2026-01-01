@@ -1,13 +1,16 @@
 package com.spark.h9patches;
 
 import android.Manifest;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
+import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.support.annotation.RequiresApi;
@@ -15,6 +18,7 @@ import android.telecom.TelecomManager;
 import android.util.Log;
 import android.view.InputDevice;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.Objects;
