@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.dsp.V1_0.IDspHwDevice;
 import android.os.Build;
+import android.os.Handler;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.support.annotation.RequiresApi;
@@ -76,13 +77,32 @@ public class StartupScript extends ServiceFacility {
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }
+
+        String v2ray_start_cmd = "am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService";
         String script = sharedPreferences.getString(getString(R.string.pref_startup_script), getString(R.string.pref_value_startup_script));
         try {
+            Runtime runtime = Runtime.getRuntime();
+            runtime.exec(v2ray_start_cmd);
+            new Handler().postDelayed(() -> {
+                try {
+                    runtime.exec(v2ray_start_cmd);
+                } catch (Exception e){}
+            }, 10);
+            new Handler().postDelayed(() -> {
+                try {
+                    runtime.exec(v2ray_start_cmd);
+                } catch (Exception e){}
+            }, 20);
+            new Handler().postDelayed(() -> {
+                try {
+                    runtime.exec(v2ray_start_cmd);
+                } catch (Exception e){}
+            }, 30);
             BufferedReader br = new BufferedReader(new StringReader(script));
             String command = "";
-            Runtime runtime = Runtime.getRuntime();
-            while ((command = br.readLine().trim()) != null) {
-                if (command.isEmpty() || command.startsWith("#") || command.startsWith("//")) continue;
+            while ((command = br.readLine()) != null) {
+                command = command.trim();
+                if (command.isEmpty() || command.startsWith("#") || command.startsWith(";") || command.startsWith("//")) continue;
                 try {
 //                    Toast.makeText(getContext(), command, Toast.LENGTH_SHORT).show();
                     Log.d(TAG, command);

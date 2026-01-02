@@ -175,9 +175,14 @@ public class Launcher extends ServiceFacility {
 //        pm.setComponentEnabledSetting(new_launcher, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
 
         if (launch_it) {
-            Log.d(TAG, "start launcher: " + resolveInfo.activityInfo.packageName);
-
             sendKeyCode(KeyEvent.KEYCODE_BACK);
+            sendKeyCode(KeyEvent.KEYCODE_BACK);
+            sendKeyCode(KeyEvent.KEYCODE_BACK);
+            Log.d(TAG, "start launcher: " + resolveInfo.activityInfo.packageName);
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(resolveInfo.activityInfo.packageName); // Replace with the target package name
+            if (launchIntent != null) {
+                startActivity(launchIntent);
+            }
 //            sendKeyCode(KeyEvent.KEYCODE_HOME);
             scheduleRunStartupApp();
         }
