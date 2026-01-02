@@ -1,0 +1,7 @@
+g6sa:/ $ pm list packages -d
+package:com.desay_sv.netmusic
+package:com.iflytek.cutefly.speechclient.hmi
+package:com.dsv.transmit_pushmsg
+package:com.iflytek.Rn2Adapter
+package:com.desaysv.netradio
+package:net.easyconn.gwmec
