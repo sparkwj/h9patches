@@ -1,31 +1,43 @@
 package com.spark.h9patches;
 
+import android.car.Car;
+import android.car.hardware.CarPropertyValue;
+import android.car.hardware.CarSensorManager;
+import android.car.hardware.CarVendorExtensionManager;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.hardware.dsp.V1_0.IDspHwDevice;
 import android.os.Build;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
 
+import com.desay_svautomotive.svcarsettings.manager.CarSettingsManager;
 import com.dsv.personalsettings.Constants;
 import com.dsv.personalsettings.SettingsAgent;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
+import java.util.Arrays;
 
 public class StartupScript extends ServiceFacility {
     BroadcastReceiver screenOnReceiver;
+    Car mCar;
+    CarVendorExtensionManager mCarVendorManager;
     public StartupScript(Context context) {
         super(context);
     }
 
     @Override
     public void onServiceStart() {
+        initCar();
         runStartupScript();
         registerReceiver();
     }
@@ -34,6 +46,12 @@ public class StartupScript extends ServiceFacility {
     public void onServiceStop() {
         if (screenOnReceiver != null) {
             getContext().unregisterReceiver(screenOnReceiver);
+        }
+        if (mCar != null && mCar.isConnected()) {
+            mCar.disconnect();
+        }
+        if (mCarConnection != null) {
+            getContext().unbindService(mCarConnection);
         }
     }
 
@@ -116,5 +134,42 @@ public class StartupScript extends ServiceFacility {
             Log.d(TAG, e.getMessage());
         }
 //        SystemProperties.set(DEFAULT_HOME, );
+    }
+
+
+//    private final CarVendorExtensionManager.CarVendorExtensionCallback carVendorExtensionCallback = new CarVendorExtensionManager.CarVendorExtensionCallback() {
+//        public void onChangeEvent(CarPropertyValue val) {
+//            if (val.getPropertyId() == 557859079) {
+//                Object[] objects1 = (Object[]) val.getValue();
+//                Log.d(TAG, "AAABBBobjects:" + Arrays.toString(objects1));
+//                int type1 = Byte.parseByte(objects1[0].toString());
+//            }
+//        }
+//        public void onErrorEvent(int var1, int var2) {
+//        }
+//    };
+    ServiceConnection mCarConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            try {
+                mCarVendorManager = (CarVendorExtensionManager) mCar.getCarManager("vendor_extension");
+                StartupScript.this.mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{29523, 4, 1, 1});
+//                mCarVendorManager.registerCallback(carVendorExtensionCallback);
+                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{0, 0, 6, 2, 0});
+            } catch (Exception ignored) {
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+
+        }
+    };
+    private void initCar() {
+        if (mCar != null) {
+            return;
+        }
+        mCar = Car.createCar(getContext(), mCarConnection);
+        mCar.connect();
     }
 }
