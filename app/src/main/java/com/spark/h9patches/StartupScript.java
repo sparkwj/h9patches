@@ -162,7 +162,7 @@ public class StartupScript extends ServiceFacility {
                 mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 0});
                 mPower.setTemporaryScreenBrightnessSettingOverride(7);
                 mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 1});
-                mPower.setTemporaryScreenBrightnessSettingOverride(2);
+                mPower.setTemporaryScreenBrightnessSettingOverride(1);
                 mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{0, 0});
 //                mCarVendorManager.registerCallback(carVendorExtensionCallback);
             } catch (Exception ignored) {
