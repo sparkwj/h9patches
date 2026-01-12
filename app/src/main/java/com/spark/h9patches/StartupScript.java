@@ -14,7 +14,9 @@ import android.hardware.dsp.V1_0.IDspHwDevice;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.IPowerManager;
 import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
@@ -154,8 +156,15 @@ public class StartupScript extends ServiceFacility {
             try {
                 mCarVendorManager = (CarVendorExtensionManager) mCar.getCarManager("vendor_extension");
                 StartupScript.this.mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{29523, 4, 1, 1});
+//                Object[] objects = mCarVendorManager.getProperty(Object[].class, 557859079, 0);
+//                objects = mCarVendorManager.getProperty(Object[].class, 557859856, 0);
+                IPowerManager mPower = IPowerManager.Stub.asInterface(ServiceManager.getService("power"));
+                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 0});
+                mPower.setTemporaryScreenBrightnessSettingOverride(7);
+                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 1});
+                mPower.setTemporaryScreenBrightnessSettingOverride(2);
+                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{0, 0});
 //                mCarVendorManager.registerCallback(carVendorExtensionCallback);
-                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{0, 0, 6, 2, 0});
             } catch (Exception ignored) {
             }
         }
