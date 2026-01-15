@@ -67,6 +67,7 @@ dependencies {
     implementation files('libs/dsp.jar')
     implementation files('libs/svradio.jar')
     implementation files('libs/dx.jar')
+    implementation files('libs/boot_dsv_platformadapter.jar')
     implementation 'com.android.support:design:28.0.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

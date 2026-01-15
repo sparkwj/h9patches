@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.hardware.dsp.V1_0.IDspHwDevice;
+import android.hardware.rvc.V1_0.IRvc;
+import android.hardware.rvc.V1_0.IRvcStatusListener;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
@@ -36,6 +38,20 @@ public class StartupScript extends ServiceFacility {
     public StartupScript(Context context) {
         super(context);
     }
+    private static final String ACTION_AVM_DEBUG = "dsv.android.avm.DEBUG";
+    private static final String ACTION_RVC_DEBUG = "dsv.android.rvc.DEBUG";
+    private static final String CLASSIC_BLUE = "00100000";
+    public static IRvc mRvc;
+    private class HalRvcStatusListener extends IRvcStatusListener.Stub {
+        @Override // android.hardware.rvc.V1_0.IRvcStatusListener
+        public void onRvcStatusChange(int i) {
+            if (i == 1) {
+                setAutoBrightness();
+            }
+//            Log.d(TAG, "receive rvc status: " + i);
+        }
+    }
+
 
     @Override
     public void onServiceStart() {
@@ -71,6 +87,7 @@ public class StartupScript extends ServiceFacility {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_ON);
         getContext().registerReceiver(screenOnReceiver, filter);
+
     }
 
     public void runStartupScript() {
@@ -96,6 +113,14 @@ public class StartupScript extends ServiceFacility {
             Settings.Global.putInt(getContext().getContentResolver(), "sv_surround", 1);
         } catch (RemoteException e) {
             throw new RuntimeException(e);
+        }
+
+        if (mRvc != null) {
+            try {
+                mRvc.setRvcStatusListener(new HalRvcStatusListener());
+            } catch (Exception e) {
+                Log.e(TAG, "set rvc listener failed", e);
+            }
         }
 
         String v2ray_start_cmd = "am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService";
@@ -141,6 +166,7 @@ public class StartupScript extends ServiceFacility {
 
 //    private final CarVendorExtensionManager.CarVendorExtensionCallback carVendorExtensionCallback = new CarVendorExtensionManager.CarVendorExtensionCallback() {
 //        public void onChangeEvent(CarPropertyValue val) {
+//            Log.d(TAG, "XXXXXXXXX:" + val.getPropertyId());
 //            if (val.getPropertyId() == 557859079) {
 //                Object[] objects1 = (Object[]) val.getValue();
 //                Log.d(TAG, "AAABBBobjects:" + Arrays.toString(objects1));
@@ -158,13 +184,8 @@ public class StartupScript extends ServiceFacility {
                 StartupScript.this.mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{29523, 4, 1, 1});
 //                Object[] objects = mCarVendorManager.getProperty(Object[].class, 557859079, 0);
 //                objects = mCarVendorManager.getProperty(Object[].class, 557859856, 0);
-                IPowerManager mPower = IPowerManager.Stub.asInterface(ServiceManager.getService("power"));
-                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 0});
-                mPower.setTemporaryScreenBrightnessSettingOverride(7);
-                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 1});
-                mPower.setTemporaryScreenBrightnessSettingOverride(1);
-                mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{0, 0});
 //                mCarVendorManager.registerCallback(carVendorExtensionCallback);
+                setAutoBrightness();
             } catch (Exception ignored) {
             }
         }
@@ -174,11 +195,29 @@ public class StartupScript extends ServiceFacility {
 
         }
     };
+    private void setAutoBrightness() {
+        try {
+            IPowerManager mPower = IPowerManager.Stub.asInterface(ServiceManager.getService("power"));
+            mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 0});
+            mPower.setTemporaryScreenBrightnessSettingOverride(7);
+            mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{1, 1});
+            mPower.setTemporaryScreenBrightnessSettingOverride(1);
+            mCarVendorManager.setProperty(Integer[].class, 557859856, 0, new Integer[]{0, 0});
+        } catch (Exception e) {
+            Log.e(TAG, "set auto brightness failed", e);
+        }
+    }
     private void initCar() {
         if (mCar != null) {
             return;
         }
         mCar = Car.createCar(getContext(), mCarConnection);
         mCar.connect();
+
+        try {
+            mRvc = IRvc.getService();
+        } catch (Exception e) {
+            Log.e(TAG, "Can not get IRvc service", e);
+        }
     }
 }
