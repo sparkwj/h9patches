@@ -123,26 +123,37 @@ public class StartupScript extends ServiceFacility {
             }
         }
 
-        String v2ray_start_cmd = "am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService";
+        String v2rayngPackageName = "com.v2ray.ang"; // Replace with the other app's package name
+        String v2rayngServiceClassName = "com.v2ray.ang.service.V2RayVpnService"; // Replace with the service's full class name
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(v2rayngPackageName, v2rayngServiceClassName));
+//        intent.putExtra("key_data", "some value");
+        try {
+            getContext().startService(intent);
+        } catch (Exception e) {
+            Log.e(TAG, "start v2ray service failed", e);
+        }
+
+//        String v2ray_start_cmd = "am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService";
         String script = sharedPreferences.getString(getString(R.string.pref_startup_script), getString(R.string.pref_value_startup_script));
         try {
             Runtime runtime = Runtime.getRuntime();
-            runtime.exec(v2ray_start_cmd);
-            new Handler().postDelayed(() -> {
-                try {
-                    runtime.exec(v2ray_start_cmd);
-                } catch (Exception e){}
-            }, 10);
-            new Handler().postDelayed(() -> {
-                try {
-                    runtime.exec(v2ray_start_cmd);
-                } catch (Exception e){}
-            }, 20);
-            new Handler().postDelayed(() -> {
-                try {
-                    runtime.exec(v2ray_start_cmd);
-                } catch (Exception e){}
-            }, 30);
+//            runtime.exec(v2ray_start_cmd);
+//            new Handler().postDelayed(() -> {
+//                try {
+//                    runtime.exec(v2ray_start_cmd);
+//                } catch (Exception e){}
+//            }, 10);
+//            new Handler().postDelayed(() -> {
+//                try {
+//                    runtime.exec(v2ray_start_cmd);
+//                } catch (Exception e){}
+//            }, 20);
+//            new Handler().postDelayed(() -> {
+//                try {
+//                    runtime.exec(v2ray_start_cmd);
+//                } catch (Exception e){}
+//            }, 30);
             BufferedReader br = new BufferedReader(new StringReader(script));
             String command = "";
             while ((command = br.readLine()) != null) {
