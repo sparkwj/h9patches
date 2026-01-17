@@ -45,7 +45,7 @@ public class StartupScript extends ServiceFacility {
     private class HalRvcStatusListener extends IRvcStatusListener.Stub {
         @Override // android.hardware.rvc.V1_0.IRvcStatusListener
         public void onRvcStatusChange(int i) {
-            if (i == 1) {
+            if (i > 0) {
                 setAutoBrightness();
             }
 //            Log.d(TAG, "receive rvc status: " + i);
@@ -123,16 +123,10 @@ public class StartupScript extends ServiceFacility {
             }
         }
 
-        String v2rayngPackageName = "com.v2ray.ang"; // Replace with the other app's package name
-        String v2rayngServiceClassName = "com.v2ray.ang.service.V2RayVpnService"; // Replace with the service's full class name
-        Intent intent = new Intent();
-        intent.setComponent(new ComponentName(v2rayngPackageName, v2rayngServiceClassName));
-//        intent.putExtra("key_data", "some value");
-        try {
-            getContext().startService(intent);
-        } catch (Exception e) {
-            Log.e(TAG, "start v2ray service failed", e);
-        }
+        startV2rayng();
+        new Handler().postDelayed(this::startV2rayng, 30 * 1000);
+        new Handler().postDelayed(this::startV2rayng, 60 * 1000);
+        new Handler().postDelayed(this::startV2rayng, 120 * 1000);
 
 //        String v2ray_start_cmd = "am start-foreground-service com.v2ray.ang/com.v2ray.ang.service.V2RayVpnService";
         String script = sharedPreferences.getString(getString(R.string.pref_startup_script), getString(R.string.pref_value_startup_script));
@@ -174,8 +168,21 @@ public class StartupScript extends ServiceFacility {
 //        SystemProperties.set(DEFAULT_HOME, );
     }
 
+    private void startV2rayng() {
+        String v2rayngPackageName = "com.v2ray.ang"; // Replace with the other app's package name
+        String v2rayngServiceClassName = "com.v2ray.ang.service.V2RayVpnService"; // Replace with the service's full class name
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(v2rayngPackageName, v2rayngServiceClassName));
+//        intent.putExtra("key_data", "some value");
+        try {
+            getContext().startService(intent);
+        } catch (Exception e) {
+            Log.e(TAG, "start v2ray service failed", e);
+        }
+    }
 
-//    private final CarVendorExtensionManager.CarVendorExtensionCallback carVendorExtensionCallback = new CarVendorExtensionManager.CarVendorExtensionCallback() {
+
+    //    private final CarVendorExtensionManager.CarVendorExtensionCallback carVendorExtensionCallback = new CarVendorExtensionManager.CarVendorExtensionCallback() {
 //        public void onChangeEvent(CarPropertyValue val) {
 //            Log.d(TAG, "XXXXXXXXX:" + val.getPropertyId());
 //            if (val.getPropertyId() == 557859079) {
